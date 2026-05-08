@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d8b4debe-a0dd-4652-abda-5d907f444f94">
+  <producedTypes>
+    <managerType typeId="845f023d-2710-4ea8-8230-6d5d2acdafb0" valueTypeId="51568bff-4237-4d17-a9d5-69fb51aefb01"/>
+    <valueManagerType typeId="348f9556-640e-483b-aa7e-90502f191bef" valueTypeId="e7f6207c-adf1-4f54-a0e0-9b41c42608fe"/>
+    <valueKeyType typeId="f20bca73-db57-4fed-ba5d-aa77b6878460" valueTypeId="dfc9eeae-6c8f-4808-b3ce-4e9a4018e167"/>
+  </producedTypes>
+  <name>MaximumTotalCredits</name>
+  <synonym>
+    <key>en</key>
+    <value>Tổng tín chỉ tối đa</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>3</precision>
+      <nonNegative>true</nonNegative>
+    </numberQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

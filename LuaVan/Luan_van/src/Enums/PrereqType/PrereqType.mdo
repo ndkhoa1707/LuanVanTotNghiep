@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f4d3beca-5147-4065-9321-b31b5ec76b21">
+  <producedTypes>
+    <refType typeId="d22c329f-4253-4206-b7c3-ac0c0c113ae7" valueTypeId="29b5c2ad-6a65-4464-bb71-4d73a8d3797d"/>
+    <listType typeId="ee34acfc-5828-4584-9ce2-f66a5a191429" valueTypeId="5861b05d-6742-4bf0-8f9f-ed022d2774ef"/>
+    <managerType typeId="8d51229d-0b32-43c2-9d10-e38819678226" valueTypeId="8ffd080c-9b19-4fd9-ae0d-27031d34462a"/>
+  </producedTypes>
+  <name>PrereqType</name>
+  <synonym>
+    <key>en</key>
+    <value>Loại điều kiện tiên quyết</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="2f6c73e3-1934-41da-9d5e-f940e75af701">
+    <name>Prerequisite</name>
+    <synonym>
+      <key>en</key>
+      <value>Điều kiện tiên quyết</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="84a0532f-7ee2-4554-b5aa-b4c689f2bf1c">
+    <name>Concurrent</name>
+    <synonym>
+      <key>en</key>
+      <value>Song hành</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="25ace5f5-f151-480e-ae25-bc1dc3ed0b14">
+    <name>Recommended</name>
+    <synonym>
+      <key>en</key>
+      <value>Khuyến khích</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

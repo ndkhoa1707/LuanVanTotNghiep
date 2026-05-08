@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="RefactoringWizard.LTK Refactoring wrapper">
+		<item key="width" value="730"/>
+		<item key="height" value="496"/>
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+	</section>
+</section>

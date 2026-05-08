@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="909432fd-d8e1-41c0-b4ab-fcfb4791f01f">
+  <producedTypes>
+    <refType typeId="9a675f4d-f7e1-4116-abbf-4863a8963360" valueTypeId="a2bfa84b-f7fb-4aea-8f6d-6a361ff473bd"/>
+    <listType typeId="f8875fc2-c3a7-4832-a2b3-a11bb21de1d7" valueTypeId="92bf855e-3dcf-492f-bf5c-107fb5fc8056"/>
+    <managerType typeId="818db2ff-1fff-46c0-9b94-06ce7e5bff42" valueTypeId="b6e2b780-5b97-4b49-a3fe-f533df833b98"/>
+  </producedTypes>
+  <name>ProgramStatuses</name>
+  <synonym>
+    <key>en</key>
+    <value>Trạng thái CTĐT</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="38ebcafe-b92e-44bb-bca5-749b597c683c">
+    <name>Draft</name>
+    <synonym>
+      <key>en</key>
+      <value>Soạn thảo</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="bd4b61a9-673a-44fc-b75c-c1ea7b8c5757">
+    <name>FacultyReview</name>
+    <synonym>
+      <key>en</key>
+      <value>Thẩm định cấp khoa</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="22e7d279-3dfd-4bcc-aef9-ec6770877089">
+    <name>InstitutionalReview</name>
+    <synonym>
+      <key>en</key>
+      <value>Thẩm định cấp trường</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="2b61a8a1-74c6-422f-8887-2b2bbcacda01">
+    <name>Approved</name>
+    <synonym>
+      <key>en</key>
+      <value>Đã duyệt</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="1d86dee8-15ed-44c3-9067-b26dd3720867">
+    <name>Issued</name>
+    <synonym>
+      <key>en</key>
+      <value>Đã ban hành</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="68cc2a1b-8af5-4f91-b687-6cf986f7b728">
+    <name>Expired</name>
+    <synonym>
+      <key>en</key>
+      <value>Hết hiệu lực</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

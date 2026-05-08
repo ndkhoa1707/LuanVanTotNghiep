@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="11e3e4fb-1e2c-491d-b53b-7da807f546ab">
+  <producedTypes>
+    <refType typeId="b130f55b-c437-4dcd-9985-9a661dfd29dc" valueTypeId="545d3af2-fb66-4b18-a40e-962fd68f549b"/>
+    <listType typeId="e5bfde12-bd24-4043-9581-07f3145a8d5a" valueTypeId="c8f9b430-f0b8-41de-9d04-a3f1176ba3bc"/>
+    <managerType typeId="2226137d-ecc3-41fd-be1b-9ac0993a614e" valueTypeId="4560fdf4-9fe1-4bf6-ac9d-2e1fe8de9f70"/>
+  </producedTypes>
+  <name>KnowledgeBlockTypes</name>
+  <synonym>
+    <key>en</key>
+    <value>Khối kiến thức</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="63773bc1-d9de-4f01-8d54-7761b27d563d">
+    <name>GeneralEducation</name>
+    <synonym>
+      <key>en</key>
+      <value>Đại cương</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="c99d45b5-788e-4930-adfd-aefb27f3c944">
+    <name>Foundation</name>
+    <synonym>
+      <key>en</key>
+      <value>Cơ sở ngành</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="08ef7917-365b-4436-9c9b-57e90aae4e90">
+    <name>Specialization</name>
+    <synonym>
+      <key>en</key>
+      <value>Chuyên ngành</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="79bac5f3-2835-410f-be63-01a51c740fbb">
+    <name>GraduationBlock</name>
+    <synonym>
+      <key>en</key>
+      <value>Tốt nghiệp</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2bd36b8f-a93a-494b-9e17-c3740860d8c9">
+  <producedTypes>
+    <objectType typeId="c347d692-b9c3-4964-84f8-c8a079f5e575" valueTypeId="d4bd6650-3c28-414c-97a0-fad48f83a535"/>
+    <refType typeId="d925c721-71a0-4343-981f-f3cee351383b" valueTypeId="fe78f8a0-3d41-4b00-84a6-5060194d7c91"/>
+    <selectionType typeId="a91294c8-f90d-4062-af7f-020b2cf5bb8d" valueTypeId="a9bac106-4e45-412f-a665-d1c12ba34e43"/>
+    <listType typeId="73630a73-0a89-4be3-afe4-f1ee4abfb687" valueTypeId="9c99df84-7b7d-48b8-b2a4-dac65651bedc"/>
+    <managerType typeId="ea70f5e4-c3a0-4d36-b5ba-9101129635ac" valueTypeId="afb72a60-f494-4fa3-9bc4-784c5e000690"/>
+  </producedTypes>
+  <name>CreatingCurriculum</name>
+  <synonym>
+    <key>en</key>
+    <value>Creating curriculum</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.CreatingCurriculum.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.CreatingCurriculum.Form.DocumentForm</defaultObjectForm>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="c779a2df-2624-410b-bc23-c5a0857532b9">
+    <name>Format</name>
+    <synonym>
+      <key>en</key>
+      <value>Format</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProgramFormats</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8cdce701-0192-44a4-af91-9651a601d7ce">
+    <name>Type</name>
+    <synonym>
+      <key>en</key>
+      <value>Type</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProgramTypes</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3baa63ef-8ea7-4286-9e12-54f56321f874">
+    <name>Priotity</name>
+    <synonym>
+      <key>en</key>
+      <value>Priotity</value>
+    </synonym>
+    <type>
+      <types>EnumRef.Priorities</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d432a933-f911-4dbb-accb-79dc5e79d91e">
+    <name>Customer</name>
+    <synonym>
+      <key>en</key>
+      <value>Customer</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Customers</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="afd8eadd-cc87-4b8a-b292-3056d5217112">
+    <name>Tutor</name>
+    <synonym>
+      <key>en</key>
+      <value>Tutor</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Employees</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="2a4a9703-e609-4464-8ed9-720ae1be38c7">
+    <name>DocumentForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Document form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="d4bf7c36-ad55-4272-b642-7be8a7c579ba">
+    <producedTypes>
+      <objectType typeId="aeafeb1f-6ef3-46aa-9ad1-9f016a19131b" valueTypeId="7c8c62a3-d4e9-46b9-b3f5-d16c921b9108"/>
+      <rowType typeId="6c34e433-a22b-4729-93b6-5e9112c3185f" valueTypeId="660dd71b-49db-4e51-8d47-3045c052d98b"/>
+    </producedTypes>
+    <name>Lessons</name>
+    <synonym>
+      <key>en</key>
+      <value>Lessons</value>
+    </synonym>
+    <attributes uuid="662722d2-4c8c-4129-a362-2f8557ab3c86">
+      <name>Lesson</name>
+      <synonym>
+        <key>en</key>
+        <value>Lesson</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0e9c2717-3377-476e-8e63-f6518923dce7">
+      <name>TheoryDuration</name>
+      <synonym>
+        <key>en</key>
+        <value>Theory duration</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cdd7d4d0-cacd-4a9e-a4f3-ba731d0c531b">
+      <name>PracticeDuration</name>
+      <synonym>
+        <key>en</key>
+        <value>Practice duration</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d8b719e1-b025-4d50-82f1-b2c4384f4313">
+      <name>PreparationMethod</name>
+      <synonym>
+        <key>en</key>
+        <value>Preparation method</value>
+      </synonym>
+      <type>
+        <types>EnumRef.PreparationMethods</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="eed44a27-33c2-49fb-a414-2274a74b38d3">
+      <name>ExistingLesson</name>
+      <synonym>
+        <key>en</key>
+        <value>Existing lesson</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Lessons</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="752d35fa-876f-4a2c-b320-880e2ee507b0">
+      <name>NewLesson</name>
+      <synonym>
+        <key>en</key>
+        <value>New lesson</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Lessons</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Configuration xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0f4a4ff6-a74d-4b5c-ad47-035eaae5a67f">
+  <name>Configuration</name>
+  <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="94bf3e5e-1531-4397-9748-774ac4d41eb2"/>
+  <containedObjects classId="9fcd25a0-4822-11d4-9414-008048da11f9" objectId="22fd0dc6-63fb-47aa-aeef-4c1b099f032c"/>
+  <containedObjects classId="e3687481-0a87-462c-a166-9f34594f9bba" objectId="6f6db847-c5d1-4e93-b2d7-7516c3c354f4"/>
+  <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="06fc9ff9-0525-4081-8cec-758161ad03a6"/>
+  <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="5cd4a4aa-bbaf-4ad3-afa5-8274c85d0c41"/>
+  <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="b570b62e-e6f5-4e39-a84c-a4246207eaf4"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="a87cab5e-f2a6-4580-a6fe-b4f9056b0a01"/>
+  <configurationExtensionCompatibilityMode>8.3.24</configurationExtensionCompatibilityMode>
+  <defaultRunMode>ManagedApplication</defaultRunMode>
+  <usePurposes>PersonalComputer</usePurposes>
+  <usedMobileApplicationFunctionalities>
+    <functionality>
+      <use>true</use>
+    </functionality>
+    <functionality>
+      <functionality>OSBackup</functionality>
+      <use>true</use>
+    </functionality>
+  </usedMobileApplicationFunctionalities>
+  <defaultLanguage>Language.English</defaultLanguage>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <objectAutonumerationMode>NotAutoFree</objectAutonumerationMode>
+  <modalityUseMode>DontUse</modalityUseMode>
+  <synchronousPlatformExtensionAndAddInCallUseMode>DontUse</synchronousPlatformExtensionAndAddInCallUseMode>
+  <compatibilityMode>8.3.24</compatibilityMode>
+  <languages uuid="bccf14c4-6cc7-43f2-b33d-3c860b7a97b4">
+    <name>English</name>
+    <synonym>
+      <key>en</key>
+      <value>English</value>
+    </synonym>
+    <languageCode>en</languageCode>
+  </languages>
+  <constants>Constant.CurrentAcademicYear</constants>
+  <constants>Constant.MinimumTotalCredits</constants>
+  <constants>Constant.MaximumTotalCredits</constants>
+  <constants>Constant.MinGeneralEducationCredits</constants>
+  <constants>Constant.MinFoundationCredits</constants>
+  <constants>Constant.ApplicableCircular</constants>
+  <constants>Constant.SystemVersion</constants>
+  <catalogs>Catalog.Faculties</catalogs>
+  <catalogs>Catalog.Departments</catalogs>
+  <catalogs>Catalog.Lecturers</catalogs>
+  <catalogs>Catalog.Majors</catalogs>
+  <catalogs>Catalog.ProgramModes</catalogs>
+  <catalogs>Catalog.TrainingPrograms</catalogs>
+  <catalogs>Catalog.ProgramFrameworks</catalogs>
+  <catalogs>Catalog.KnowledgeBlocks</catalogs>
+  <catalogs>Catalog.Courses</catalogs>
+  <catalogs>Catalog.AssessmentMethods</catalogs>
+  <catalogs>Catalog.AcademicYears</catalogs>
+  <enums>Enum.ProgramStatuses</enums>
+  <enums>Enum.CourseTypes</enums>
+  <enums>Enum.KnowledgeBlockTypes</enums>
+  <enums>Enum.GradingSystems</enums>
+  <enums>Enum.ApprovalLevel</enums>
+  <enums>Enum.Genders</enums>
+  <enums>Enum.UserRoles</enums>
+  <enums>Enum.AcademicTitles</enums>
+  <enums>Enum.DegreeLevels</enums>
+  <enums>Enum.PrereqType</enums>
+  <enums>Enum.AssessmentTypes</enums>
+</mdclass:Configuration>

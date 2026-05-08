@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8b369394-b602-46ca-a40f-ee0e1dd38b94">
+  <producedTypes>
+    <objectType typeId="7d7cd1e0-c814-4c83-8297-f4cbc0462f29" valueTypeId="31611334-6ca5-4469-b8e9-1e49b17bbc02"/>
+    <refType typeId="c6d4c4cb-bd4a-4cef-953c-5a9ed8829ab2" valueTypeId="c9efede9-965c-44ad-9598-d4c49db15a09"/>
+    <selectionType typeId="aba161dc-44d1-4846-b53b-41b724c5ceb3" valueTypeId="840789b3-52a6-4c10-afc5-a16eb2e2a33f"/>
+    <listType typeId="20670a5e-da45-4c39-8536-e1ca130ff52c" valueTypeId="138fe3f2-706e-4ffa-ae52-ed5da7948763"/>
+    <managerType typeId="bac2b657-30ac-4547-b3b2-0e5f2d8cecb8" valueTypeId="864a410a-92b8-4069-b238-b272be18f5d6"/>
+  </producedTypes>
+  <name>ConductingTraining</name>
+  <synonym>
+    <key>en</key>
+    <value>Conducting training</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ConductingTraining.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="4439bfcf-5430-4e8f-83bb-11c086bfd044">
+    <name>Status</name>
+    <synonym>
+      <key>en</key>
+      <value>Status</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.TrainingStatuses</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7b8e5e90-834c-434d-a63c-b451ad3f671b">
+    <name>Recipient</name>
+    <synonym>
+      <key>en</key>
+      <value>Recipient</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Partners</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4b12c341-b57e-404d-8802-263061dee224">
+    <name>ProgramType</name>
+    <synonym>
+      <key>en</key>
+      <value>Program type</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProgramTypes</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f9f823d5-6d69-460d-89fd-b6e0ec029815">
+    <name>Location</name>
+    <synonym>
+      <key>en</key>
+      <value>Location</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.TrainingLocations</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fd5488de-aa5e-4d7a-805d-dfaa50beac1f">
+    <name>Venue</name>
+    <synonym>
+      <key>en</key>
+      <value>Venue</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Venues</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="03779890-6946-4df3-ac06-efc0be249377">
+    <producedTypes>
+      <objectType typeId="36e6debf-df5f-4173-a689-3ffa4f2614ba" valueTypeId="2501e4fe-7945-4916-9252-36882685bae2"/>
+      <rowType typeId="b38fab74-e121-4d4a-bdb2-c703b2b0d2d9" valueTypeId="ba142bd2-01b0-42ec-9bc5-63125ce3e378"/>
+    </producedTypes>
+    <name>ProgramsUsed</name>
+    <synonym>
+      <key>en</key>
+      <value>Programs used</value>
+    </synonym>
+    <attributes uuid="ca9685f6-d807-4a92-aed0-c7750d2a2e83">
+      <name>DateFrom</name>
+      <synonym>
+        <key>en</key>
+        <value>Date from</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="65eea3f6-96a6-400c-a0d0-cd898fe18e5f">
+      <name>DateTo</name>
+      <synonym>
+        <key>en</key>
+        <value>Date to</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

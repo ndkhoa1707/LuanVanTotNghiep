@@ -1,0 +1,81 @@
+!SESSION 2025-11-24 16:12:53.474 -----------------------------------------------
+eclipse.buildId=2024.1.2.50
+java.version=17.0.13
+java.vendor=BellSoft
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\Asus\AppData\Local\1C\1cedtstart\projects\Demo_EDT
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2025-11-24 16:13:06.654
+!MESSAGE java.vm.name=OpenJDK 64-Bit Server VM
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2025-11-24 16:13:06.674
+!MESSAGE java.vm.info=mixed mode, sharing
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2025-11-24 16:13:08.097
+!MESSAGE Trying to re-establish all non-closed SSH connecton...
+
+!ENTRY com.e1c.g5.v8.dt.platform.standaloneserver.wst.core 1 0 2025-11-24 16:13:09.959
+!MESSAGE Starting one-time migration process: Switching to debug server embedded in standalone server.
+
+!ENTRY org.eclipse.ui.navigator 4 0 2025-11-24 16:13:33.728
+!MESSAGE An extension already exists with id "org.eclipse.wst.server.ui.ServersView.content.root".
+
+!ENTRY org.eclipse.ui.navigator.resources 4 0 2025-11-24 16:13:38.512
+!MESSAGE Required filter org.eclipse.ui.navigator.resources.filters.workingSet is not present. Working set support will not function correctly.
+
+!ENTRY org.eclipse.ui.navigator.resources 4 0 2025-11-24 16:13:38.514
+!MESSAGE 
+
+!ENTRY com._1c.g5.v8.dt.md.ui 1 0 2025-11-24 16:14:03.000
+!MESSAGE New configuration project Configuration is being created
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2025-11-24 16:14:03.082
+!MESSAGE Project context is being started: Configuration (NEW_PROJECT)
+
+!ENTRY com._1c.g5.v8.dt.lifecycle 1 0 2025-11-24 16:14:05.308
+!MESSAGE Starting phase LINKING of context ProjectContext: Configuration
+
+!ENTRY com._1c.g5.v8.dt.lifecycle 1 0 2025-11-24 16:14:05.309
+!MESSAGE Starting phase INITIALIZATION of context ProjectContext: Configuration
+
+!ENTRY com._1c.g5.v8.dt.lifecycle 1 0 2025-11-24 16:14:06.006
+!MESSAGE Starting phase CHECKING of context ProjectContext: Configuration
+
+!ENTRY com._1c.g5.v8.dt.lifecycle 1 0 2025-11-24 16:14:06.018
+!MESSAGE Starting phase STORAGE_INITIALIZATION of context ProjectContext: Configuration
+
+!ENTRY com._1c.g5.v8.dt.lifecycle 1 0 2025-11-24 16:14:06.651
+!MESSAGE Starting phase RESOURCE_LOADING of context ProjectContext: Configuration
+
+!ENTRY com._1c.g5.v8.dt.lifecycle 1 0 2025-11-24 16:14:06.980
+!MESSAGE Starting phase POST_RESOURCE_LOADING of context ProjectContext: Configuration
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2025-11-24 16:14:07.268
+!MESSAGE Project context is started: Configuration
+
+!ENTRY org.eclipse.equinox.security 1 0 2025-11-24 16:15:08.792
+!MESSAGE New keyring password generated. 
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2025-11-24 16:15:09.199
+!MESSAGE SSH connecton with infobase InfoBase1 established.
+
+!ENTRY com._1c.g5.v8.dt.ui 1 0 2025-11-24 16:46:07.446
+!MESSAGE EDT is being closed
+
+!ENTRY com._1c.g5.v8.dt.ui 1 0 2025-11-24 16:46:07.454
+!MESSAGE Existing project (on close): Configuration, open: true
+
+!ENTRY org.eclipse.e4.ui.workbench.swt 1 0 2025-11-24 16:46:09.651
+!MESSAGE Saving dialog settings
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2025-11-24 16:46:10.406
+!MESSAGE Project context is being stopped: Configuration (IDE_SHUTDOWN)-(com._1c.g5.v8.dt.core.platform.workspace-project)
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2025-11-24 16:46:11.410
+!MESSAGE Disconnecting project Configuration and infobase InfoBase1 configuration
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2025-11-24 16:46:11.644
+!MESSAGE Project context is stopped: Configuration
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2025-11-24 16:46:12.587
+!MESSAGE All known SSH connectons released

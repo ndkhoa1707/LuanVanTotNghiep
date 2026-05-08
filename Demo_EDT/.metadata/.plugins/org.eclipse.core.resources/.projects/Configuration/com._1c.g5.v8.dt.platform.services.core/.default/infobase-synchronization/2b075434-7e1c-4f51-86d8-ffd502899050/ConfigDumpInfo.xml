@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.18">
+	<ConfigVersions>
+		<Metadata name="Configuration.Configuration" id="771cff3b-45e4-4191-9b4f-48eb793d0b80" configVersion="c9e5b6de2705bf4e8656d1ab55312d4400000000"/>
+		<Metadata name="Configuration.Configuration.CommandInterface" id="eef7217f-2d52-4768-8301-c628de2dbdc5.a" configVersion="3a715660de088149a077f7c877b3759d00000000"/>
+		<Metadata name="Configuration.Configuration.ExternalConnectionModule" id="eef7217f-2d52-4768-8301-c628de2dbdc5.5" configVersion="bf1036650f130749b7948982eb87fd3700000000"/>
+		<Metadata name="Configuration.Configuration.MainSectionCommandInterface" id="eef7217f-2d52-4768-8301-c628de2dbdc5.9" configVersion="ab42fb0e5ebc0f419148ccd57ed7b62600000000"/>
+		<Metadata name="Configuration.Configuration.ManagedApplicationModule" id="eef7217f-2d52-4768-8301-c628de2dbdc5.6" configVersion="8ab2f65914cef949a1f59c060cd31a7900000000"/>
+		<Metadata name="Configuration.Configuration.SessionModule" id="eef7217f-2d52-4768-8301-c628de2dbdc5.7" configVersion="68506d61701e2c48976401e996a4555600000000"/>
+		<Metadata name="Language.English" id="b4c5bd03-94e0-4b6e-ae2e-d1fef8f439dd" configVersion="31aa6575cb4cb244b4073d19daa5a56000000000"/>
+	</ConfigVersions>
+</ConfigDumpInfo>

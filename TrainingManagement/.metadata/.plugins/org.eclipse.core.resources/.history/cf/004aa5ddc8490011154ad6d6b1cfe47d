@@ -1,0 +1,71 @@
+#Region Public
+
+Function CurriculumData(DocumentRef) Export
+	Result = New Structure;
+
+	Query = New Query;
+	Query.Text = 
+	"SELECT
+	|	CreatingCurriculum.Ref AS Ref,
+	|	CreatingCurriculum.Format AS Format,
+	|	CreatingCurriculum.Type AS Type,
+	|	CreatingCurriculum.CurriculumDescription AS CurriculumDescription,
+	|	CreatingCurriculum.Lessons.(
+	|		TheoryDuration,
+	|		PracticeDuration,
+	|		ExistingLesson,
+	|		NewLesson),
+	|	CreatingCurriculum.RequestType
+	|FROM
+	|	Document.LessonCreationRequest AS CreatingCurriculum
+	|WHERE
+	|	CreatingCurriculum.Ref = &Ref";
+	
+	Query.SetParameter("Ref", DocumentRef);
+	
+	QueryResult = Query.Execute();   
+	
+	For Each Column In QueryResult.Columns Do
+		Result.Insert(Column.Name);
+	EndDo;
+	
+	Selection = QueryResult.Select();
+	
+	While Selection.Next() Do 
+		FillPropertyValues(Result, Selection,, "Lessons");
+		Result.Lessons = Selection.Lessons.Unload();
+	EndDo;
+	
+	Return Result;
+
+EndFunction
+
+Procedure SetNextStatus(Document, Description, AttributesToUpdate) Export
+
+	LessonCreationRequestDocument = Document.GetObject();
+	If LessonCreationRequestDocument <> Undefined Then
+		If LessonCreationRequestDocument.RequestType = Enums.LessonRequestTypes.Curriculum Then
+			//RequestType = Curriculum	
+			LessonRow = LessonCreationRequestDocument.Lessons.Find(Description, "Description");	
+		Else //RequestType = Single lesson
+			LessonRow = LessonCreationRequestDocument.Lessons.Get(0);
+		EndIf;
+		
+		CurrentStatus = LessonRow.State;
+		NextStatus = WorkWithLessonsClientServer.NextStatus(CurrentStatus);
+		LessonRow.State = NextStatus;
+		
+		If AttributesToUpdate.Attribute = "NewLesson" Then
+			LessonRow.NewLesson = AttributesToUpdate.NewLesson;
+		EndIf;
+		
+		If AttributesToUpdate.Attribute = "Responsible" Then
+			LessonRow.Responsible = AttributesToUpdate.Responsible;
+		EndIf;
+		
+		LessonCreationRequestDocument.Write(DocumentWriteMode.Posting);
+	EndIf;
+EndProcedure
+
+#EndRegion
+

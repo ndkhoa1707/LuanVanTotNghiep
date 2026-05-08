@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d042c05f-3344-48b6-a91e-c55463a705c6">
+  <producedTypes>
+    <selectionType typeId="74c6dcd3-5622-4949-a568-138d45392a2b" valueTypeId="b146695a-5a74-41b3-b22c-f214f0988516"/>
+    <listType typeId="8e108290-f682-4dd5-ad16-ad7e329e4448" valueTypeId="87923b21-04ed-41e1-8dc1-9f39d6455f8d"/>
+    <managerType typeId="75c42d7e-695c-48d8-a376-790f372ef116" valueTypeId="8f786d2c-f86c-488c-8a03-7046a02a77ce"/>
+    <recordSetType typeId="9e752e8f-371d-45b0-858f-10cb3b115928" valueTypeId="575ddd15-9988-4ca3-91ac-1e791b1c4155"/>
+    <recordKeyType typeId="db06f6e0-0a88-453b-9668-793b0f5dcb9f" valueTypeId="de02a2dd-bc47-4b0d-9b6a-2e926ed05ebf"/>
+    <recordType typeId="1b941875-8f2e-4fce-8362-c80ff2a2a4d8" valueTypeId="0cfe3b25-d93a-45e7-bef7-cabffd6d2b61"/>
+    <recordManagerType typeId="91220b1b-57a1-4256-8fbc-ebd0f908fc18" valueTypeId="e9e9dd33-f231-4b00-87ab-e451c5e4270c"/>
+  </producedTypes>
+  <name>ClassStatuses</name>
+  <synonym>
+    <key>en</key>
+    <value>Class statuses</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="07d29245-5c77-409d-9be0-2168d183a112">
+    <name>Status</name>
+    <synonym>
+      <key>en</key>
+      <value>Status</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.TrainingStatuses</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="812c27ce-ceb1-4b20-8e7c-e479faa45630">
+    <name>Class</name>
+    <synonym>
+      <key>en</key>
+      <value>Class</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Classes</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

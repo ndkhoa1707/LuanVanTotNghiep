@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com._1c.g5.v8.dt.launching.core.RuntimeClient">
+    <stringAttribute key="com._1c.g5.v8.dt.debug.core.ATTR_APPLICATION_ID" value="35db2efe-58f1-4c39-82b5-d015228f1f98"/>
+    <booleanAttribute key="com._1c.g5.v8.dt.debug.core.ATTR_APPLICATION_USE_DEFAULT" value="false"/>
+    <stringAttribute key="com._1c.g5.v8.dt.debug.core.ATTR_PROJECT_NAME" value="TrainingAndDevelopmentManagement"/>
+    <booleanAttribute key="com._1c.g5.v8.dt.debug.core.ATTR_RUNTIME_INSTALLATION_USE_AUTO" value="true"/>
+    <stringAttribute key="com._1c.g5.v8.dt.debug.core.ATTR_USE_LOCAL_DEBUG_SERVER" value="AUTO"/>
+    <intAttribute key="com._1c.g5.v8.dt.launching.core.ATTR_CALL_DELAY" value="145"/>
+    <booleanAttribute key="com._1c.g5.v8.dt.launching.core.ATTR_CLIENT_AUTO_SELECT" value="false"/>
+    <stringAttribute key="com._1c.g5.v8.dt.launching.core.ATTR_CLIENT_TYPE" value="com._1c.g5.v8.dt.platform.services.core.componentTypes.ThinClient"/>
+    <intAttribute key="com._1c.g5.v8.dt.launching.core.ATTR_DATA_RECEIVING_DELAY" value="15"/>
+    <intAttribute key="com._1c.g5.v8.dt.launching.core.ATTR_DATA_SENDING_DELAY" value="45"/>
+    <booleanAttribute key="com._1c.g5.v8.dt.launching.core.ATTR_DO_NOT_DISPLAY_WARNINGS" value="true"/>
+    <booleanAttribute key="com._1c.g5.v8.dt.launching.core.ATTR_LAUNCH_USER_USE_INFOBASE_ACCESS" value="true"/>
+    <booleanAttribute key="com._1c.g5.v8.dt.launching.core.ATTR_SHOW_ALL_FUNCTIONS" value="true"/>
+    <booleanAttribute key="com._1c.g5.v8.dt.launching.core.ATTR_SHOW_PERFORMANCE" value="true"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/TrainingAndDevelopmentManagement"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="4"/>
+    </listAttribute>
+    <stringAttribute key="org.eclipse.debug.ui.ATTR_CONSOLE_ENCODING" value="IBM437"/>
+    <stringAttribute key="process_factory_id" value="com._1c.g5.v8.dt.debug.core.RuntimeProcessFactory"/>
+</launchConfiguration>

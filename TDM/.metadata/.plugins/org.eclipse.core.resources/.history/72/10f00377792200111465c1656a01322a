@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6bc354c2-cb84-4874-9ab9-65d10cf47c2b">
+  <producedTypes>
+    <objectType typeId="12616876-5665-4546-92d6-cf3b67f0453d" valueTypeId="7940652f-f33e-40eb-bb65-a20f6ff7f087"/>
+    <managerType typeId="cb91a9d8-a239-43d0-98b7-a8a4eef150ef" valueTypeId="11506a75-5282-4508-a5dd-a1c434d7d2b2"/>
+  </producedTypes>
+  <name>TeacherWorkspace</name>
+  <synonym>
+    <key>en</key>
+    <value>Teacher workspace</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.TeacherWorkspace.Form.Form</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <forms uuid="137ad774-2854-4331-bb94-38a899bea466">
+    <name>Form</name>
+    <synonym>
+      <key>en</key>
+      <value>Form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1033bcc4-d385-401d-b049-fd46195638f7">
+  <producedTypes>
+    <objectType typeId="163e1edf-8239-4526-babc-2228d223f742" valueTypeId="2ecd228d-8aa9-4615-9db5-fbe95f8866d6"/>
+    <managerType typeId="9013a0ec-3f60-4902-b06a-973c34a6c9fa" valueTypeId="55e92e61-491d-455f-af77-1fa11e09d9d4"/>
+  </producedTypes>
+  <name>TeacherWorkspace</name>
+  <synonym>
+    <key>en</key>
+    <value>Teacher workspace</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+</mdclass:DataProcessor>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2260bd1d-5025-4b1c-b4ea-a0d773d4bff7">
+  <name>Training</name>
+  <synonym>
+    <key>en</key>
+    <value>Training</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Document.Curriculum</content>
+  <content>Catalog.Partners</content>
+  <content>Catalog.ProgramFormats</content>
+  <content>Catalog.ProgramTypes</content>
+  <content>Catalog.TrainingLocations</content>
+  <content>Catalog.TrainingStatuses</content>
+  <content>Catalog.Venues</content>
+  <content>Catalog.Employees</content>
+  <content>Catalog.Customers</content>
+  <content>Catalog.ContactPersons</content>
+  <content>Catalog.Curriculums</content>
+  <content>Catalog.Lessons</content>
+  <content>Catalog.Classes</content>
+  <content>Document.ConductingTraining</content>
+  <content>Document.CreatingCurriculum</content>
+  <content>Enum.PreparationMethods</content>
+  <content>Role.ReadCreatingCurriculum</content>
+  <content>Role.AddEditCreatingCurriculum</content>
+  <content>Role.SubsystemTraining</content>
+  <content>Enum.Priorities</content>
+  <content>Enum.ClassStatuses</content>
+</mdclass:Subsystem>

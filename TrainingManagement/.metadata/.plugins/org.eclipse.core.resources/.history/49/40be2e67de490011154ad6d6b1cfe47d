@@ -1,0 +1,10 @@
+
+&AtClient
+Procedure AfterWrite(WriteParameters)
+	
+    NotifyParameters = New Structure;
+    NotifyParameters.Insert("Ref", Object.Ref);
+    
+    Notify("Write_Lesson", NotifyParameters, Object.Ref);  
+	
+EndProcedure
