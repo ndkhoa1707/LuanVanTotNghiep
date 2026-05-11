@@ -20,6 +20,7 @@ Procedure RunAll() Export
 	FillDecisions();
 	FillTrainingPrograms();
 	FillDocuments();
+	FillBusinessProcessAndTasks();
 EndProcedure
 
 #EndRegion
@@ -291,13 +292,27 @@ EndFunction
 
 Procedure FillDecisions() Export
 	GD = Catalogs.Lecturers.FindByCode("GV0001");
-	CreateDecision(
-		"QD-1234",
+	PhoGD = Catalogs.Lecturers.FindByCode("GV0002");
+
+	// 1. QĐ ban hành CTĐT CNTT
+	CreateDecision("QD-1234",
 		"Quyết định ban hành CTĐT Cử nhân Công nghệ thông tin K2024",
-		Date(2024, 6, 15),
-		GD,
-		Date(2024, 9, 1)
-	);
+		Date(2024, 6, 15), GD, Date(2024, 9, 1));
+
+	// 2. QĐ ban hành CTĐT ATTT
+	CreateDecision("QD-1235",
+		"Quyết định ban hành CTĐT Cử nhân An toàn thông tin K2024",
+		Date(2024, 7, 20), GD, Date(2024, 9, 1));
+
+	// 3. QĐ sửa đổi CTĐT CNTT (Minor)
+	CreateDecision("QD-1502",
+		"Quyết định sửa đổi nhỏ CTĐT Cử nhân CNTT (đổi tên 2 HP tự chọn)",
+		Date(2025, 3, 10), PhoGD, Date(2025, 3, 15));
+
+	// 4. QĐ ngừng tuyển sinh CTĐT cũ
+	CreateDecision("QD-2001",
+		"Quyết định ngừng tuyển sinh CTĐT CNTT phiên bản 2018 (đã thay bằng K2024)",
+		Date(2024, 8, 1), GD, Date(2024, 9, 1));
 EndProcedure
 
 Function CreateDecision(Code, Description, IssueDate, Signer, EffectiveDate)
@@ -520,5 +535,71 @@ Function CreateProgramAmendment(DocDate, CTDT, AmendType, Summary, EffDate, SupD
 	NewDoc.Write(DocumentWriteMode.Posting);
 	Return NewDoc.Ref;
 EndFunction
+
+#EndRegion
+
+#Region BusinessProcessAndTasks
+
+// Tạo 1 instance BusinessProcess + 4 Task tương ứng 4 bước workflow
+// Phê duyệt CTĐT (T1→T2→T3→T4)
+// Lưu ý: Route map chưa vẽ → Task không tự sinh, code này tạo Task thủ công
+Procedure FillBusinessProcessAndTasks() Export
+	// Tạo BusinessProcess instance
+	BP = CreateBusinessProcess(Date(2024, 1, 15));
+
+	// Tạo 4 Task instances tương ứng 4 bước
+	GV_Proposer = Catalogs.Lecturers.FindByCode("GV0010");      // GV Khoa CNTT1
+	GV_HeadDept = Catalogs.Lecturers.FindByCode("GV0013");      // PGS.TS Phạm Minh Dũng (Trưởng BM TTNT)
+	GV_PDT      = Catalogs.Lecturers.FindByCode("GV0002");      // PGĐ Phòng Đào tạo
+	GV_GD       = Catalogs.Lecturers.FindByCode("GV0001");      // Giám đốc
+
+	CreateTask(BP, Date(2024, 1, 15),
+		"T1 - Soạn đề xuất CTĐT (Cử nhân CNTT K2024)",
+		GV_Proposer, True);
+
+	CreateTask(BP, Date(2024, 3, 10),
+		"T2 - Họp HĐKH Khoa CNTT1 phê duyệt sơ bộ",
+		GV_HeadDept, True);
+
+	CreateTask(BP, Date(2024, 5, 20),
+		"T3 - Trình HĐKHĐT Trường thẩm định",
+		GV_PDT, True);
+
+	CreateTask(BP, Date(2024, 6, 15),
+		"T4 - Trình Giám đốc ký QĐ ban hành",
+		GV_GD, True);
+EndProcedure
+
+Function CreateBusinessProcess(BPDate)
+	NewBP = BusinessProcesses.ProgramApprovalProcess.CreateBusinessProcess();
+	NewBP.Date = BPDate;
+	NewBP.Write();
+	Return NewBP.Ref;
+EndFunction
+
+Function CreateTask(BPRef, TaskDate, Description, Performer, Completed)
+	NewTask = Tasks.ProgramApprovalTasks.CreateTask();
+	NewTask.Date = TaskDate;
+	NewTask.Description = Description;
+	NewTask.Performer = Performer;
+	NewTask.BusinessProcess = BPRef;
+	NewTask.Completed = Completed;
+	NewTask.Write();
+	Return NewTask.Ref;
+EndFunction
+
+#EndRegion
+
+#Region MoreSampleDocuments
+
+// Procedure phụ tạo thêm ProgramProposal cho ngành khác (ATTT)
+// Có thể gọi riêng để demo workflow song song
+Procedure FillExtraProposals() Export
+	CTDT_ATTT = Catalogs.TrainingPrograms.FindByCode("CT-ATTT-2024");
+	If Not CTDT_ATTT.IsEmpty() Then
+		Return; // chưa có CTĐT này thì bỏ qua
+	EndIf;
+	// Có thể bổ sung sau khi có CTĐT ATTT
+EndProcedure
 
 #EndRegion
