@@ -11,17 +11,17 @@
 #Region PublicAPI
 
 Procedure RunAll() Export
-	FillConstants();
-	FillAcademicYears();
-	FillKnowledgeBlocks();
-	FillFaculties();
+	//FillConstants();
+	//FillAcademicYears();
+	//FillKnowledgeBlocks();
+	//FillFaculties();
 	FillLecturers();
-	FillMajors();
-	FillCourses();
-	FillDecisions();
-	FillTrainingPrograms();
-	FillDocuments();
-	FillBusinessProcessAndTasks();
+	//FillMajors();
+	//FillCourses();
+	//FillDecisions();
+	//FillTrainingPrograms();
+	//FillDocuments();
+	//FillBusinessProcessAndTasks();
 EndProcedure
 
 #EndRegion
@@ -416,8 +416,12 @@ Procedure FillTrainingPrograms() Export
 EndProcedure
 
 Procedure AddCourseListRow(Program, CourseCode, KnowledgeBlock, CourseType, Semester, Credits)
+	CourseRef = Catalogs.Courses.FindByCode(CourseCode);
+	If CourseRef.IsEmpty() Then
+		Return; // skip nếu chưa có HP
+	EndIf;
 	NewRow = Program.CourseList.Add();
-	NewRow.Course = CourseCode;
+	NewRow.Course = CourseRef;
 	NewRow.KnowledgeBlock = KnowledgeBlock;
 	NewRow.CourseType = CourseType;
 	NewRow.SuggestedSemester = Semester;
