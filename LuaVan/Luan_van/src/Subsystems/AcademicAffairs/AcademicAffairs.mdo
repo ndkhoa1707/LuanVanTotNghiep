@@ -7,4 +7,5 @@
   </synonym>
   <includeInCommandInterface>true</includeInCommandInterface>
   <content>Catalog.Decisions</content>
+  <content>DataProcessor.FillSampleData</content>
 </mdclass:Subsystem>

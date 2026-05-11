@@ -19,6 +19,7 @@ Procedure RunAll() Export
 	FillCourses();
 	FillDecisions();
 	FillTrainingPrograms();
+	FillDocuments();
 EndProcedure
 
 #EndRegion
@@ -398,5 +399,100 @@ Procedure AddCourseListRow(Program, CourseCode, KnowledgeBlock, CourseType, Seme
 	NewRow.Credits = Credits;
 	NewRow.GroupCode = "";
 EndProcedure
+
+#EndRegion
+
+#Region Documents
+
+// Tạo + Post 5 Documents mẫu mô phỏng vòng đời CTĐT CT-IT-2024:
+//   1. ProgramProposal — Khoa CNTT1 đề xuất
+//   2. ProgramApproval (FacultyCouncil) — HĐKH Khoa duyệt
+//   3. ProgramApproval (InstitutionalCouncil) — HĐKHĐT Trường duyệt
+//   4. ProgramApproval (Issued) — Ban hành QĐ
+//   5. ProgramAmendment (AnnualReview) — Rà soát năm 2025-2026
+Procedure FillDocuments() Export
+	CTDT = Catalogs.TrainingPrograms.FindByCode("CT-IT-2024");
+	If CTDT.IsEmpty() Then
+		Return;
+	EndIf;
+
+	CNTT1 = Catalogs.Faculties.FindByCode("CNTT1");
+	GD = Catalogs.Lecturers.FindByCode("GV0001");
+	Proposer = Catalogs.Lecturers.FindByCode("GV0010");
+	Decision = Catalogs.Decisions.FindByCode("QD-1234");
+	Year2526 = Catalogs.AcademicYears.FindByCode("2025-2026");
+
+	// 1. ProgramProposal
+	Proposal = CreateProgramProposal(Date(2024, 1, 15), CNTT1, Proposer, CTDT,
+		"Đề xuất ban hành CTĐT Cử nhân Công nghệ Thông tin K2024 theo TT17/2021");
+
+	// 2. ProgramApproval cấp Khoa
+	CreateProgramApproval(Date(2024, 3, 10), CTDT, Enums.ApprovalLevel.FacultyCouncil,
+		Proposal, "Phiên họp số 03/HĐKH-CNTT1 ngày 10/03/2024",
+		Enums.ApprovalDecision.Approved, "GS.TS. Từ Minh Phương, PGS.TS. Đặng Hoài Bắc", Undefined);
+
+	// 3. ProgramApproval cấp Trường
+	CreateProgramApproval(Date(2024, 5, 20), CTDT, Enums.ApprovalLevel.InstitutionalCouncil,
+		Undefined, "Phiên họp số 02/HĐKHĐT-PTIT ngày 20/05/2024",
+		Enums.ApprovalDecision.Approved, "GS.TS. Từ Minh Phương (Chủ tịch HĐKHĐT)", Undefined);
+
+	// 4. ProgramApproval Ban hành
+	CreateProgramApproval(Date(2024, 6, 15), CTDT, Enums.ApprovalLevel.Issued,
+		Undefined, "QĐ-1234/QĐ-HV ngày 15/06/2024",
+		Enums.ApprovalDecision.Approved, "GS.TS. Từ Minh Phương (Giám đốc)", Decision);
+
+	// 5. ProgramAmendment - Rà soát hằng năm 2025-2026
+	CreateProgramAmendment(Date(2025, 12, 15), CTDT, Enums.AmendmentType.AnnualReview,
+		"Rà soát hằng năm CTĐT CNTT 2024 cho năm học 2025-2026 - không thay đổi nội dung",
+		Date(2026, 1, 1), Undefined, Year2526,
+		"Kết quả rà soát: Đạt yêu cầu. Tỷ lệ sinh viên đăng ký 95%. GPA trung bình 2.8.");
+EndProcedure
+
+Function CreateProgramProposal(DocDate, Faculty, Proposer, CTDT, Summary)
+	NewDoc = Documents.ProgramProposal.CreateDocument();
+	NewDoc.Date = DocDate;
+	NewDoc.ProposingFaculty = Faculty;
+	NewDoc.Proposer = Proposer;
+	NewDoc.TargetProgram = CTDT;
+	NewDoc.ProposalSummary = Summary;
+	NewDoc.Write(DocumentWriteMode.Posting);
+	Return NewDoc.Ref;
+EndFunction
+
+Function CreateProgramApproval(DocDate, CTDT, Level, BasedOn, Session, Result, Signers, IssuedDecision)
+	NewDoc = Documents.ProgramApproval.CreateDocument();
+	NewDoc.Date = DocDate;
+	NewDoc.TargetProgram = CTDT;
+	NewDoc.ApprovalLevel = Level;
+	If BasedOn <> Undefined Then
+		NewDoc.BasedOnProposal = BasedOn;
+	EndIf;
+	NewDoc.CouncilSession = Session;
+	NewDoc.Decision = Result;
+	NewDoc.SignerSummary = Signers;
+	If IssuedDecision <> Undefined Then
+		NewDoc.IssuanceDecision = IssuedDecision;
+	EndIf;
+	NewDoc.Write(DocumentWriteMode.Posting);
+	Return NewDoc.Ref;
+EndFunction
+
+Function CreateProgramAmendment(DocDate, CTDT, AmendType, Summary, EffDate, SupDec, RevYear, RevSummary)
+	NewDoc = Documents.ProgramAmendment.CreateDocument();
+	NewDoc.Date = DocDate;
+	NewDoc.TargetProgram = CTDT;
+	NewDoc.AmendmentType = AmendType;
+	NewDoc.AmendmentSummary = Summary;
+	NewDoc.EffectiveDate = EffDate;
+	If SupDec <> Undefined Then
+		NewDoc.SupportingDecision = SupDec;
+	EndIf;
+	If RevYear <> Undefined Then
+		NewDoc.ReviewYear = RevYear;
+	EndIf;
+	NewDoc.ReviewSummary = RevSummary;
+	NewDoc.Write(DocumentWriteMode.Posting);
+	Return NewDoc.Ref;
+EndFunction
 
 #EndRegion

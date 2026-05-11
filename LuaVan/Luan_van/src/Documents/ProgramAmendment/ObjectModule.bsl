@@ -1,15 +1,15 @@
 ////////////////////////////////////////////////////////////////////////////////
-// ProgramApproval - Module đối tượng
-// Posting: Cập nhật trạng thái CTĐT dựa trên ApprovalLevel + Decision
+// ProgramAmendment - Module đối tượng
+// Posting: Cập nhật trạng thái CTĐT dựa trên AmendmentType
 ////////////////////////////////////////////////////////////////////////////////
 
 Procedure Posting(Cancel, PostingMode)
 	// Xác định trạng thái mới
-	NewStatus = Enums.ProgramStatuses.UnderReview;
-	If ApprovalLevel = Enums.ApprovalLevel.Issued Then
-		NewStatus = Enums.ProgramStatuses.Issued;
-	ElsIf Decision = Enums.ApprovalDecision.Approved Then
-		NewStatus = Enums.ProgramStatuses.Approved;
+	NewStatus = Enums.ProgramStatuses.Issued;
+	If AmendmentType = Enums.AmendmentType.Deactivation Then
+		NewStatus = Enums.ProgramStatuses.Deactivated;
+	ElsIf AmendmentType = Enums.AmendmentType.MajorAmendment Then
+		NewStatus = Enums.ProgramStatuses.UnderReview;
 	EndIf;
 
 	// Ghi ProgramValidity
@@ -17,18 +17,22 @@ Procedure Posting(Cancel, PostingMode)
 	Movement.Period = Date;
 	Movement.TrainingProgram = TargetProgram;
 	Movement.Status = NewStatus;
-	Movement.EffectiveDate = Date;
-	If Not IssuanceDecision.IsEmpty() Then
-		Movement.IssuanceDecision = IssuanceDecision;
-	EndIf;
+	Movement.EffectiveDate = ?(EffectiveDate = '00010101', Date, EffectiveDate);
 
 	// Ghi ApprovalLog
 	Movement = RegisterRecords.ApprovalLog.Add();
 	Movement.SourceDocument = Ref;
 	DefaultPerformer = Catalogs.Lecturers.FindByCode("GV0001");
 	Movement.Performer = ?(DefaultPerformer.IsEmpty(), Catalogs.Lecturers.EmptyRef(), DefaultPerformer);
-	Movement.Action = ?(Decision = Enums.ApprovalDecision.Approved, "Approve",
-		?(Decision = Enums.ApprovalDecision.RequiresRevision, "RequiresRevision", "Reject"));
+	If AmendmentType = Enums.AmendmentType.Deactivation Then
+		Movement.Action = "Deactivate";
+	ElsIf AmendmentType = Enums.AmendmentType.MajorAmendment Then
+		Movement.Action = "MajorAmend";
+	ElsIf AmendmentType = Enums.AmendmentType.MinorAmendment Then
+		Movement.Action = "MinorAmend";
+	Else
+		Movement.Action = "AnnualReview";
+	EndIf;
 	Movement.TargetProgram = TargetProgram;
 	Movement.TimeStamp = CurrentDate();
 EndProcedure
