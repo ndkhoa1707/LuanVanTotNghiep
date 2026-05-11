@@ -29,6 +29,3 @@ Procedure Posting(Cancel, PostingMode)
 	EndIf;
 	Record.Note = AmendmentSummary;
 EndProcedure
-
-Procedure UndoPosting(Cancel)
-EndProcedure

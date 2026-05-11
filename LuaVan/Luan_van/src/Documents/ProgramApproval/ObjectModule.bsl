@@ -30,5 +30,4 @@ Procedure Posting(Cancel, PostingMode)
 	Record.Note = CouncilSession;
 EndProcedure
 
-Procedure UndoPosting(Cancel)
-EndProcedure
+

@@ -13,6 +13,3 @@ Procedure Posting(Cancel, PostingMode)
 	Record.Note = ProposalSummary;
 EndProcedure
 
-Procedure UndoPosting(Cancel)
-	// Records RecorderSubordinate auto-delete khi unpost
-EndProcedure
