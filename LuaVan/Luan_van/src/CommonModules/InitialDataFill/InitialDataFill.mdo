@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="092c9da4-22f4-4ed6-af4b-ba5c5b5a3c3f">
+  <name>InitialDataFill</name>
+  <synonym>
+    <key>en</key>
+    <value>Nạp dữ liệu mẫu (PTIT)</value>
+  </synonym>
+  <server>true</server>
+  <serverCall>true</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>
