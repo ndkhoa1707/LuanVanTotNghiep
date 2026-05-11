@@ -36,6 +36,7 @@
   </languages>
   <subsystems>Subsystem.ProgramManagement</subsystems>
   <subsystems>Subsystem.AcademicAffairs</subsystems>
+  <commonModules>CommonModule.InitialDataFill</commonModules>
   <constants>Constant.AcademicInstitutionName</constants>
   <constants>Constant.DefaultAcademicYear</constants>
   <constants>Constant.UseDigitalSignatureFlag</constants>
