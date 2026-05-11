@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8888f4b8-6faf-4249-a5b5-9097733064d2">
+  <name>SystemAdmin</name>
+  <synonym>
+    <key>en</key>
+    <value>Quản trị hệ thống</value>
+  </synonym>
+</mdclass:Role>

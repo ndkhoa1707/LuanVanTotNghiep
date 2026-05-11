@@ -34,6 +34,8 @@
     </synonym>
     <languageCode>en</languageCode>
   </languages>
+  <subsystems>Subsystem.ProgramManagement</subsystems>
+  <subsystems>Subsystem.AcademicAffairs</subsystems>
   <constants>Constant.AcademicInstitutionName</constants>
   <constants>Constant.DefaultAcademicYear</constants>
   <constants>Constant.UseDigitalSignatureFlag</constants>
@@ -49,4 +51,9 @@
   <enums>Enum.ApprovalLevel</enums>
   <enums>Enum.AmendmentType</enums>
   <enums>Enum.ApprovalDecision</enums>
+  <roles>Role.FacultyStaff</roles>
+  <roles>Role.HeadOfDepartment</roles>
+  <roles>Role.AcademicAffairsOffice</roles>
+  <roles>Role.SystemAdmin</roles>
+  <functionalOptions>FunctionalOption.UseDigitalSignature</functionalOptions>
 </mdclass:Configuration>

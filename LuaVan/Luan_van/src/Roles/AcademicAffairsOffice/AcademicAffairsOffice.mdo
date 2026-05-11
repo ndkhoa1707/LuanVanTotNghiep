@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d9caa35c-ecbb-494d-9668-e1e3d7eb6fb6">
+  <name>AcademicAffairsOffice</name>
+  <synonym>
+    <key>en</key>
+    <value>Phòng Đào tạo / HĐKHĐT / BGH</value>
+  </synonym>
+</mdclass:Role>
