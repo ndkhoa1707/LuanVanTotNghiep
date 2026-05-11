@@ -23,11 +23,9 @@
   <numberPeriodicity>Year</numberPeriodicity>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
-  <posting>Allow</posting>
+  <registerRecords>InformationRegister.ProgramValidity</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
-  <registerRecords>InformationRegister.ProgramValidity</registerRecords>
-  <registerRecords>InformationRegister.ApprovalLog</registerRecords>
   <attributes uuid="aff44fc9-e7d8-4ebd-8417-cae36ab256f7">
     <name>TargetProgram</name>
     <synonym>
@@ -149,7 +147,7 @@
     <dataHistory>Use</dataHistory>
   </attributes>
   <attributes uuid="70f0a988-bd46-4369-8115-c2dd043934bb">
-    <name>NewStatus</name>
+    <name>Status</name>
     <synonym>
       <key>en</key>
       <value>Trạng thái CTĐT sau khi post</value>

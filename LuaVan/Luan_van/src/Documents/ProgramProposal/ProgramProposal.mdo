@@ -23,11 +23,9 @@
   <numberPeriodicity>Year</numberPeriodicity>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
-  <posting>Allow</posting>
+  <registerRecords>InformationRegister.ProgramValidity</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
-  <registerRecords>InformationRegister.ProgramValidity</registerRecords>
-  <registerRecords>InformationRegister.ApprovalLog</registerRecords>
   <attributes uuid="5a0e2571-cf39-4301-b1b4-e336586a7962">
     <name>ProposingFaculty</name>
     <synonym>
@@ -97,7 +95,7 @@
     <dataHistory>Use</dataHistory>
   </attributes>
   <attributes uuid="a5c1cbf9-28c0-449f-a350-770825a930d8">
-    <name>NewStatus</name>
+    <name>Status</name>
     <synonym>
       <key>en</key>
       <value>Trạng thái CTĐT sau khi post</value>

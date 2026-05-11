@@ -1,29 +1,18 @@
 ////////////////////////////////////////////////////////////////////////////////
 // ProgramProposal - Module đối tượng
-// Posting: Khi cán bộ khoa gửi đề xuất CTĐT, tạo bản ghi vào:
-//   - ProgramValidity: trạng thái CTĐT chuyển sang UnderReview
-//   - ApprovalLog: ghi audit log
+// Posting: Khi cán bộ khoa gửi đề xuất CTĐT, tạo bản ghi vào ProgramValidity
+//   với Status = Document.Status (mặc định UnderReview nếu chưa set)
 ////////////////////////////////////////////////////////////////////////////////
 
 Procedure Posting(Cancel, PostingMode)
-	// Ghi ProgramValidity: CTĐT chuyển sang UnderReview
-	Movement = RegisterRecords.ProgramValidity.Add();
-	Movement.Period = Date;
-	Movement.TrainingProgram = TargetProgram;
-	// Dùng NewStatus từ Document; default UnderReview nếu chưa set
-	Movement.Status = ?(NewStatus.IsEmpty(), Enums.ProgramStatuses.UnderReview, NewStatus);
-	Movement.EffectiveDate = Date;
-
-	// Ghi ApprovalLog: audit trail
-	Movement = RegisterRecords.ApprovalLog.Add();
-	Movement.SourceDocument = Ref;
-	Movement.Performer = Proposer;
-	Movement.Action = "Submit";
-	Movement.TargetProgram = TargetProgram;
-	Movement.TimeStamp = CurrentDate();
+	RegisterRecords.ProgramValidity.Write = True;
+	Record = RegisterRecords.ProgramValidity.Add();
+	Record.Period = Date;
+	Record.TrainingProgram = TargetProgram;
+	Record.Status = ?(Status.IsEmpty(), Enums.ProgramStatuses.UnderReview, Status);
+	Record.Note = ProposalSummary;
 EndProcedure
 
 Procedure UndoPosting(Cancel)
-	// Khi unpost - các bản ghi RecorderSubordinate sẽ auto-delete
-	// Có thể thêm logic rollback Status nếu cần
+	// Records RecorderSubordinate auto-delete khi unpost
 EndProcedure

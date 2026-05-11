@@ -1,11 +1,14 @@
 ////////////////////////////////////////////////////////////////////////////////
 // ProgramAmendment - Module đối tượng
-// Posting: Cập nhật trạng thái CTĐT dựa trên AmendmentType
+// Posting: Cập nhật trạng thái CTĐT trong IR ProgramValidity
+//   Status = Document.Status (nếu set), nếu không fallback theo AmendmentType:
+//   - Deactivation → Deactivated
+//   - MajorAmendment → UnderReview
+//   - Minor/AnnualReview → Issued
 ////////////////////////////////////////////////////////////////////////////////
 
 Procedure Posting(Cancel, PostingMode)
-	// Status xác định từ field NewStatus. Fallback theo AmendmentType nếu chưa set
-	ResolvedStatus = NewStatus;
+	ResolvedStatus = Status;
 	If ResolvedStatus.IsEmpty() Then
 		If AmendmentType = Enums.AmendmentType.Deactivation Then
 			ResolvedStatus = Enums.ProgramStatuses.Deactivated;
@@ -16,29 +19,15 @@ Procedure Posting(Cancel, PostingMode)
 		EndIf;
 	EndIf;
 
-	// Ghi ProgramValidity
-	Movement = RegisterRecords.ProgramValidity.Add();
-	Movement.Period = Date;
-	Movement.TrainingProgram = TargetProgram;
-	Movement.Status = ResolvedStatus;
-	Movement.EffectiveDate = ?(EffectiveDate = '00010101', Date, EffectiveDate);
-
-	// Ghi ApprovalLog
-	Movement = RegisterRecords.ApprovalLog.Add();
-	Movement.SourceDocument = Ref;
-	DefaultPerformer = Catalogs.Lecturers.FindByCode("GV0001");
-	Movement.Performer = ?(DefaultPerformer.IsEmpty(), Catalogs.Lecturers.EmptyRef(), DefaultPerformer);
-	If AmendmentType = Enums.AmendmentType.Deactivation Then
-		Movement.Action = "Deactivate";
-	ElsIf AmendmentType = Enums.AmendmentType.MajorAmendment Then
-		Movement.Action = "MajorAmend";
-	ElsIf AmendmentType = Enums.AmendmentType.MinorAmendment Then
-		Movement.Action = "MinorAmend";
-	Else
-		Movement.Action = "AnnualReview";
+	RegisterRecords.ProgramValidity.Write = True;
+	Record = RegisterRecords.ProgramValidity.Add();
+	Record.Period = ?(EffectiveDate = '00010101', Date, EffectiveDate);
+	Record.TrainingProgram = TargetProgram;
+	Record.Status = ResolvedStatus;
+	If Not SupportingDecision.IsEmpty() Then
+		Record.IssuanceDecision = SupportingDecision;
 	EndIf;
-	Movement.TargetProgram = TargetProgram;
-	Movement.TimeStamp = CurrentDate();
+	Record.Note = AmendmentSummary;
 EndProcedure
 
 Procedure UndoPosting(Cancel)

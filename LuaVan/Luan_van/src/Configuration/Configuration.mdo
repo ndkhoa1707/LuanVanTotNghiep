@@ -64,7 +64,6 @@
   <reports>Report.ApprovalAuditReport</reports>
   <dataProcessors>DataProcessor.ImportFromExcel</dataProcessors>
   <dataProcessors>DataProcessor.FillSampleData</dataProcessors>
-  <informationRegisters>InformationRegister.ApprovalLog</informationRegisters>
   <informationRegisters>InformationRegister.ProgramValidity</informationRegisters>
   <businessProcesses>BusinessProcess.ProgramApprovalProcess</businessProcesses>
   <tasks>Task.ProgramApprovalTasks</tasks>

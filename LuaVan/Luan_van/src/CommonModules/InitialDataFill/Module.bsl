@@ -460,7 +460,7 @@ Function CreateProgramProposal(DocDate, Faculty, Proposer, CTDT, Summary, NewSt)
 	NewDoc.Proposer = Proposer;
 	NewDoc.TargetProgram = CTDT;
 	NewDoc.ProposalSummary = Summary;
-	NewDoc.NewStatus = NewSt;
+	NewDoc.Status = NewSt;
 	NewDoc.Write(DocumentWriteMode.Posting);
 	Return NewDoc.Ref;
 EndFunction
@@ -479,7 +479,7 @@ Function CreateProgramApproval(DocDate, CTDT, Level, BasedOn, Session, Result, S
 	If IssuedDecision <> Undefined Then
 		NewDoc.IssuanceDecision = IssuedDecision;
 	EndIf;
-	NewDoc.NewStatus = NewSt;
+	NewDoc.Status = NewSt;
 	NewDoc.Write(DocumentWriteMode.Posting);
 	Return NewDoc.Ref;
 EndFunction
@@ -498,7 +498,7 @@ Function CreateProgramAmendment(DocDate, CTDT, AmendType, Summary, EffDate, SupD
 		NewDoc.ReviewYear = RevYear;
 	EndIf;
 	NewDoc.ReviewSummary = RevSummary;
-	NewDoc.NewStatus = NewSt;
+	NewDoc.Status = NewSt;
 	NewDoc.Write(DocumentWriteMode.Posting);
 	Return NewDoc.Ref;
 EndFunction

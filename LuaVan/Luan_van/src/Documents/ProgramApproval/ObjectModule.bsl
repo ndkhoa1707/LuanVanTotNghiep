@@ -1,12 +1,14 @@
 ////////////////////////////////////////////////////////////////////////////////
 // ProgramApproval - Module đối tượng
-// Posting: Cập nhật trạng thái CTĐT dựa trên ApprovalLevel + Decision
+// Posting: Cập nhật trạng thái CTĐT trong IR ProgramValidity
+//   Status = Document.Status (nếu set), nếu không fallback theo logic:
+//   - ApprovalLevel=Issued → Issued
+//   - Decision=Approved → Approved
+//   - khác → UnderReview
 ////////////////////////////////////////////////////////////////////////////////
 
 Procedure Posting(Cancel, PostingMode)
-	// Status xác định từ field NewStatus của Document. Nếu chưa set,
-	// fallback theo logic: Issued nếu Lvl=Issued, Approved nếu Decision=Approved
-	ResolvedStatus = NewStatus;
+	ResolvedStatus = Status;
 	If ResolvedStatus.IsEmpty() Then
 		If ApprovalLevel = Enums.ApprovalLevel.Issued Then
 			ResolvedStatus = Enums.ProgramStatuses.Issued;
@@ -17,25 +19,15 @@ Procedure Posting(Cancel, PostingMode)
 		EndIf;
 	EndIf;
 
-	// Ghi ProgramValidity
-	Movement = RegisterRecords.ProgramValidity.Add();
-	Movement.Period = Date;
-	Movement.TrainingProgram = TargetProgram;
-	Movement.Status = ResolvedStatus;
-	Movement.EffectiveDate = Date;
+	RegisterRecords.ProgramValidity.Write = True;
+	Record = RegisterRecords.ProgramValidity.Add();
+	Record.Period = Date;
+	Record.TrainingProgram = TargetProgram;
+	Record.Status = ResolvedStatus;
 	If Not IssuanceDecision.IsEmpty() Then
-		Movement.IssuanceDecision = IssuanceDecision;
+		Record.IssuanceDecision = IssuanceDecision;
 	EndIf;
-
-	// Ghi ApprovalLog
-	Movement = RegisterRecords.ApprovalLog.Add();
-	Movement.SourceDocument = Ref;
-	DefaultPerformer = Catalogs.Lecturers.FindByCode("GV0001");
-	Movement.Performer = ?(DefaultPerformer.IsEmpty(), Catalogs.Lecturers.EmptyRef(), DefaultPerformer);
-	Movement.Action = ?(Decision = Enums.ApprovalDecision.Approved, "Approve",
-		?(Decision = Enums.ApprovalDecision.RequiresRevision, "RequiresRevision", "Reject"));
-	Movement.TargetProgram = TargetProgram;
-	Movement.TimeStamp = CurrentDate();
+	Record.Note = CouncilSession;
 EndProcedure
 
 Procedure UndoPosting(Cancel)
