@@ -47,6 +47,7 @@
   <catalogs>Catalog.Courses</catalogs>
   <catalogs>Catalog.AcademicYears</catalogs>
   <catalogs>Catalog.Decisions</catalogs>
+  <documents>Document.ProgramProposal</documents>
   <enums>Enum.ProgramStatuses</enums>
   <enums>Enum.ApprovalLevel</enums>
   <enums>Enum.AmendmentType</enums>
