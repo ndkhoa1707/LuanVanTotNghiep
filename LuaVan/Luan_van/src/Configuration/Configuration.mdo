@@ -34,6 +34,9 @@
     </synonym>
     <languageCode>en</languageCode>
   </languages>
+  <constants>Constant.AcademicInstitutionName</constants>
+  <constants>Constant.DefaultAcademicYear</constants>
+  <constants>Constant.UseDigitalSignatureFlag</constants>
   <catalogs>Catalog.Faculties</catalogs>
   <catalogs>Catalog.Lecturers</catalogs>
   <catalogs>Catalog.Majors</catalogs>
@@ -41,6 +44,9 @@
   <catalogs>Catalog.KnowledgeBlocks</catalogs>
   <catalogs>Catalog.Courses</catalogs>
   <catalogs>Catalog.AcademicYears</catalogs>
+  <catalogs>Catalog.Decisions</catalogs>
   <enums>Enum.ProgramStatuses</enums>
   <enums>Enum.ApprovalLevel</enums>
+  <enums>Enum.AmendmentType</enums>
+  <enums>Enum.ApprovalDecision</enums>
 </mdclass:Configuration>

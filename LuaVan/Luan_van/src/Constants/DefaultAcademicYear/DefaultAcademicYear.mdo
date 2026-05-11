@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5d032954-cc46-4753-8b7f-54994c66f5b7">
+  <producedTypes>
+    <managerType typeId="c6885dae-0ec6-4ca3-8948-3084c674261f" valueTypeId="b05a4ad8-5c96-48d7-a24c-c3c5dc934a8e"/>
+    <valueManagerType typeId="ad169c30-30b9-4e14-b51f-a88636e78117" valueTypeId="df3cc624-02f6-4f62-bc91-c759851e1011"/>
+    <valueKeyType typeId="dc9df493-398c-4334-a4c2-8d49f87877e7" valueTypeId="17e3a8ca-3571-4000-a1cc-0f3d716363a2"/>
+  </producedTypes>
+  <name>DefaultAcademicYear</name>
+  <synonym>
+    <key>en</key>
+    <value>Năm học mặc định</value>
+  </synonym>
+  <type>
+    <types>CatalogRef.AcademicYears</types>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>
