@@ -1,9 +1,0 @@
-#Infobase binding data of the project
-#Wed Mar 18 14:15:51 ICT 2026
-com._1c.g5.v8.dt.platform.services.core/infobaseBinding/678ebb8a-1144-4fb0-9c8e-b0ac0a05046d=com._1c.g5.v8.dt.platform.services.core.resolvableInstallations.environments\:com._1c.g5.v8.dt.platform.services.core.runtimeType.EnterprisePlatform\=8.3.24
-com._1c.g5.v8.dt.platform.services.core/infobaseBinding/5e711c2e-90da-49f0-aea8-59f0fb9843c5=com._1c.g5.v8.dt.platform.services.core.resolvableInstallations.fixed\:com._1c.g5.v8.dt.platform.services.core.runtimeType.EnterprisePlatform\=8.3.24.1819\=x86_64
-com._1c.g5.v8.dt.platform.services.core/infobaseBinding/7b240fb3-e8a3-4549-b517-e92299a3cfef=com._1c.g5.v8.dt.platform.services.core.resolvableInstallations.fixed\:com._1c.g5.v8.dt.platform.services.core.runtimeType.EnterprisePlatform\=8.3.24.1819\=x86_64
-com._1c.g5.v8.dt.platform.services.core/infobaseBinding/ae3c338d-fd24-4ff1-8cc2-58f524961152=com._1c.g5.v8.dt.platform.services.core.resolvableInstallations.fixed\:com._1c.g5.v8.dt.platform.services.core.runtimeType.EnterprisePlatform\=8.3.24.1819\=x86_64
-com._1c.g5.v8.dt.platform.services.core/infobaseBinding/50ab37da-f340-4d63-94a3-a5d739715ea7=com._1c.g5.v8.dt.platform.services.core.resolvableInstallations.environments\:com._1c.g5.v8.dt.platform.services.core.runtimeType.EnterprisePlatform\=8.3.24
-com._1c.g5.v8.dt.platform.services.core/infobaseBinding/cb29ee44-8471-4157-bae2-a849f882f9c9=com._1c.g5.v8.dt.platform.services.core.resolvableInstallations.fixed\:com._1c.g5.v8.dt.platform.services.core.runtimeType.EnterprisePlatform\=8.3.24.1819\=x86_64
-com._1c.g5.v8.dt.platform.services.core/infobaseBinding/ab2292ea-8221-4cb4-9886-86078c36a0bf=com._1c.g5.v8.dt.platform.services.core.resolvableInstallations.fixed\:com._1c.g5.v8.dt.platform.services.core.runtimeType.EnterprisePlatform\=8.3.24.1819\=x86_64
