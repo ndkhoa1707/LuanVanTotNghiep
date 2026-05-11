@@ -136,9 +136,6 @@ Function CreateFaculty(Code, Description, Parent)
 	NewItem = Catalogs.Faculties.CreateItem();
 	NewItem.Code = Code;
 	NewItem.Description = Description;
-	If Parent <> Undefined Then
-		NewItem.Parent = Parent;
-	EndIf;
 	NewItem.Active = True;
 	NewItem.Write();
 	Return NewItem.Ref;

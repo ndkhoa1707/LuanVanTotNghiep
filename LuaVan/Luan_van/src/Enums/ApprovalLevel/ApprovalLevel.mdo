@@ -12,32 +12,25 @@
   </synonym>
   <quickChoice>true</quickChoice>
   <choiceMode>BothWays</choiceMode>
-  <enumValues uuid="65288b1d-6cd2-4243-9935-fad74c9d0827">
-    <name>Faculty</name>
-    <synonym>
-      <key>en</key>
-      <value>Khoa</value>
-    </synonym>
-  </enumValues>
   <enumValues uuid="aec019d6-3471-42da-8165-2d0c89c65e5b">
     <name>FacultyCouncil</name>
     <synonym>
       <key>en</key>
-      <value>HĐKH khoa</value>
+      <value>Phê duyệt cấp Khoa (HĐKH Khoa)</value>
     </synonym>
   </enumValues>
   <enumValues uuid="80ecc07b-75f1-46c1-b467-501090db7b8b">
     <name>InstitutionalCouncil</name>
     <synonym>
       <key>en</key>
-      <value>HĐKHĐT trường</value>
+      <value>Phê duyệt cấp Trường (HĐKHĐT)</value>
     </synonym>
   </enumValues>
-  <enumValues uuid="afe47d37-3f05-4efc-a0a2-a8435575c500">
-    <name>BoardOfTrustees</name>
+  <enumValues uuid="65288b1d-6cd2-4243-9935-fad74c9d0827">
+    <name>Issued</name>
     <synonym>
       <key>en</key>
-      <value>Hội đồng trường</value>
+      <value>Ban hành</value>
     </synonym>
   </enumValues>
 </mdclass:Enum>
