@@ -26,6 +26,8 @@
   <posting>Allow</posting>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <registerRecords>InformationRegister.ProgramValidity</registerRecords>
+  <registerRecords>InformationRegister.ApprovalLog</registerRecords>
   <attributes uuid="5a0e2571-cf39-4301-b1b4-e336586a7962">
     <name>ProposingFaculty</name>
     <synonym>

@@ -26,6 +26,8 @@
   <posting>Allow</posting>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <registerRecords>InformationRegister.ProgramValidity</registerRecords>
+  <registerRecords>InformationRegister.ApprovalLog</registerRecords>
   <attributes uuid="aff44fc9-e7d8-4ebd-8417-cae36ab256f7">
     <name>TargetProgram</name>
     <synonym>
