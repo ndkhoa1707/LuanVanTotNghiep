@@ -10,7 +10,7 @@
   <name>TrainingPrograms</name>
   <synonym>
     <key>en</key>
-    <value>Training programs</value>
+    <value>Chương trình đào tạo</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <inputByString>Catalog.TrainingPrograms.StandardAttribute.Description</inputByString>

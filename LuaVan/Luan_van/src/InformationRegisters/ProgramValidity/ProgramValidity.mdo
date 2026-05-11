@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a146a163-32b8-42bb-b616-6d91efde077c">
+  <producedTypes>
+    <selectionType typeId="06869eb4-c716-4658-982b-512e194eaba7" valueTypeId="8d2e858f-b2eb-4959-b170-30a4d396adf4"/>
+    <listType typeId="4aff4f58-4619-44a6-b1d6-cefdc51720f1" valueTypeId="1db4d263-7cc9-422c-8dd0-6a787ce773a2"/>
+    <managerType typeId="d365e738-ec04-45ba-97f2-e15e9a0f4f1b" valueTypeId="ae05d940-ea5a-43dd-ba93-86fb6ecbdfa7"/>
+    <recordSetType typeId="dad8cec2-4663-41bb-a008-3d6fc1a611c4" valueTypeId="f89e1e98-5c9a-48e3-9890-0fc979918391"/>
+    <recordKeyType typeId="54ec14c2-67fb-4e1e-91d1-413219a395bd" valueTypeId="8292bf1a-9619-411e-a758-60cfc8bf92cc"/>
+    <recordType typeId="b7a56551-ec81-41c5-b453-1eda9e65b28f" valueTypeId="7056c6fc-2ba3-483e-9a87-6eb88de364b3"/>
+    <recordManagerType typeId="fcb3cb31-7575-434e-9616-56b9e6c0f440" valueTypeId="727a2a7d-8e7b-41ae-be26-85803b892912"/>
+  </producedTypes>
+  <name>ProgramValidity</name>
+  <synonym>
+    <key>en</key>
+    <value>Lịch sử trạng thái CTĐT</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <writeMode>Independent</writeMode>
+  <enableTotalsSliceFirst>true</enableTotalsSliceFirst>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <dimensions uuid="aff44fc9-e7d8-4ebd-8417-cae36ab258a0">
+    <name>TrainingProgram</name>
+    <synonym>
+      <key>en</key>
+      <value>CTĐT theo dõi</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.TrainingPrograms</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <master>true</master>
+    <denyIncompleteValues>true</denyIncompleteValues>
+  </dimensions>
+  <resources uuid="aff44fc9-e7d8-4ebd-8417-cae36ab258a1">
+    <name>Status</name>
+    <synonym>
+      <key>en</key>
+      <value>Trạng thái</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ProgramStatuses</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="aff44fc9-e7d8-4ebd-8417-cae36ab258a2">
+    <name>IssuanceDecision</name>
+    <synonym>
+      <key>en</key>
+      <value>QĐ căn cứ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Decisions</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="aff44fc9-e7d8-4ebd-8417-cae36ab258a3">
+    <name>Note</name>
+    <synonym>
+      <key>en</key>
+      <value>Ghi chú</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+</mdclass:InformationRegister>
