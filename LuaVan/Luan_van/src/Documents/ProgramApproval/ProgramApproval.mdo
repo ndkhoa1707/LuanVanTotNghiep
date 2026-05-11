@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="15135ed9-ca76-48b8-be15-da5697a36905">
+  <producedTypes>
+    <objectType typeId="ca1fe81c-3c91-4ed3-97d2-e7ab6be565f8" valueTypeId="68735833-e03f-4c7b-9573-b89f5189225b"/>
+    <refType typeId="2b80b8bb-a388-4b76-a40d-9a35a96e633e" valueTypeId="2478a80c-e70c-41ea-9497-0b8aeb67e070"/>
+    <selectionType typeId="f4bb15f8-94d8-402b-9906-b188e200397e" valueTypeId="31abc92d-9a72-40d1-9cf1-ec98f60f0075"/>
+    <listType typeId="c66e523f-a549-4802-8f1f-5cea63daf3e0" valueTypeId="e23de6b3-0d61-4ae4-b27b-4028526687af"/>
+    <managerType typeId="5de0e625-10b5-481c-b563-3753162fb382" valueTypeId="d3597fa4-dc09-420f-993c-ea370707f11b"/>
+  </producedTypes>
+  <name>ProgramApproval</name>
+  <synonym>
+    <key>en</key>
+    <value>Phê duyệt CTĐT</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ProgramApproval.StandardAttribute.Number</inputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <synonym>
+      <key>en</key>
+      <value>Số chứng từ (PA-{YYYY}-NNNNN)</value>
+    </synonym>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <synonym>
+      <key>en</key>
+      <value>Ngày họp/phê duyệt</value>
+    </synonym>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>15</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <posting>Allow</posting>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <registerRecords>InformationRegister.ProgramValidity</registerRecords>
+  <registerRecords>InformationRegister.ApprovalLog</registerRecords>
+  <attributes uuid="2046119c-a757-4e46-8ba9-87bba8573d00">
+    <name>TargetProgram</name>
+    <synonym>
+      <key>en</key>
+      <value>CTĐT được xét duyệt</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.TrainingPrograms</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="03316531-23df-4b2f-a030-a80e7f5d4785">
+    <name>ApprovalLevel</name>
+    <synonym>
+      <key>en</key>
+      <value>Cấp phê duyệt (Khoa/Trường/Ban hành)</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ApprovalLevel</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="60c1eb55-ebf0-49d3-9048-4d0af0598d96">
+    <name>BasedOnProposal</name>
+    <synonym>
+      <key>en</key>
+      <value>Tham chiếu Document đề xuất gốc</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ProgramProposal</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="134e0b92-9297-4c48-8920-aa18eacd0bb5">
+    <name>CouncilSession</name>
+    <synonym>
+      <key>en</key>
+      <value>Phiên họp HĐ (số, ngày)</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f1a55e53-9672-421a-86ca-477735e6c0dd">
+    <name>Decision</name>
+    <synonym>
+      <key>en</key>
+      <value>Approved/RequiresRevision/Rejected</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ApprovalDecision</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c1be0b42-fbee-41aa-b94c-fe7cc1759c95">
+    <name>RevisionNotes</name>
+    <synonym>
+      <key>en</key>
+      <value>Ý kiến chỉnh sửa (khi RequiresRevision)</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>2000</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2fbbe30c-b5be-4e17-8833-62bd82b329ad">
+    <name>IssuanceDecision</name>
+    <synonym>
+      <key>en</key>
+      <value>QĐ ban hành (khi Lvl=Issued)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Decisions</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2d6c75a5-0504-43fd-9bba-2eb11c78eb55">
+    <name>SignerSummary</name>
+    <synonym>
+      <key>en</key>
+      <value>Danh sách người ký biên bản</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="da0f3823-195b-4104-bda0-a5da6791a77e">
+    <producedTypes>
+      <objectType typeId="efe9100f-1eab-4033-a228-3ea0c5f30b40" valueTypeId="6266a32d-9839-4983-b58c-2dd8529cdf4c"/>
+      <rowType typeId="f5567521-7334-4ec6-acf5-9dc092693f0f" valueTypeId="cd966ca5-c5da-4f8a-a6f0-0702ce15ab1a"/>
+    </producedTypes>
+    <name>VotingResults</name>
+    <synonym>
+      <key>en</key>
+      <value>Kết quả biểu quyết HĐ</value>
+    </synonym>
+    <attributes uuid="f1520bb9-f3e4-460a-8378-dd208942ae9f">
+      <name>CouncilMember</name>
+      <synonym>
+        <key>en</key>
+        <value>Thành viên Hội đồng</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Lecturers</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0bd3aa1e-fc3d-47ba-b64d-3e5794a08001">
+      <name>Vote</name>
+      <synonym>
+        <key>en</key>
+        <value>Tán thành/Không tán thành/Vắng</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>15</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b302e45f-8fe1-4ba1-9d58-a716d38e9202">
+      <name>Comment</name>
+      <synonym>
+        <key>en</key>
+        <value>Ý kiến (nếu có)</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>300</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

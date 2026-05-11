@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f6fdad37-b700-4067-a914-cc5ee3202399">
+  <producedTypes>
+    <selectionType typeId="23aba304-73e3-4eef-a4f3-ac2cc9f3c61a" valueTypeId="b7d74f10-d807-4366-bbc0-f26261d1216c"/>
+    <listType typeId="7856be72-e578-4d71-900a-b5481d942890" valueTypeId="d915b454-ddc6-4984-ba8b-3ab5843e7809"/>
+    <managerType typeId="99c672cc-03ca-42a8-a6ae-6fe06d3c6ae8" valueTypeId="f0d5922d-2040-438b-84ff-a3ebcb2a29a9"/>
+    <recordSetType typeId="95c7f7b4-88a7-4bec-babe-b090f8fb8223" valueTypeId="7f93c5f2-eaea-47a5-a3b5-a387b1a8f79e"/>
+    <recordKeyType typeId="a478ffb7-dea9-4d80-af2f-27a5991be4f3" valueTypeId="c2676334-dfd1-44d5-a60f-76331fae5345"/>
+    <recordType typeId="17d09103-b795-4f35-888a-c3dac393d300" valueTypeId="18098a4b-cf57-4e99-aac7-fda5f5a40644"/>
+    <recordManagerType typeId="71b86557-5bf7-43ca-91a1-1263e50fdd04" valueTypeId="d117fb8f-9720-48e0-8ddc-783e2eda0de4"/>
+  </producedTypes>
+  <name>ApprovalLog</name>
+  <synonym>
+    <key>en</key>
+    <value>Audit trail phê duyệt</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <informationRegisterPeriodicity>Nonperiodical</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <enableTotalsSliceFirst>false</enableTotalsSliceFirst>
+  <enableTotalsSliceLast>false</enableTotalsSliceLast>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <dimensions uuid="893ffc5e-88ec-407d-b433-85eb0876b3b7">
+    <name>SourceDocument</name>
+    <synonym>
+      <key>en</key>
+      <value>Document gốc (3 loại)</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ProgramProposal</types>
+      <types>DocumentRef.ProgramApproval</types>
+      <types>DocumentRef.ProgramAmendment</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <master>true</master>
+    <denyIncompleteValues>true</denyIncompleteValues>
+  </dimensions>
+  <dimensions uuid="0d6deaa4-bf86-4ad2-bb32-54e1d5aacb46">
+    <name>Performer</name>
+    <synonym>
+      <key>en</key>
+      <value>Người thực hiện</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Lecturers</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <resources uuid="da5e4357-09d1-4f7a-bc15-f45bb445eada">
+    <name>Action</name>
+    <synonym>
+      <key>en</key>
+      <value>Submit/Approve/RequiresRevision/Reject/Issue/Deactivate</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>30</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="3131c76d-3fcf-4393-ace5-cd208010b4b3">
+    <name>TargetProgram</name>
+    <synonym>
+      <key>en</key>
+      <value>CTĐT bị tác động</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.TrainingPrograms</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="92f3ac53-c99c-4d5c-a247-17e8b0bdd57c">
+    <name>TimeStamp</name>
+    <synonym>
+      <key>en</key>
+      <value>Thời điểm chính xác</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>DateTime</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="2e694ac5-dad0-478a-93ab-033e2240c9ea">
+    <name>IPAddress</name>
+    <synonym>
+      <key>en</key>
+      <value>IP người thực hiện</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>45</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="20fb6269-21ab-44a8-a8b3-42a336a6d8aa">
+    <name>Comment</name>
+    <synonym>
+      <key>en</key>
+      <value>Ghi chú/lý do của Performer</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+</mdclass:InformationRegister>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3817689b-52b0-4dc0-8549-d59ffee75df3">
+  <producedTypes>
+    <selectionType typeId="b1d072ce-307a-432b-9e9f-7ba7b6867b61" valueTypeId="cbda103f-ba20-4718-943f-831642aacc1f"/>
+    <listType typeId="1b13f1e6-d292-4a85-88b0-194923046fbb" valueTypeId="83c56e51-ae8f-4a61-a150-02973b64cdcb"/>
+    <managerType typeId="e9414c23-10f4-4201-aeff-26459fa5848a" valueTypeId="a8300380-540c-44fe-b7ed-5a0dba1daba9"/>
+    <recordSetType typeId="19e1f2d2-ae0c-4aca-aa09-ea0879d4ed86" valueTypeId="23387b17-d68a-44a0-ab6a-0202ef4c6dd1"/>
+    <recordKeyType typeId="0c96ccf5-1fba-41ba-a435-bc3eabde4132" valueTypeId="6d340bd6-791f-4d5f-bdc6-8369e09bae11"/>
+    <recordType typeId="db494400-f49a-431f-a275-7004170250f6" valueTypeId="30f5123e-917d-4628-a9ab-8b98189b0073"/>
+    <recordManagerType typeId="07c6e573-f7a3-4d87-a3ea-2b324d700e21" valueTypeId="f1d953e2-93b5-4a1c-ba95-4960487ef63e"/>
+  </producedTypes>
+  <name>ProgramValidity</name>
+  <synonym>
+    <key>en</key>
+    <value>Lịch sử trạng thái CTĐT</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <enableTotalsSliceFirst>true</enableTotalsSliceFirst>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <dimensions uuid="9f26ee5a-3a90-47d1-abe9-412f1cc2612f">
+    <name>TrainingProgram</name>
+    <synonym>
+      <key>en</key>
+      <value>CTĐT theo dõi</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.TrainingPrograms</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+    <denyIncompleteValues>true</denyIncompleteValues>
+  </dimensions>
+  <resources uuid="a8344e44-1d33-412d-b2d9-88086cfa65c4">
+    <name>Status</name>
+    <synonym>
+      <key>en</key>
+      <value>Trạng thái tại thời điểm Period</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ProgramStatuses</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="dee4e257-f881-4cb0-a191-74e9b6eb7025">
+    <name>EffectiveDate</name>
+    <synonym>
+      <key>en</key>
+      <value>Ngày bắt đầu có hiệu lực</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="80ebdec2-f6c6-4e77-a25d-9413d19ba0a5">
+    <name>IssuanceDecision</name>
+    <synonym>
+      <key>en</key>
+      <value>QĐ căn cứ (rỗng nếu Status != Issued)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Decisions</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="f39bb4f8-1ba4-4c4c-8cf6-dbcb4018eb89">
+    <name>Note</name>
+    <synonym>
+      <key>en</key>
+      <value>Ghi chú thay đổi trạng thái</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+</mdclass:InformationRegister>

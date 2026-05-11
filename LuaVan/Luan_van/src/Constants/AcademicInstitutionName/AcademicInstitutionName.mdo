@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b302e45f-8fe1-4ba1-9d58-a716d38e9201">
+  <producedTypes>
+    <managerType typeId="700543fb-eac9-4f57-aa73-1b4dd0f1a901" valueTypeId="f407671f-a67c-4e1c-b40f-c3bc4ced8701"/>
+    <valueManagerType typeId="d1df6db4-493f-4544-9383-1ecd6fe3f101" valueTypeId="3a7c383c-8d5a-49b1-a7f8-4409f1631801"/>
+    <valueKeyType typeId="910f7d6f-93b0-45b1-84a3-3a8c20e72501" valueTypeId="274257af-3850-4cb3-b442-17dd6c998001"/>
+  </producedTypes>
+  <name>AcademicInstitutionName</name>
+  <synonym>
+    <key>en</key>
+    <value>Tên Học viện</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>250</length>
+    </stringQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

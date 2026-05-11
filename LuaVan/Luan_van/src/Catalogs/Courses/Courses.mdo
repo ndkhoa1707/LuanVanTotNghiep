@@ -18,65 +18,6 @@
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
   <standardAttributes>
     <dataHistory>Use</dataHistory>
-    <name>PredefinedDataName</name>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-  </standardAttributes>
-  <standardAttributes>
-    <dataHistory>Use</dataHistory>
-    <name>Predefined</name>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-  </standardAttributes>
-  <standardAttributes>
-    <dataHistory>Use</dataHistory>
-    <name>Ref</name>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-  </standardAttributes>
-  <standardAttributes>
-    <dataHistory>Use</dataHistory>
-    <name>DeletionMark</name>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-  </standardAttributes>
-  <standardAttributes>
-    <dataHistory>Use</dataHistory>
-    <name>IsFolder</name>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-  </standardAttributes>
-  <standardAttributes>
-    <dataHistory>Use</dataHistory>
-    <name>Owner</name>
-    <fillFromFillingValue>true</fillFromFillingValue>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
-    <fullTextSearch>Use</fullTextSearch>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-  </standardAttributes>
-  <standardAttributes>
-    <dataHistory>Use</dataHistory>
-    <name>Parent</name>
-    <fillFromFillingValue>true</fillFromFillingValue>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-  </standardAttributes>
-  <standardAttributes>
-    <dataHistory>Use</dataHistory>
     <name>Description</name>
     <synonym>
       <key>en</key>
@@ -103,9 +44,7 @@
   <createOnInput>Use</createOnInput>
   <dataLockControlMode>Managed</dataLockControlMode>
   <fullTextSearch>Use</fullTextSearch>
-  <levelCount>2</levelCount>
-  <foldersOnTop>true</foldersOnTop>
-  <codeLength>9</codeLength>
+  <codeLength>15</codeLength>
   <descriptionLength>150</descriptionLength>
   <codeType>String</codeType>
   <codeAllowedLength>Variable</codeAllowedLength>
@@ -114,26 +53,6 @@
   <defaultPresentation>AsDescription</defaultPresentation>
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
-  <attributes uuid="4bd7a897-11ee-488f-b94a-e3d98a137076">
-    <name>DescriptionEng</name>
-    <synonym>
-      <key>en</key>
-      <value>Tên tiếng Anh</value>
-    </synonym>
-    <type>
-      <types>String</types>
-      <stringQualifiers>
-        <length>150</length>
-      </stringQualifiers>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
   <attributes uuid="19ba3f7b-ba32-4e17-a465-c2ff3ce1df5a">
     <name>Credits</name>
     <synonym>
@@ -149,47 +68,16 @@
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="55544980-42a4-4f12-bff0-5e491bd0960b">
-    <name>OwnerDepartment</name>
-    <synonym>
-      <key>en</key>
-      <value>Bộ môn chủ trì</value>
-    </synonym>
-    <type>
-      <types>CatalogRef.Departments</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="13e40c46-355d-4e1d-a920-5ce9b1a2eae0">
-    <name>DefaultCourseType</name>
-    <synonym>
-      <key>en</key>
-      <value>Loại HP mặc định</value>
-    </synonym>
-    <type>
-      <types>EnumRef.CourseTypes</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
   <attributes uuid="90af81bb-7caf-42ad-a9c0-27ad3273fd3b">
-    <name>DefaultBlock</name>
+    <name>KnowledgeBlock</name>
     <synonym>
       <key>en</key>
-      <value>Khối kiến thức mặc định</value>
+      <value>Khối kiến thức HP thuộc về</value>
     </synonym>
     <type>
       <types>CatalogRef.KnowledgeBlocks</types>
@@ -200,18 +88,14 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="ee4b3dd8-3b60-4600-ae66-ed4d3e7103a7">
-    <name>Hours_Theory</name>
+  <attributes uuid="55544980-42a4-4f12-bff0-5e491bd0960b">
+    <name>ManagingFaculty</name>
     <synonym>
       <key>en</key>
-      <value>Giờ lý thuyết</value>
+      <value>Khoa/BM phụ trách</value>
     </synonym>
     <type>
-      <types>Number</types>
-      <numberQualifiers>
-        <precision>3</precision>
-        <nonNegative>true</nonNegative>
-      </numberQualifiers>
+      <types>CatalogRef.Faculties</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -220,61 +104,23 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="9e2fd010-47d6-465b-a978-0554d81d36f2">
-    <name>Hours_Practice</name>
+  <attributes uuid="13e40c46-355d-4e1d-a920-5ce9b1a2eae0">
+    <name>CourseType</name>
     <synonym>
       <key>en</key>
-      <value>Giờ thực hành</value>
+      <value>Loại HP (Lý thuyết/Thực hành/Đồ án/Khoá luận)</value>
     </synonym>
     <type>
-      <types>Number</types>
-      <numberQualifiers>
-        <precision>3</precision>
-      </numberQualifiers>
+      <types>String</types>
+      <stringQualifiers>
+        <length>30</length>
+      </stringQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="ce2d0488-db5b-459e-854a-aa9ff2e470d5">
-    <name>Hours_SelfStudy</name>
-    <synonym>
-      <key>en</key>
-      <value>Giờ tự học</value>
-    </synonym>
-    <type>
-      <types>Number</types>
-      <numberQualifiers>
-        <precision>3</precision>
-        <nonNegative>true</nonNegative>
-      </numberQualifiers>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="d7c12dab-bce4-476c-be60-b89097584bb7">
-    <name>Hours_Internship</name>
-    <synonym>
-      <key>en</key>
-      <value>Giờ thực tập</value>
-    </synonym>
-    <type>
-      <types>Number</types>
-      <numberQualifiers>
-        <precision>3</precision>
-        <nonNegative>true</nonNegative>
-      </numberQualifiers>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
-    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
@@ -282,68 +128,36 @@
     <name>Description_Long</name>
     <synonym>
       <key>en</key>
-      <value>Mô tả nội dung tóm tắt</value>
+      <value>Mô tả ngắn gọn về HP</value>
     </synonym>
     <type>
       <types>String</types>
-      <stringQualifiers/>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
     <fillValue xsi:type="core:StringValue">
       <value></value>
     </fillValue>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="c6df57f4-28d4-487f-9238-bc5163f5fd57">
-    <name>FirstDeliveryYear</name>
-    <synonym>
-      <key>en</key>
-      <value>Năm bắt đầu giảng dạy</value>
-    </synonym>
-    <type>
-      <types>Number</types>
-      <numberQualifiers>
-        <precision>4</precision>
-        <nonNegative>true</nonNegative>
-      </numberQualifiers>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
   <attributes uuid="5bf13fcf-1de6-4f9f-8d04-60877de80297">
-    <name>Discontinued</name>
+    <name>IsActive</name>
     <synonym>
       <key>en</key>
-      <value>Đã ngừng</value>
+      <value>Còn sử dụng</value>
     </synonym>
     <type>
       <types>Boolean</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="db1626f6-1c3f-48a7-93df-7ba9e392e82e">
-    <name>ReplacedBy</name>
-    <synonym>
-      <key>en</key>
-      <value>Thay thế bởi</value>
-    </synonym>
-    <type>
-      <types>CatalogRef.Courses</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:BooleanValue">
+      <value>true</value>
+    </fillValue>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
@@ -355,13 +169,13 @@
     <name>Prerequisites</name>
     <synonym>
       <key>en</key>
-      <value>Điều kiện tiên quyết / song hành</value>
+      <value>Điều kiện tiên quyết</value>
     </synonym>
     <attributes uuid="b9a2f8b7-ca77-4461-a477-5d960b7f921e">
-      <name>PriorCourse</name>
+      <name>PrerequisiteCourse</name>
       <synonym>
         <key>en</key>
-        <value>HP yêu cầu trước</value>
+        <value>HP tiên quyết</value>
       </synonym>
       <type>
         <types>CatalogRef.Courses</types>
@@ -372,32 +186,16 @@
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
     <attributes uuid="d322e864-5fbc-4950-ac23-1faa188deb09">
-      <name>ConstraintType</name>
+      <name>PrerequisiteType</name>
       <synonym>
         <key>en</key>
-        <value>Loại ràng buộc</value>
+        <value>Tiên quyết / Học trước / Song hành</value>
       </synonym>
       <type>
-        <types>EnumRef.PrereqType</types>
-      </type>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-    <attributes uuid="f1920a92-18a6-47b2-b324-63b86dd3a81b">
-      <name>MinGrade</name>
-      <synonym>
-        <key>en</key>
-        <value>Điểm tối thiểu</value>
-      </synonym>
-      <type>
-        <types>Number</types>
-        <numberQualifiers>
-          <precision>3</precision>
-          <scale>1</scale>
-          <nonNegative>true</nonNegative>
-        </numberQualifiers>
+        <types>String</types>
+        <stringQualifiers>
+          <length>20</length>
+        </stringQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>

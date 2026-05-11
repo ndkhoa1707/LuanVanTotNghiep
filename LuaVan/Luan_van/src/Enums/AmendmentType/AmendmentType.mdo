@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8f41ec5d-dd83-4c5d-93bc-345ea2a92bdb">
+  <producedTypes>
+    <refType typeId="909d13ea-8f34-470c-b023-ff218e8c6a3a" valueTypeId="a7b9e5e2-79c5-4060-8156-c4a8df93b4b1"/>
+    <listType typeId="14a28974-cd32-448d-aca6-8335721aebc1" valueTypeId="90ed3e98-0dfd-4b5b-9da9-fa33bc4c3160"/>
+    <managerType typeId="3294f587-1927-439d-ace0-bcf986099784" valueTypeId="6d8c1b25-bb8b-4616-9861-9e45b7988ea2"/>
+  </producedTypes>
+  <name>AmendmentType</name>
+  <synonym>
+    <key>en</key>
+    <value>Loại sửa đổi</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="74ac84a8-a23e-4b6e-aef5-2be98a8f3a2b">
+    <name>MinorAmendment</name>
+    <synonym>
+      <key>en</key>
+      <value>Sửa đổi nhỏ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="37c207e2-2eca-49cf-a5eb-490165ba4d64">
+    <name>MajorAmendment</name>
+    <synonym>
+      <key>en</key>
+      <value>Sửa đổi lớn</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="56444c64-a76b-4d9f-9322-c466acc5f79d">
+    <name>Deactivation</name>
+    <synonym>
+      <key>en</key>
+      <value>Ngừng hiệu lực</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="7966bd97-3c6a-45a0-920c-6334f862d836">
+    <name>AnnualReview</name>
+    <synonym>
+      <key>en</key>
+      <value>Rà soát hằng năm</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

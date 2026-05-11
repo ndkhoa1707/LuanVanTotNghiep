@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:BusinessProcess xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f60cdc81-30d4-4883-bf16-81a74c0868bf">
+  <producedTypes>
+    <objectType typeId="0db9deee-8b2b-450a-9c97-e18a93fe2a39" valueTypeId="d0c5fd34-796b-49a6-b807-3ac1c4fb6974"/>
+    <refType typeId="9acbd658-e9ee-4cec-af63-04d95a266f71" valueTypeId="b982b594-d6a9-46dd-9717-8f478b2cf88f"/>
+    <selectionType typeId="5c344b04-c30a-4c02-b9ea-7eec8d1ef4c8" valueTypeId="b36d79fb-fd73-4576-8875-91e6f460852f"/>
+    <listType typeId="0896ff4e-8bf9-4d0a-9202-bdfda7abb5cf" valueTypeId="326ee951-b88d-4744-ba1c-b04c30651cbb"/>
+    <managerType typeId="03e9df65-676e-42e9-914f-0ad306f540a9" valueTypeId="7f2c5852-89a1-4b4c-9508-097ff7803c96"/>
+    <routePointRefType typeId="2b5a6f75-0a67-4c6f-83c0-82a43eab5138" valueTypeId="8c7e3281-f15f-426d-8c2b-5c5c4441e583"/>
+  </producedTypes>
+  <name>ProgramApprovalProcess</name>
+  <synonym>
+    <key>en</key>
+    <value>Quy trình phê duyệt CTĐT</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>15</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <task>Task.ProgramApprovalTasks</task>
+  <attributes uuid="aa3caddf-0b75-4213-81e4-78fb93c4252b">
+    <name>TargetProgram</name>
+    <synonym>
+      <key>en</key>
+      <value>CTĐT đang phê duyệt</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.TrainingPrograms</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c0ea15ae-f988-4324-b87d-7be7a6997539">
+    <name>InitiatingProposal</name>
+    <synonym>
+      <key>en</key>
+      <value>Document đề xuất khởi tạo</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ProgramProposal</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:BusinessProcess>
