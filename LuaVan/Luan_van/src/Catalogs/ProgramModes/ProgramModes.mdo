@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="439b75ee-a60b-4cd1-be4a-37676372e117">
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b117286d-1c47-4c3c-ab25-73fc12c40080">
   <producedTypes>
-    <objectType typeId="84d5bace-06a7-489d-958d-fe5a0b2deb7b" valueTypeId="78421989-cd9d-4dc5-b4e1-ed7272c6ea81"/>
-    <refType typeId="be5d5bbd-96b9-4f65-a586-449f2e7c4f0c" valueTypeId="632404e2-7d70-488f-b408-3473cf3025a0"/>
-    <selectionType typeId="8f2f1582-cdc3-4347-872a-b36bbbc9cd9d" valueTypeId="4feacba6-29e7-4450-9097-0b186c414364"/>
-    <listType typeId="4c33e30b-b159-4a63-b0e0-a7696f33803f" valueTypeId="02b1a3ba-ac9e-4e13-a950-0ded962fb8e7"/>
-    <managerType typeId="7ea6bdc0-4a4a-477b-a90d-f1536fdfc5c5" valueTypeId="46026ab0-500f-4eba-b95f-c5c50f1db21b"/>
+    <objectType typeId="07643e49-71fc-4dec-ab32-df31e0cd6a4d" valueTypeId="d1151def-054b-402c-8756-44eebfac3193"/>
+    <refType typeId="0a1e65bb-c1b1-4fcd-97a9-ad4e000ade55" valueTypeId="72cfbdb5-9d29-49d4-9cf3-46d2e4925632"/>
+    <selectionType typeId="4ce9c2b8-2171-4f24-9105-a9260c52f5d7" valueTypeId="95d698a9-cc97-4b99-a5ef-a8ed6e9b6716"/>
+    <listType typeId="fbb7baca-58ac-4188-be4c-f7aeb9c883ac" valueTypeId="30b96ab0-ebd3-4ed0-92e1-d27b86434621"/>
+    <managerType typeId="62b4017c-d371-4e19-b0bf-f05e68820607" valueTypeId="c60d9750-ce68-46f8-9eff-a2e63645d70e"/>
   </producedTypes>
-  <name>Majors</name>
+  <name>ProgramModes</name>
   <synonym>
     <key>en</key>
-    <value>Ngành đào tạo</value>
+    <value>Hệ đào tạo</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
-  <inputByString>Catalog.Majors.StandardAttribute.Description</inputByString>
-  <inputByString>Catalog.Majors.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.ProgramModes.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ProgramModes.StandardAttribute.Code</inputByString>
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
   <standardAttributes>
     <dataHistory>Use</dataHistory>
@@ -59,14 +59,8 @@
   <standardAttributes>
     <dataHistory>Use</dataHistory>
     <name>Owner</name>
-    <synonym>
-      <key>en</key>
-      <value>Khoa</value>
-    </synonym>
     <fillFromFillingValue>true</fillFromFillingValue>
-    <fillValue xsi:type="core:ReferenceValue">
-      <value>Catalog.Faculties.EmptyRef</value>
-    </fillValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
     <fullTextSearch>Use</fullTextSearch>
     <minValue xsi:type="core:UndefinedValue"/>
@@ -86,7 +80,7 @@
     <name>Description</name>
     <synonym>
       <key>en</key>
-      <value>Tên ngành</value>
+      <value>Tên hệ</value>
     </synonym>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
@@ -99,7 +93,7 @@
     <name>Code</name>
     <synonym>
       <key>en</key>
-      <value>Mã ngành</value>
+      <value>Mã</value>
     </synonym>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
@@ -111,9 +105,8 @@
   <fullTextSearch>Use</fullTextSearch>
   <levelCount>2</levelCount>
   <foldersOnTop>true</foldersOnTop>
-  <owners>Catalog.Faculties</owners>
   <codeLength>9</codeLength>
-  <descriptionLength>150</descriptionLength>
+  <descriptionLength>25</descriptionLength>
   <codeType>String</codeType>
   <codeAllowedLength>Variable</codeAllowedLength>
   <checkUnique>true</checkUnique>
@@ -121,47 +114,42 @@
   <defaultPresentation>AsDescription</defaultPresentation>
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
-  <attributes uuid="9e46d614-3066-4e32-99c4-4fe3d1f5576f">
-    <name>MOECode</name>
+  <attributes uuid="a02b83f9-04fd-4f5f-9802-eb256e422fd8">
+    <name>StandardYears</name>
     <synonym>
       <key>en</key>
-      <value>Mã ngành Bộ GD</value>
+      <value>Số năm chuẩn</value>
     </synonym>
     <type>
-      <types>String</types>
-      <stringQualifiers>
-        <length>7</length>
-      </stringQualifiers>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+        <scale>1</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="693e8881-430d-4a3f-bb1d-23b1623cca63">
-    <name>DegreeLevel</name>
+  <attributes uuid="004c548f-621c-4ad2-892c-1827c5cc91b6">
+    <name>IsFullTime</name>
     <synonym>
       <key>en</key>
-      <value>Degree level</value>
+      <value>Is full time</value>
     </synonym>
     <type>
-      <types>String</types>
-      <stringQualifiers>
-        <length>10</length>
-      </stringQualifiers>
+      <types>Boolean</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="fcdd3236-014f-454e-aa2f-4ad76f72294c">
+  <attributes uuid="4417d0f1-da56-4e57-a5b2-59e1b595ffac">
     <name>Active</name>
     <synonym>
       <key>en</key>

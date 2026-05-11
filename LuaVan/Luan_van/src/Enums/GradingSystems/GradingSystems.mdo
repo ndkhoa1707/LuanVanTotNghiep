@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f0688f58-cd4e-459d-8718-038e9e4726ce">
+  <producedTypes>
+    <refType typeId="fe59c47c-7014-463e-b950-8b4e0924d93e" valueTypeId="d4852777-d7d3-4a71-91b7-91b7651d2d68"/>
+    <listType typeId="3ef6fe51-2813-44bc-b266-bb8dda258cc4" valueTypeId="1ebdeace-a028-4af2-849a-ab7bf10847a7"/>
+    <managerType typeId="fe2eac2b-d231-4b0b-95a7-31f178ccc340" valueTypeId="cb58790e-aacb-4cd2-b11b-623ce1cd1f50"/>
+  </producedTypes>
+  <name>GradingSystems</name>
+  <synonym>
+    <key>en</key>
+    <value>(Hệ thống đánh giá</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="7049201d-7c81-49d0-b974-6fd0db10040c">
+    <name>Scale10</name>
+    <synonym>
+      <key>en</key>
+      <value>Thang 10</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="1b028727-ff56-425a-8ae8-a73e5a495028">
+    <name>Scale4</name>
+    <synonym>
+      <key>en</key>
+      <value>Thang 4</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="284c1022-2479-4100-9180-95141019a93a">
+    <name>LetterGrade</name>
+    <synonym>
+      <key>en</key>
+      <value>Chữ A-F</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

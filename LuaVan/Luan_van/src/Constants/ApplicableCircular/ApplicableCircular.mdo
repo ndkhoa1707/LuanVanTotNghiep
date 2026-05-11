@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a7ecba0d-1f03-496c-9524-7a877d4a0fb3">
+  <producedTypes>
+    <managerType typeId="01d5c626-1b3e-4168-95fe-502aadf0cad1" valueTypeId="82bb2d93-c4ee-4b2d-8e82-15ecd95fed06"/>
+    <valueManagerType typeId="3365170b-75f8-468d-890b-9a856565ce13" valueTypeId="be4a981e-2087-44d5-a6d8-e0ff6d401e40"/>
+    <valueKeyType typeId="55bf83db-708d-47d6-b291-011e3d54d84b" valueTypeId="16ce69f1-f23f-433d-9afd-057301527c59"/>
+  </producedTypes>
+  <name>ApplicableCircular</name>
+  <synonym>
+    <key>en</key>
+    <value>Thông tư áp dụng</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>20</length>
+    </stringQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

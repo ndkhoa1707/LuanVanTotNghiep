@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8e5a7db7-dd0a-431d-af98-9a12c53638b6">
+  <producedTypes>
+    <managerType typeId="b92f2b7c-91cc-4939-a63a-c0eaf11fd216" valueTypeId="91c156a1-03a3-4f46-8ee0-70058aeeecb4"/>
+    <valueManagerType typeId="75fa2d90-4078-425a-9ed0-173fc506d93a" valueTypeId="ccb2e26b-24a6-4ee1-94ab-02d556b38002"/>
+    <valueKeyType typeId="1b06ef9d-5dc8-4213-ba66-7b853b344331" valueTypeId="20e62db6-290a-446b-b899-8f3b499841c9"/>
+  </producedTypes>
+  <name>MinFoundationCredits</name>
+  <synonym>
+    <key>en</key>
+    <value>TC tối thiểu khối cơ sở ngành</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>3</precision>
+      <nonNegative>true</nonNegative>
+    </numberQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

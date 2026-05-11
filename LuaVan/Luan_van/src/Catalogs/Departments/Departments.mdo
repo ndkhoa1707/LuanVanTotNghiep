@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="439b75ee-a60b-4cd1-be4a-37676372e117">
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2e4efdf1-a57c-4678-997b-adb147e6d2b3">
   <producedTypes>
-    <objectType typeId="84d5bace-06a7-489d-958d-fe5a0b2deb7b" valueTypeId="78421989-cd9d-4dc5-b4e1-ed7272c6ea81"/>
-    <refType typeId="be5d5bbd-96b9-4f65-a586-449f2e7c4f0c" valueTypeId="632404e2-7d70-488f-b408-3473cf3025a0"/>
-    <selectionType typeId="8f2f1582-cdc3-4347-872a-b36bbbc9cd9d" valueTypeId="4feacba6-29e7-4450-9097-0b186c414364"/>
-    <listType typeId="4c33e30b-b159-4a63-b0e0-a7696f33803f" valueTypeId="02b1a3ba-ac9e-4e13-a950-0ded962fb8e7"/>
-    <managerType typeId="7ea6bdc0-4a4a-477b-a90d-f1536fdfc5c5" valueTypeId="46026ab0-500f-4eba-b95f-c5c50f1db21b"/>
+    <objectType typeId="f2007744-4f54-4bbe-91ee-674a75a7d782" valueTypeId="c46423e6-4660-4abc-bfd2-131e397f2537"/>
+    <refType typeId="7a90ec31-935c-48f9-9650-f824d5960d29" valueTypeId="e915a696-9ed7-476f-b0f8-0960d16275a0"/>
+    <selectionType typeId="60b552bd-c980-428b-8943-6e238e3ea520" valueTypeId="069cdb17-75f7-452d-bac2-4aa3ad53a557"/>
+    <listType typeId="815b1b7f-1a4b-4f4b-a85d-51a588e912fa" valueTypeId="e7b5a79d-3085-4bed-8832-636bf28e2f4c"/>
+    <managerType typeId="f4ddc2c1-7d8c-432a-b485-db33c48f4921" valueTypeId="665b55ce-3d80-41a2-a9bf-4deb6b91c268"/>
   </producedTypes>
-  <name>Majors</name>
+  <name>Departments</name>
   <synonym>
     <key>en</key>
-    <value>Ngành đào tạo</value>
+    <value>Bộ môn</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
-  <inputByString>Catalog.Majors.StandardAttribute.Description</inputByString>
-  <inputByString>Catalog.Majors.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.Departments.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.Departments.StandardAttribute.Code</inputByString>
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
   <standardAttributes>
     <dataHistory>Use</dataHistory>
@@ -86,7 +86,7 @@
     <name>Description</name>
     <synonym>
       <key>en</key>
-      <value>Tên ngành</value>
+      <value>Tên bộ môn</value>
     </synonym>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
@@ -99,7 +99,7 @@
     <name>Code</name>
     <synonym>
       <key>en</key>
-      <value>Mã ngành</value>
+      <value>Mã bộ môn</value>
     </synonym>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
@@ -121,31 +121,11 @@
   <defaultPresentation>AsDescription</defaultPresentation>
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
-  <attributes uuid="9e46d614-3066-4e32-99c4-4fe3d1f5576f">
-    <name>MOECode</name>
+  <attributes uuid="e6cac23c-111e-4be3-b38f-fb61b99539d6">
+    <name>HeadOfDepartment</name>
     <synonym>
       <key>en</key>
-      <value>Mã ngành Bộ GD</value>
-    </synonym>
-    <type>
-      <types>String</types>
-      <stringQualifiers>
-        <length>7</length>
-      </stringQualifiers>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="693e8881-430d-4a3f-bb1d-23b1623cca63">
-    <name>DegreeLevel</name>
-    <synonym>
-      <key>en</key>
-      <value>Degree level</value>
+      <value>Trưởng bộ môn</value>
     </synonym>
     <type>
       <types>String</types>
@@ -161,7 +141,7 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="fcdd3236-014f-454e-aa2f-4ad76f72294c">
+  <attributes uuid="b292f661-8867-4e3c-ac17-7c531db36bf4">
     <name>Active</name>
     <synonym>
       <key>en</key>

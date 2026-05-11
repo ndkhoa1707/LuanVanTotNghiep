@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="439b75ee-a60b-4cd1-be4a-37676372e117">
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4d2162c8-31df-4e2e-87e4-392b2860a6c6">
   <producedTypes>
-    <objectType typeId="84d5bace-06a7-489d-958d-fe5a0b2deb7b" valueTypeId="78421989-cd9d-4dc5-b4e1-ed7272c6ea81"/>
-    <refType typeId="be5d5bbd-96b9-4f65-a586-449f2e7c4f0c" valueTypeId="632404e2-7d70-488f-b408-3473cf3025a0"/>
-    <selectionType typeId="8f2f1582-cdc3-4347-872a-b36bbbc9cd9d" valueTypeId="4feacba6-29e7-4450-9097-0b186c414364"/>
-    <listType typeId="4c33e30b-b159-4a63-b0e0-a7696f33803f" valueTypeId="02b1a3ba-ac9e-4e13-a950-0ded962fb8e7"/>
-    <managerType typeId="7ea6bdc0-4a4a-477b-a90d-f1536fdfc5c5" valueTypeId="46026ab0-500f-4eba-b95f-c5c50f1db21b"/>
+    <objectType typeId="4cee2cea-bf1f-49c9-aecf-9e2d8b28a9c4" valueTypeId="ffe6ec56-86c8-48b9-8fd4-3df328b5a693"/>
+    <refType typeId="610edca3-ecef-4881-97f4-e200ad280904" valueTypeId="f1f609b9-101f-4a3c-9a4a-dc4b85ce4bcd"/>
+    <selectionType typeId="4f34c9a0-1bd0-4c42-b1fb-34bffc8ed188" valueTypeId="6ea1e03b-50ad-4b03-af4c-db278fc61ac3"/>
+    <listType typeId="f09ae795-a080-4231-b869-edf4d13335f5" valueTypeId="ba6488f6-b37a-4d6d-8fb1-780b6ebe3b16"/>
+    <managerType typeId="2cab16e8-8c29-4321-9230-7f82390d5210" valueTypeId="d6600017-821e-4aa4-959f-727a1de5edfa"/>
   </producedTypes>
-  <name>Majors</name>
+  <name>AssessmentMethods</name>
   <synonym>
     <key>en</key>
-    <value>Ngành đào tạo</value>
+    <value>Phương pháp đánh giá</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
-  <inputByString>Catalog.Majors.StandardAttribute.Description</inputByString>
-  <inputByString>Catalog.Majors.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.AssessmentMethods.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.AssessmentMethods.StandardAttribute.Code</inputByString>
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
   <standardAttributes>
     <dataHistory>Use</dataHistory>
@@ -59,14 +59,8 @@
   <standardAttributes>
     <dataHistory>Use</dataHistory>
     <name>Owner</name>
-    <synonym>
-      <key>en</key>
-      <value>Khoa</value>
-    </synonym>
     <fillFromFillingValue>true</fillFromFillingValue>
-    <fillValue xsi:type="core:ReferenceValue">
-      <value>Catalog.Faculties.EmptyRef</value>
-    </fillValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
     <fullTextSearch>Use</fullTextSearch>
     <minValue xsi:type="core:UndefinedValue"/>
@@ -86,7 +80,7 @@
     <name>Description</name>
     <synonym>
       <key>en</key>
-      <value>Tên ngành</value>
+      <value>Tên phương pháp</value>
     </synonym>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
@@ -99,7 +93,7 @@
     <name>Code</name>
     <synonym>
       <key>en</key>
-      <value>Mã ngành</value>
+      <value>Mã</value>
     </synonym>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
@@ -111,9 +105,8 @@
   <fullTextSearch>Use</fullTextSearch>
   <levelCount>2</levelCount>
   <foldersOnTop>true</foldersOnTop>
-  <owners>Catalog.Faculties</owners>
   <codeLength>9</codeLength>
-  <descriptionLength>150</descriptionLength>
+  <descriptionLength>100</descriptionLength>
   <codeType>String</codeType>
   <codeAllowedLength>Variable</codeAllowedLength>
   <checkUnique>true</checkUnique>
@@ -121,51 +114,50 @@
   <defaultPresentation>AsDescription</defaultPresentation>
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
-  <attributes uuid="9e46d614-3066-4e32-99c4-4fe3d1f5576f">
-    <name>MOECode</name>
+  <attributes uuid="9d995fce-8012-4d3b-b6b3-b4e9638e6a91">
+    <name>MaxWeightCap</name>
     <synonym>
       <key>en</key>
-      <value>Mã ngành Bộ GD</value>
+      <value>Trọng số tối đa (%)</value>
     </synonym>
     <type>
-      <types>String</types>
-      <stringQualifiers>
-        <length>7</length>
-      </stringQualifiers>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
     </fillValue>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="693e8881-430d-4a3f-bb1d-23b1623cca63">
-    <name>DegreeLevel</name>
+  <attributes uuid="89566a7b-bbd4-44b5-9d63-7880764cabc4">
+    <name>AssessmentType</name>
     <synonym>
       <key>en</key>
-      <value>Degree level</value>
+      <value>Loại</value>
     </synonym>
     <type>
-      <types>String</types>
-      <stringQualifiers>
-        <length>10</length>
-      </stringQualifiers>
+      <types>EnumRef.AssessmentTypes</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="fcdd3236-014f-454e-aa2f-4ad76f72294c">
+  <attributes uuid="654bca59-2619-4444-91bd-e5946b9896c9">
     <name>Active</name>
     <synonym>
       <key>en</key>
-      <value>Active</value>
+      <value>Hoạt động</value>
     </synonym>
     <type>
       <types>Boolean</types>

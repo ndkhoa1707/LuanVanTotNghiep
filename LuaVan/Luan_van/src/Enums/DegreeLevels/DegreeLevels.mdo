@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f60429a6-8674-49ab-834c-010ec53b3c87">
+  <producedTypes>
+    <refType typeId="3453ac3a-0d85-4850-b742-9805d86d7c34" valueTypeId="bc01bf5e-7adf-40cd-a00f-3d67cddb89bd"/>
+    <listType typeId="a3cb9138-bf1c-46e6-a598-7b3ac9c8ca2e" valueTypeId="16985a7c-2fa4-4b4e-80fd-097b9bc79131"/>
+    <managerType typeId="6c1163a0-318e-40de-b6a1-908c21954ae4" valueTypeId="fc0fcbe8-f5b9-4218-a4b1-79015fa82ccd"/>
+  </producedTypes>
+  <name>DegreeLevels</name>
+  <synonym>
+    <key>en</key>
+    <value>Degree levels</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="d85e7f79-6157-499a-ade2-b3cafd18001b">
+    <name>Bachelor</name>
+    <synonym>
+      <key>en</key>
+      <value>Cử nhân / Kỹ sư</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="db36feb3-80a9-41c2-a6fb-c2bc037423d7">
+    <name>Master</name>
+    <synonym>
+      <key>en</key>
+      <value>Thạc sĩ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="974417d6-827a-4cce-8dca-0bfea3833fd5">
+    <name>PhD</name>
+    <synonym>
+      <key>en</key>
+      <value>Tiến sĩ</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

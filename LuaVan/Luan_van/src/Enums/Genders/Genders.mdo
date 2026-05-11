@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4fa1d759-e344-4321-bb89-b312b6c3671f">
+  <producedTypes>
+    <refType typeId="db59a3b7-ddb6-42e5-8e9e-f21417e5d465" valueTypeId="4daa6c5d-0994-4782-8dda-a2e4ebd40125"/>
+    <listType typeId="78c55b10-0dba-4847-9f96-334f20438c80" valueTypeId="7c03a028-5af0-49d5-810f-be78fdd6e845"/>
+    <managerType typeId="5fbac527-3792-484b-a6ad-7d7bf7ad54de" valueTypeId="4300564e-1294-40cb-944a-3efd0ca93c10"/>
+  </producedTypes>
+  <name>Genders</name>
+  <synonym>
+    <key>en</key>
+    <value>Genders</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="3c75a98b-549f-4caf-af90-740a8dd21981">
+    <name>Male</name>
+    <synonym>
+      <key>en</key>
+      <value>Nam</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="5cce99a8-7686-4948-a9cf-91636f6a56ef">
+    <name>Female</name>
+    <synonym>
+      <key>en</key>
+      <value>Nữ</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

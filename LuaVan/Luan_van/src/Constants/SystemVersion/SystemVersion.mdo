@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="55f8f4b1-7c71-48d0-8a7b-edf2c36b048d">
+  <producedTypes>
+    <managerType typeId="917b9dd7-9b91-42c7-be9b-b18b6b0d36db" valueTypeId="29d70e19-4278-4271-b5c8-384a4f9e95cc"/>
+    <valueManagerType typeId="bfcd980d-844d-419a-908b-482908be8e72" valueTypeId="0cf7fe0e-23fe-4aba-aeb8-6969ad6d0375"/>
+    <valueKeyType typeId="c3385818-12c2-4ba7-bc57-3888a45f5836" valueTypeId="70665d80-4709-45c1-ad6e-7a1b0c9638dc"/>
+  </producedTypes>
+  <name>SystemVersion</name>
+  <synonym>
+    <key>en</key>
+    <value>Phiên bản hệ thống</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>10</length>
+    </stringQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

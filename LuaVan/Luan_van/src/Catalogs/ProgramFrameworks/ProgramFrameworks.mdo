@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0bfd8406-c8cf-4fce-9ff0-d1ace225f166">
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9acf65fa-3af1-4b07-8ff0-dcea9e86540b">
   <producedTypes>
-    <objectType typeId="614c75e8-1d18-4905-8432-9dfd173df9ee" valueTypeId="86ff1477-1516-47b4-80ab-b0de7f4cab3b"/>
-    <refType typeId="ef4c9bd0-af63-4e5b-be82-3fbbb9ad8bf8" valueTypeId="48f6c1d3-e9ca-4d1a-8e9c-e454e21adb25"/>
-    <selectionType typeId="56700c9d-a4ec-416d-8237-1f469af7e13c" valueTypeId="d964fb5a-134e-4943-b518-d5f6daaffd1d"/>
-    <listType typeId="47d9ac57-66d0-4d9a-a1ba-f23ef5540e38" valueTypeId="4a00b4e1-24f6-42f7-86c2-4edcbc4f9c71"/>
-    <managerType typeId="165f5c16-653e-42fd-b86b-4cfb00800100" valueTypeId="8f9e03b8-cda7-45f3-875d-d3b4908a9868"/>
+    <objectType typeId="9e4aa1f7-6d98-4d7d-bc6f-726eea39a767" valueTypeId="360b8a2a-6edd-4103-a151-0e1a396d3f3d"/>
+    <refType typeId="30071341-4898-40f2-bd76-508d64aacbf1" valueTypeId="2e495131-798c-42cc-b1d1-78f4ee2e6d10"/>
+    <selectionType typeId="fbdf2e29-1947-4e43-a368-9380795f7831" valueTypeId="4b3c6400-4c03-4481-a90e-f113916bdb68"/>
+    <listType typeId="5b78a947-3fd2-48e5-9c60-47e188292897" valueTypeId="607b8915-850d-4204-915d-bcf4774514fe"/>
+    <managerType typeId="f167f2d2-967a-40f5-8ae2-e22b7c9548ae" valueTypeId="8fe90fad-41f8-4881-8eae-a8f31fb09885"/>
   </producedTypes>
-  <name>Lecturers</name>
+  <name>ProgramFrameworks</name>
   <synonym>
     <key>en</key>
-    <value>Giảng viên</value>
+    <value>Khung CTĐT</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
-  <inputByString>Catalog.Lecturers.StandardAttribute.Description</inputByString>
-  <inputByString>Catalog.Lecturers.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.ProgramFrameworks.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ProgramFrameworks.StandardAttribute.Code</inputByString>
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
   <standardAttributes>
     <dataHistory>Use</dataHistory>
@@ -59,14 +59,8 @@
   <standardAttributes>
     <dataHistory>Use</dataHistory>
     <name>Owner</name>
-    <synonym>
-      <key>en</key>
-      <value>Khoa</value>
-    </synonym>
     <fillFromFillingValue>true</fillFromFillingValue>
-    <fillValue xsi:type="core:ReferenceValue">
-      <value>Catalog.Faculties.EmptyRef</value>
-    </fillValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
     <fullTextSearch>Use</fullTextSearch>
     <minValue xsi:type="core:UndefinedValue"/>
@@ -86,7 +80,7 @@
     <name>Description</name>
     <synonym>
       <key>en</key>
-      <value>Họ và tên</value>
+      <value>Tên khung</value>
     </synonym>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
@@ -99,7 +93,7 @@
     <name>Code</name>
     <synonym>
       <key>en</key>
-      <value>Mã CB</value>
+      <value>Mã khung</value>
     </synonym>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
@@ -111,9 +105,8 @@
   <fullTextSearch>Use</fullTextSearch>
   <levelCount>2</levelCount>
   <foldersOnTop>true</foldersOnTop>
-  <owners>Catalog.Faculties</owners>
   <codeLength>9</codeLength>
-  <descriptionLength>150</descriptionLength>
+  <descriptionLength>25</descriptionLength>
   <codeType>String</codeType>
   <codeAllowedLength>Variable</codeAllowedLength>
   <checkUnique>true</checkUnique>
@@ -121,64 +114,16 @@
   <defaultPresentation>AsDescription</defaultPresentation>
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
-  <attributes uuid="276c8734-87d9-46ed-9284-ba4f56c89a17">
-    <name>AcademicTitle</name>
+  <attributes uuid="cad48868-0c5f-49d1-b024-f4e189bd50a8">
+    <name>ApplicableCircular</name>
     <synonym>
       <key>en</key>
-      <value>Chức danh</value>
-    </synonym>
-    <type>
-      <types>EnumRef.AcademicTitles</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="bb443279-a013-482e-b137-f61bda57f9ee">
-    <name>DateOfBirth</name>
-    <synonym>
-      <key>en</key>
-      <value>Ngày sinh</value>
-    </synonym>
-    <type>
-      <types>Date</types>
-      <dateQualifiers>
-        <dateFractions>Date</dateFractions>
-      </dateQualifiers>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="f93f7cb4-9ad5-4581-b912-f91c15014d59">
-    <name>Gender</name>
-    <synonym>
-      <key>en</key>
-      <value>Giới tính</value>
-    </synonym>
-    <type>
-      <types>EnumRef.Genders</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="23a7f89f-c619-4a9f-9285-9042020f67e4">
-    <name>Email</name>
-    <synonym>
-      <key>en</key>
-      <value>Email</value>
+      <value>Thông tư áp dụng</value>
     </synonym>
     <type>
       <types>String</types>
       <stringQualifiers>
-        <length>50</length>
+        <length>20</length>
       </stringQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
@@ -190,38 +135,53 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="16dc8ece-8859-44bc-8d20-02ee6223603b">
-    <name>Phone</name>
+  <attributes uuid="049940b1-a7a2-4934-b5d2-d630481cab8e">
+    <name>DegreeLevel</name>
     <synonym>
       <key>en</key>
-      <value>Điện thoại</value>
+      <value>Trình độ</value>
     </synonym>
     <type>
-      <types>String</types>
-      <stringQualifiers>
-        <length>10</length>
-        <fixed>true</fixed>
-      </stringQualifiers>
+      <types>EnumRef.DegreeLevels</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:StringValue">
-      <value>          </value>
-    </fillValue>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="259fba34-d7dd-4254-98c7-cf64d198e686">
-    <name>JoinDate</name>
+  <attributes uuid="72792d79-ae8e-4785-a8f7-b07dae143905">
+    <name>MinTotalCredits</name>
     <synonym>
       <key>en</key>
-      <value>Ngày vào làm</value>
+      <value>TC tối thiểu</value>
     </synonym>
     <type>
-      <types>Date</types>
-      <dateQualifiers>
-        <dateFractions>Date</dateFractions>
-      </dateQualifiers>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="47bee563-ae51-43ff-b79d-47981d475b07">
+    <name>MaxTotalCredits</name>
+    <synonym>
+      <key>en</key>
+      <value>TC tối đa</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -229,95 +189,100 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="7cb64d0b-ad7d-49e0-9bf8-696f4351bfef">
-    <name>ResearchAreas</name>
+  <attributes uuid="96d59c4e-3d36-42ad-ba41-51bd36671294">
+    <name>StandardYears</name>
     <synonym>
       <key>en</key>
-      <value>Lĩnh vực nghiên cứu</value>
+      <value>Số năm chuẩn</value>
     </synonym>
     <type>
-      <types>String</types>
-      <stringQualifiers>
-        <length>500</length>
-      </stringQualifiers>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+        <scale>1</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="aaa37df9-e67e-4505-afab-4bdb168a5107">
-    <name>Active</name>
-    <synonym>
-      <key>en</key>
-      <value>Đang công tác</value>
-    </synonym>
-    <type>
-      <types>Boolean</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <tabularSections uuid="caa779e2-9559-4688-8383-d42307b950f2">
+  <tabularSections uuid="7236eca1-4560-4053-9f88-dc361c836156">
     <producedTypes>
-      <objectType typeId="f9ac369d-3040-4ad7-80b1-545b2c42b144" valueTypeId="f218c4f0-34ac-45ae-9ef9-4440c47cf9fe"/>
-      <rowType typeId="4390d859-d9cd-4bc6-94ba-8f9a322c6d96" valueTypeId="e3a71c70-60fe-4aad-8f1a-b67bc3f96ff7"/>
+      <objectType typeId="52c6e836-4886-46e8-9263-d38095858239" valueTypeId="5ba4968d-c905-432d-b6c2-68fbaab6c506"/>
+      <rowType typeId="28bc01a8-3ae2-4494-9839-3e017f99383a" valueTypeId="b0662d82-5553-4e74-9671-05a5958ee4e7"/>
     </producedTypes>
-    <name>SystemRoles</name>
+    <name>BlockRequirements</name>
     <synonym>
       <key>en</key>
-      <value>Các vai trò trong hệ thống QLĐT</value>
+      <value>Yêu cầu tối thiểu/tối đa của từng khối kiến thức</value>
     </synonym>
-    <attributes uuid="efb3f878-15c0-433b-9972-58a7457d376d">
-      <name>Role</name>
+    <attributes uuid="cc8a04e6-8a64-4441-a2d8-db75acbc58cd">
+      <name>KnowledgeBlock</name>
       <synonym>
         <key>en</key>
-        <value>Vai trò</value>
+        <value>Khối kiến thức</value>
       </synonym>
       <type>
-        <types>EnumRef.UserRoles</types>
+        <types>CatalogRef.KnowledgeBlocks</types>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="93e57379-c1f5-44f4-9c9d-b0a1c64f888b">
-      <name>AssignedDate</name>
+    <attributes uuid="03d6576c-3d1c-407d-9da4-ea3c104d5116">
+      <name>MinCredits</name>
       <synonym>
         <key>en</key>
-        <value>Ngày bắt đầu</value>
+        <value>MinCredits</value>
       </synonym>
       <type>
-        <types>Date</types>
-        <dateQualifiers>
-          <dateFractions>Date</dateFractions>
-        </dateQualifiers>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>3</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="407392db-e261-480a-825d-d5daa8f67026">
-      <name>ExpiryDate</name>
+    <attributes uuid="fb4bec05-65b4-434e-a437-69f15c074751">
+      <name>MaxCredits</name>
       <synonym>
         <key>en</key>
-        <value>Ngày kết thúc</value>
+        <value>Max credits</value>
       </synonym>
       <type>
-        <types>String</types>
-        <stringQualifiers>
-          <length>10</length>
-        </stringQualifiers>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>3</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c63b6c64-a093-4cba-ad9e-cbf24dcb8a24">
+      <name>MinRatio</name>
+      <synonym>
+        <key>en</key>
+        <value>Tỷ lệ tối thiểu (%)</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>

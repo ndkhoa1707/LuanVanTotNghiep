@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="566aaf44-1afe-4e12-8073-9413d668244e">
+  <producedTypes>
+    <managerType typeId="2833532d-c5ae-42e5-9077-4877ce472182" valueTypeId="fcbbca60-4646-42a9-928d-f3dbd552ca25"/>
+    <valueManagerType typeId="5f2ca6c1-7906-429b-9af2-7035cedc82c3" valueTypeId="58e67786-4eea-485c-99ee-28e204cb6fc9"/>
+    <valueKeyType typeId="1d88bc9a-b575-4d23-b536-66827df4fff7" valueTypeId="2d901ec9-2864-4ec2-8c51-a259a01624c7"/>
+  </producedTypes>
+  <name>MinGeneralEducationCredits</name>
+  <synonym>
+    <key>en</key>
+    <value>TC tối thiểu khối đại cương</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>3</precision>
+      <nonNegative>true</nonNegative>
+    </numberQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>
