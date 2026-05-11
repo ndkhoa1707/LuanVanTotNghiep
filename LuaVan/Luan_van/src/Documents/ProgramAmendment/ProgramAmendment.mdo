@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d828a16a-c66e-4d64-b854-2c8077df5299">
+  <producedTypes>
+    <objectType typeId="417eab44-46d3-4094-90f7-a86c563b1aa0" valueTypeId="93238652-0a85-40f1-9b14-a0a4f316e02f"/>
+    <refType typeId="f30c701a-7962-48dd-8eab-7b55e201675d" valueTypeId="6f2497a0-6340-4713-b722-19980c1f304b"/>
+    <selectionType typeId="95a60692-9c16-4746-aa06-d5966f204b47" valueTypeId="7de1c27d-75ec-4b2f-b980-e84037c91bac"/>
+    <listType typeId="f71fb743-1f5e-4fcf-bcbe-cd53d0892aa3" valueTypeId="cf9c1de0-f895-44fb-a46d-97e446f55702"/>
+    <managerType typeId="4dd00519-100e-43e7-83c2-b2a1bb07f87f" valueTypeId="040dd608-a2d1-4250-a811-8515053a43d8"/>
+  </producedTypes>
+  <name>ProgramAmendment</name>
+  <synonym>
+    <key>en</key>
+    <value>Sửa đổi/Ngừng/Rà soát CTĐT</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ProgramAmendment.StandardAttribute.Number</inputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <posting>Deny</posting>
+  <attributes uuid="aff44fc9-e7d8-4ebd-8417-cae36ab256f7">
+    <name>TargetProgram</name>
+    <synonym>
+      <key>en</key>
+      <value>CTĐT bị tác động</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.TrainingPrograms</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="aff44fc9-e7d8-4ebd-8417-cae36ab256f8">
+    <name>AmendmentType</name>
+    <synonym>
+      <key>en</key>
+      <value>Loại sửa đổi</value>
+    </synonym>
+    <type>
+      <types>EnumRef.AmendmentType</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="aff44fc9-e7d8-4ebd-8417-cae36ab256f9">
+    <name>AmendmentSummary</name>
+    <synonym>
+      <key>en</key>
+      <value>Mô tả thay đổi/lý do</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1024</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="aff44fc9-e7d8-4ebd-8417-cae36ab25700">
+    <name>EffectiveDate</name>
+    <synonym>
+      <key>en</key>
+      <value>Ngày có hiệu lực</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="aff44fc9-e7d8-4ebd-8417-cae36ab25701">
+    <name>SupportingDecision</name>
+    <synonym>
+      <key>en</key>
+      <value>QĐ căn cứ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Decisions</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="aff44fc9-e7d8-4ebd-8417-cae36ab25702">
+    <name>ReviewYear</name>
+    <synonym>
+      <key>en</key>
+      <value>Năm rà soát</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.AcademicYears</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="aff44fc9-e7d8-4ebd-8417-cae36ab25703">
+    <name>ReviewSummary</name>
+    <synonym>
+      <key>en</key>
+      <value>Tóm tắt báo cáo rà soát</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1024</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Document>
