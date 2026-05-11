@@ -22,4 +22,20 @@
   <numberAllowedLength>Variable</numberAllowedLength>
   <numberPeriodicity>Year</numberPeriodicity>
   <task>Task.ProgramApprovalTasks</task>
+  <attributes uuid="0b50dc13-0e75-43ff-9eb2-22c438ec4e2e">
+    <name>TargetProgram</name>
+    <synonym>
+      <key>en</key>
+      <value>CTĐT đang phê duyệt</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.TrainingPrograms</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
 </mdclass:BusinessProcess>

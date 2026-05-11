@@ -15,11 +15,11 @@ Procedure RunAll() Export
 	//FillAcademicYears();
 	//FillKnowledgeBlocks();
 	//FillFaculties();
-	FillLecturers();
+	//FillLecturers();
 	//FillMajors();
 	//FillCourses();
 	//FillDecisions();
-	//FillTrainingPrograms();
+	FillTrainingPrograms();
 	//FillDocuments();
 	//FillBusinessProcessAndTasks();
 EndProcedure
@@ -561,8 +561,9 @@ EndFunction
 // Phê duyệt CTĐT (T1→T2→T3→T4)
 // Lưu ý: Route map chưa vẽ → Task không tự sinh, code này tạo Task thủ công
 Procedure FillBusinessProcessAndTasks() Export
-	// Tạo BusinessProcess instance
-	BP = CreateBusinessProcess(Date(2024, 1, 15));
+	// Tạo BusinessProcess instance gắn với CTĐT IT 2024
+	CTDT = Catalogs.TrainingPrograms.FindByCode("CT-IT-2024");
+	BP = CreateBusinessProcess(Date(2024, 1, 15), CTDT);
 
 	// Dynamic lookup performers theo Role thay vì hard-code mã GV
 	CNTT1     = Catalogs.Faculties.FindByCode("CNTT1");
@@ -588,9 +589,10 @@ Procedure FillBusinessProcessAndTasks() Export
 		Performer4, True);
 EndProcedure
 
-Function CreateBusinessProcess(BPDate)
+Function CreateBusinessProcess(BPDate, TargetProgram)
 	NewBP = BusinessProcesses.ProgramApprovalProcess.CreateBusinessProcess();
 	NewBP.Date = BPDate;
+	NewBP.TargetProgram = TargetProgram;
 	NewBP.Write();
 	Return NewBP.Ref;
 EndFunction
