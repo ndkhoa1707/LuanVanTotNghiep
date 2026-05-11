@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Task xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="14cd09b5-e357-4eab-9db2-1a5d339150a6">
+  <producedTypes>
+    <objectType typeId="d716d5c6-0d71-4e7b-9509-fc8b5cfa89c6" valueTypeId="7aee9a96-6ff2-4d4d-a482-5c833147af1b"/>
+    <refType typeId="7dd781b1-941c-498d-ae24-26d6905a37f7" valueTypeId="6d9e2d0b-0b94-4e32-ae0e-96458a4c9606"/>
+    <selectionType typeId="24ac844b-b17b-4ca9-bd90-16af8b3eb77d" valueTypeId="a85aa144-3fd0-474e-a565-d672ec35dd23"/>
+    <listType typeId="8399fca1-af4e-447b-8158-3d4b9624465e" valueTypeId="8af6f934-8cb0-4655-aa32-53291d5d6f98"/>
+    <managerType typeId="64e35b69-26c4-48c2-bb75-86de15a54cf1" valueTypeId="d3dbc3f6-fe87-4108-b429-096fa1a33fed"/>
+  </producedTypes>
+  <name>ProgramApprovalTasks</name>
+  <synonym>
+    <key>en</key>
+    <value>Nhiệm vụ phê duyệt CTĐT</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Task.ProgramApprovalTasks.StandardAttribute.Number</inputByString>
+  <inputByString>Task.ProgramApprovalTasks.StandardAttribute.Description</inputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <descriptionLength>150</descriptionLength>
+</mdclass:Task>

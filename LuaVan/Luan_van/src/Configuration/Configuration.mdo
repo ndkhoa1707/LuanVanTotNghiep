@@ -59,6 +59,7 @@
   <reports>Report.ProgramListReport</reports>
   <reports>Report.ApprovalAuditReport</reports>
   <dataProcessors>DataProcessor.ImportFromExcel</dataProcessors>
+  <tasks>Task.ProgramApprovalTasks</tasks>
   <roles>Role.FacultyStaff</roles>
   <roles>Role.HeadOfDepartment</roles>
   <roles>Role.AcademicAffairsOffice</roles>
