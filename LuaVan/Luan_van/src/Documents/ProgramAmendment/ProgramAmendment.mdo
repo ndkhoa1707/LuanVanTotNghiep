@@ -23,7 +23,9 @@
   <numberPeriodicity>Year</numberPeriodicity>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
-  <posting>Deny</posting>
+  <posting>Allow</posting>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="aff44fc9-e7d8-4ebd-8417-cae36ab256f7">
     <name>TargetProgram</name>
     <synonym>
