@@ -166,6 +166,21 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="6706a96f-8730-4c57-b76b-56313fb63aec">
+    <name>NewStatus</name>
+    <synonym>
+      <key>en</key>
+      <value>Trạng thái CTĐT sau khi post</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ProgramStatuses</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <tabularSections uuid="1ab09109-9bf1-4d3c-84f6-730438f7adf1">
     <producedTypes>
       <objectType typeId="94f01371-5199-49ba-9837-f764869d913c" valueTypeId="6c860adb-c5cc-4b3a-857e-2a462aa423e4"/>

@@ -148,4 +148,19 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="70f0a988-bd46-4369-8115-c2dd043934bb">
+    <name>NewStatus</name>
+    <synonym>
+      <key>en</key>
+      <value>Trạng thái CTĐT sau khi post</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ProgramStatuses</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
 </mdclass:Document>

@@ -4,19 +4,23 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 Procedure Posting(Cancel, PostingMode)
-	// Xác định trạng thái mới
-	NewStatus = Enums.ProgramStatuses.Issued;
-	If AmendmentType = Enums.AmendmentType.Deactivation Then
-		NewStatus = Enums.ProgramStatuses.Deactivated;
-	ElsIf AmendmentType = Enums.AmendmentType.MajorAmendment Then
-		NewStatus = Enums.ProgramStatuses.UnderReview;
+	// Status xác định từ field NewStatus. Fallback theo AmendmentType nếu chưa set
+	ResolvedStatus = NewStatus;
+	If ResolvedStatus.IsEmpty() Then
+		If AmendmentType = Enums.AmendmentType.Deactivation Then
+			ResolvedStatus = Enums.ProgramStatuses.Deactivated;
+		ElsIf AmendmentType = Enums.AmendmentType.MajorAmendment Then
+			ResolvedStatus = Enums.ProgramStatuses.UnderReview;
+		Else
+			ResolvedStatus = Enums.ProgramStatuses.Issued;
+		EndIf;
 	EndIf;
 
 	// Ghi ProgramValidity
 	Movement = RegisterRecords.ProgramValidity.Add();
 	Movement.Period = Date;
 	Movement.TrainingProgram = TargetProgram;
-	Movement.Status = NewStatus;
+	Movement.Status = ResolvedStatus;
 	Movement.EffectiveDate = ?(EffectiveDate = '00010101', Date, EffectiveDate);
 
 	// Ghi ApprovalLog

@@ -10,7 +10,8 @@ Procedure Posting(Cancel, PostingMode)
 	Movement = RegisterRecords.ProgramValidity.Add();
 	Movement.Period = Date;
 	Movement.TrainingProgram = TargetProgram;
-	Movement.Status = Enums.ProgramStatuses.UnderReview;
+	// Dùng NewStatus từ Document; default UnderReview nếu chưa set
+	Movement.Status = ?(NewStatus.IsEmpty(), Enums.ProgramStatuses.UnderReview, NewStatus);
 	Movement.EffectiveDate = Date;
 
 	// Ghi ApprovalLog: audit trail

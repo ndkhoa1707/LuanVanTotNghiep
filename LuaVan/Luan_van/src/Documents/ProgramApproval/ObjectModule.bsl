@@ -4,19 +4,24 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 Procedure Posting(Cancel, PostingMode)
-	// Xác định trạng thái mới
-	NewStatus = Enums.ProgramStatuses.UnderReview;
-	If ApprovalLevel = Enums.ApprovalLevel.Issued Then
-		NewStatus = Enums.ProgramStatuses.Issued;
-	ElsIf Decision = Enums.ApprovalDecision.Approved Then
-		NewStatus = Enums.ProgramStatuses.Approved;
+	// Status xác định từ field NewStatus của Document. Nếu chưa set,
+	// fallback theo logic: Issued nếu Lvl=Issued, Approved nếu Decision=Approved
+	ResolvedStatus = NewStatus;
+	If ResolvedStatus.IsEmpty() Then
+		If ApprovalLevel = Enums.ApprovalLevel.Issued Then
+			ResolvedStatus = Enums.ProgramStatuses.Issued;
+		ElsIf Decision = Enums.ApprovalDecision.Approved Then
+			ResolvedStatus = Enums.ProgramStatuses.Approved;
+		Else
+			ResolvedStatus = Enums.ProgramStatuses.UnderReview;
+		EndIf;
 	EndIf;
 
 	// Ghi ProgramValidity
 	Movement = RegisterRecords.ProgramValidity.Add();
 	Movement.Period = Date;
 	Movement.TrainingProgram = TargetProgram;
-	Movement.Status = NewStatus;
+	Movement.Status = ResolvedStatus;
 	Movement.EffectiveDate = Date;
 	If Not IssuanceDecision.IsEmpty() Then
 		Movement.IssuanceDecision = IssuanceDecision;

@@ -422,44 +422,50 @@ Procedure FillDocuments() Export
 	Decision = Catalogs.Decisions.FindByCode("QD-1234");
 	Year2526 = Catalogs.AcademicYears.FindByCode("2025-2026");
 
-	// 1. ProgramProposal
+	// 1. ProgramProposal → Status UnderReview
 	Proposal = CreateProgramProposal(Date(2024, 1, 15), CNTT1, Proposer, CTDT,
-		"Đề xuất ban hành CTĐT Cử nhân Công nghệ Thông tin K2024 theo TT17/2021");
+		"Đề xuất ban hành CTĐT Cử nhân Công nghệ Thông tin K2024 theo TT17/2021",
+		Enums.ProgramStatuses.UnderReview);
 
-	// 2. ProgramApproval cấp Khoa
+	// 2. ProgramApproval cấp Khoa → Status Approved
 	CreateProgramApproval(Date(2024, 3, 10), CTDT, Enums.ApprovalLevel.FacultyCouncil,
 		Proposal, "Phiên họp số 03/HĐKH-CNTT1 ngày 10/03/2024",
-		Enums.ApprovalDecision.Approved, "GS.TS. Từ Minh Phương, PGS.TS. Đặng Hoài Bắc", Undefined);
+		Enums.ApprovalDecision.Approved, "GS.TS. Từ Minh Phương, PGS.TS. Đặng Hoài Bắc",
+		Undefined, Enums.ProgramStatuses.Approved);
 
-	// 3. ProgramApproval cấp Trường
+	// 3. ProgramApproval cấp Trường → Status vẫn Approved (chỉ kế tiếp Lvl)
 	CreateProgramApproval(Date(2024, 5, 20), CTDT, Enums.ApprovalLevel.InstitutionalCouncil,
 		Undefined, "Phiên họp số 02/HĐKHĐT-PTIT ngày 20/05/2024",
-		Enums.ApprovalDecision.Approved, "GS.TS. Từ Minh Phương (Chủ tịch HĐKHĐT)", Undefined);
+		Enums.ApprovalDecision.Approved, "GS.TS. Từ Minh Phương (Chủ tịch HĐKHĐT)",
+		Undefined, Enums.ProgramStatuses.Approved);
 
-	// 4. ProgramApproval Ban hành
+	// 4. ProgramApproval Ban hành → Status Issued
 	CreateProgramApproval(Date(2024, 6, 15), CTDT, Enums.ApprovalLevel.Issued,
 		Undefined, "QĐ-1234/QĐ-HV ngày 15/06/2024",
-		Enums.ApprovalDecision.Approved, "GS.TS. Từ Minh Phương (Giám đốc)", Decision);
+		Enums.ApprovalDecision.Approved, "GS.TS. Từ Minh Phương (Giám đốc)",
+		Decision, Enums.ProgramStatuses.Issued);
 
-	// 5. ProgramAmendment - Rà soát hằng năm 2025-2026
+	// 5. ProgramAmendment - Rà soát hằng năm → Status giữ Issued
 	CreateProgramAmendment(Date(2025, 12, 15), CTDT, Enums.AmendmentType.AnnualReview,
 		"Rà soát hằng năm CTĐT CNTT 2024 cho năm học 2025-2026 - không thay đổi nội dung",
 		Date(2026, 1, 1), Undefined, Year2526,
-		"Kết quả rà soát: Đạt yêu cầu. Tỷ lệ sinh viên đăng ký 95%. GPA trung bình 2.8.");
+		"Kết quả rà soát: Đạt yêu cầu. Tỷ lệ sinh viên đăng ký 95%. GPA trung bình 2.8.",
+		Enums.ProgramStatuses.Issued);
 EndProcedure
 
-Function CreateProgramProposal(DocDate, Faculty, Proposer, CTDT, Summary)
+Function CreateProgramProposal(DocDate, Faculty, Proposer, CTDT, Summary, NewSt)
 	NewDoc = Documents.ProgramProposal.CreateDocument();
 	NewDoc.Date = DocDate;
 	NewDoc.ProposingFaculty = Faculty;
 	NewDoc.Proposer = Proposer;
 	NewDoc.TargetProgram = CTDT;
 	NewDoc.ProposalSummary = Summary;
+	NewDoc.NewStatus = NewSt;
 	NewDoc.Write(DocumentWriteMode.Posting);
 	Return NewDoc.Ref;
 EndFunction
 
-Function CreateProgramApproval(DocDate, CTDT, Level, BasedOn, Session, Result, Signers, IssuedDecision)
+Function CreateProgramApproval(DocDate, CTDT, Level, BasedOn, Session, Result, Signers, IssuedDecision, NewSt)
 	NewDoc = Documents.ProgramApproval.CreateDocument();
 	NewDoc.Date = DocDate;
 	NewDoc.TargetProgram = CTDT;
@@ -473,11 +479,12 @@ Function CreateProgramApproval(DocDate, CTDT, Level, BasedOn, Session, Result, S
 	If IssuedDecision <> Undefined Then
 		NewDoc.IssuanceDecision = IssuedDecision;
 	EndIf;
+	NewDoc.NewStatus = NewSt;
 	NewDoc.Write(DocumentWriteMode.Posting);
 	Return NewDoc.Ref;
 EndFunction
 
-Function CreateProgramAmendment(DocDate, CTDT, AmendType, Summary, EffDate, SupDec, RevYear, RevSummary)
+Function CreateProgramAmendment(DocDate, CTDT, AmendType, Summary, EffDate, SupDec, RevYear, RevSummary, NewSt)
 	NewDoc = Documents.ProgramAmendment.CreateDocument();
 	NewDoc.Date = DocDate;
 	NewDoc.TargetProgram = CTDT;
@@ -491,6 +498,7 @@ Function CreateProgramAmendment(DocDate, CTDT, AmendType, Summary, EffDate, SupD
 		NewDoc.ReviewYear = RevYear;
 	EndIf;
 	NewDoc.ReviewSummary = RevSummary;
+	NewDoc.NewStatus = NewSt;
 	NewDoc.Write(DocumentWriteMode.Posting);
 	Return NewDoc.Ref;
 EndFunction
