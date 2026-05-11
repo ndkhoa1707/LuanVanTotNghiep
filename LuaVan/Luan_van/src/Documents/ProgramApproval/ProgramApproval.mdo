@@ -164,4 +164,63 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <tabularSections uuid="1ab09109-9bf1-4d3c-84f6-730438f7adf1">
+    <producedTypes>
+      <objectType typeId="94f01371-5199-49ba-9837-f764869d913c" valueTypeId="6c860adb-c5cc-4b3a-857e-2a462aa423e4"/>
+      <rowType typeId="1423b781-151e-460c-8b6f-fd692ea5cd44" valueTypeId="0e3eb1d5-58b0-43b4-8651-fe480e5cc54f"/>
+    </producedTypes>
+    <name>VotingResults</name>
+    <synonym>
+      <key>en</key>
+      <value>Kết quả biểu quyết HĐ</value>
+    </synonym>
+    <attributes uuid="f97de849-0510-411c-928d-0d79fb4231b6">
+      <name>CouncilMember</name>
+      <synonym>
+        <key>en</key>
+        <value>Thành viên Hội đồng</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Lecturers</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="842c7239-852a-452c-a14f-7f870478408b">
+      <name>Vote</name>
+      <synonym>
+        <key>en</key>
+        <value>Phiếu (Tán thành/Không tán thành/Vắng)</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>20</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="81586e1f-d493-4fee-b0d4-229133c25971">
+      <name>Comment</name>
+      <synonym>
+        <key>en</key>
+        <value>Ý kiến</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>300</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
 </mdclass:Document>
