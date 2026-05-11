@@ -16,7 +16,7 @@
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <informationRegisterPeriodicity>Nonperiodical</informationRegisterPeriodicity>
-  <writeMode>Independent</writeMode>
+  <writeMode>RecorderSubordinate</writeMode>
   <enableTotalsSliceFirst>false</enableTotalsSliceFirst>
   <enableTotalsSliceLast>false</enableTotalsSliceLast>
   <dataLockControlMode>Managed</dataLockControlMode>
