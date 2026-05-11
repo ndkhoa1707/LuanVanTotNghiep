@@ -54,6 +54,7 @@
   <enums>Enum.ApprovalLevel</enums>
   <enums>Enum.AmendmentType</enums>
   <enums>Enum.ApprovalDecision</enums>
+  <informationRegisters>InformationRegister.ApprovalLog</informationRegisters>
   <roles>Role.FacultyStaff</roles>
   <roles>Role.HeadOfDepartment</roles>
   <roles>Role.AcademicAffairsOffice</roles>
