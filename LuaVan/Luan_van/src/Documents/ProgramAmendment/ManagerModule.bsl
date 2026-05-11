@@ -1,8 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////
-// ProgramApproval - Manager Module
-// Prefix PA-{YYYY}-
+// ProgramAmendment - Manager Module
+// Prefix PAM-{YYYY}-
 ////////////////////////////////////////////////////////////////////////////////
 
 Procedure OnSetNewNumber(StandardProcessing, Prefix) Export
-	Prefix = "PA-" + Format(Year(CurrentDate()), "ND=4; NLZ=") + "-";
+	Prefix = "PAM-" + Format(Year(CurrentDate()), "ND=4; NLZ=") + "-";
 EndProcedure

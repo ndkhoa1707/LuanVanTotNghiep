@@ -1,8 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////
-// ProgramApproval - Manager Module
-// Prefix PA-{YYYY}-
+// ProgramProposal - Manager Module
+// Tự động thêm prefix PP-{YYYY}- cho số chứng từ
 ////////////////////////////////////////////////////////////////////////////////
 
 Procedure OnSetNewNumber(StandardProcessing, Prefix) Export
-	Prefix = "PA-" + Format(Year(CurrentDate()), "ND=4; NLZ=") + "-";
+	Prefix = "PP-" + Format(Year(CurrentDate()), "ND=4; NLZ=") + "-";
 EndProcedure

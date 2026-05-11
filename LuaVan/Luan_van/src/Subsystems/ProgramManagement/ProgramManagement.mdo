@@ -13,4 +13,6 @@
   <content>Catalog.Lecturers</content>
   <content>Catalog.Majors</content>
   <content>Catalog.AcademicYears</content>
+  <content>Document.ProgramProposal</content>
+  <content>DataProcessor.ImportFromExcel</content>
 </mdclass:Subsystem>

@@ -477,9 +477,30 @@ Function CreateProgramApproval(DocDate, CTDT, Level, BasedOn, Session, Result, S
 		NewDoc.IssuanceDecision = IssuedDecision;
 	EndIf;
 	NewDoc.Status = NewSt;
+
+	// VotingResults tabular (chỉ cho 2 cấp Hội đồng, không cho Lvl=Issued)
+	If Level <> Enums.ApprovalLevel.Issued Then
+		AddVotingResult(NewDoc, "GV0001", "Tán thành", "Đồng ý thông qua");
+		AddVotingResult(NewDoc, "GV0002", "Tán thành", "");
+		AddVotingResult(NewDoc, "GV0013", "Tán thành", "Phê duyệt");
+		AddVotingResult(NewDoc, "GV0010", "Tán thành", "");
+		AddVotingResult(NewDoc, "GV0012", "Tán thành", "Đồng ý");
+	EndIf;
+
 	NewDoc.Write(DocumentWriteMode.Posting);
 	Return NewDoc.Ref;
 EndFunction
+
+Procedure AddVotingResult(Doc, LecturerCode, Vote, Comment)
+	Lecturer = Catalogs.Lecturers.FindByCode(LecturerCode);
+	If Lecturer.IsEmpty() Then
+		Return;
+	EndIf;
+	NewRow = Doc.VotingResults.Add();
+	NewRow.CouncilMember = Lecturer;
+	NewRow.Vote = Vote;
+	NewRow.Comment = Comment;
+EndProcedure
 
 Function CreateProgramAmendment(DocDate, CTDT, AmendType, Summary, EffDate, SupDec, RevYear, RevSummary, NewSt)
 	NewDoc = Documents.ProgramAmendment.CreateDocument();

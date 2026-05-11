@@ -7,5 +7,12 @@
   </synonym>
   <includeInCommandInterface>true</includeInCommandInterface>
   <content>Catalog.Decisions</content>
+  <content>Document.ProgramApproval</content>
+  <content>Document.ProgramAmendment</content>
+  <content>InformationRegister.ProgramValidity</content>
+  <content>Report.ProgramListReport</content>
+  <content>Report.ApprovalAuditReport</content>
   <content>DataProcessor.FillSampleData</content>
+  <content>BusinessProcess.ProgramApprovalProcess</content>
+  <content>Task.ProgramApprovalTasks</content>
 </mdclass:Subsystem>

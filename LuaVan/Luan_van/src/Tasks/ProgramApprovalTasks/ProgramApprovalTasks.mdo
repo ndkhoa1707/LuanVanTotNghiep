@@ -22,4 +22,18 @@
   <numberLength>9</numberLength>
   <numberAllowedLength>Variable</numberAllowedLength>
   <descriptionLength>150</descriptionLength>
+  <addressingAttributes uuid="95627cd0-b266-449f-9bd1-29f1b28be369">
+    <name>Performer</name>
+    <synonym>
+      <key>en</key>
+      <value>Người thực hiện</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Lecturers</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </addressingAttributes>
 </mdclass:Task>
