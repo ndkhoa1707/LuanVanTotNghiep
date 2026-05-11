@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:BusinessProcess xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="06b43b92-fd6d-46ad-9c97-b2ec7c9bb3fc">
+  <producedTypes>
+    <objectType typeId="f33b7da9-ab26-4359-a389-2bf45a59b8c9" valueTypeId="e3760888-a84a-43ce-925e-2d894f17367a"/>
+    <refType typeId="8a2afb46-b825-4718-8e21-c7b3a67dce53" valueTypeId="a7e17147-49be-4634-9ca3-46d518504fc6"/>
+    <selectionType typeId="b24fdd1d-9cb4-494c-9050-3cd6d72a702b" valueTypeId="5124efe3-0c46-4882-a89f-964376fcbc02"/>
+    <listType typeId="eec7d86a-24fc-4d67-b05e-269feb9b55f6" valueTypeId="f3b8ad73-69ba-4c4f-8f83-cc44c3fa66b4"/>
+    <managerType typeId="4b794417-1220-486f-8ab8-62d81b5614ec" valueTypeId="aacbdd37-3426-4d1d-aa61-f492a4b71e6f"/>
+    <routePointRefType typeId="088a915a-54c1-4179-867f-4a834938cd0c" valueTypeId="c7eb1901-292c-44f1-ad41-cbf5fa385c09"/>
+  </producedTypes>
+  <name>ProgramApprovalProcess</name>
+  <synonym>
+    <key>en</key>
+    <value>Quy trình phê duyệt CTĐT</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>15</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <task>Task.ProgramApprovalTasks</task>
+</mdclass:BusinessProcess>
