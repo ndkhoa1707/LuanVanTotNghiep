@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a76c3743-99c0-4eb5-b575-f583da5504d9">
+  <name>WorkflowAddressing</name>
+  <synonym>
+    <key>en</key>
+    <value>Tìm người thực hiện workflow</value>
+  </synonym>
+  <server>true</server>
+  <serverCall>true</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

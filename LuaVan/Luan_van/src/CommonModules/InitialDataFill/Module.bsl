@@ -7,6 +7,7 @@
 // Module idempotent — chạy nhiều lần không tạo trùng.
 ////////////////////////////////////////////////////////////////////////////////
 
+
 #Region PublicAPI
 
 Procedure RunAll() Export
@@ -146,25 +147,36 @@ EndFunction
 
 #Region Lecturers
 
-// Sample giảng viên (Owner = Faculty)
+// Sample giảng viên (Owner = Faculty, Role workflow)
 Procedure FillLecturers() Export
 	CNTT1 = Catalogs.Faculties.FindByCode("CNTT1");
 	VT1   = Catalogs.Faculties.FindByCode("VT1");
+	TTNT  = Catalogs.Faculties.FindByCode("TTNT");
 
-	// Lãnh đạo PTIT (thông tin công khai)
-	CreateLecturer("GV0001", "GS.TS. Từ Minh Phương",  CNTT1, "phuongtm@ptit.edu.vn", Date(1970, 1, 1));
-	CreateLecturer("GV0002", "PGS.TS. Đặng Hoài Bắc",  VT1,   "bacdh@ptit.edu.vn",    Date(1975, 5, 10));
+	// Lãnh đạo PTIT — gán Role workflow
+	CreateLecturer("GV0001", "GS.TS. Từ Minh Phương",  CNTT1, "phuongtm@ptit.edu.vn", Date(1970, 1, 1),
+		Enums.PerformerRoles.Dean);
+	CreateLecturer("GV0002", "PGS.TS. Đặng Hoài Bắc",  VT1,   "bacdh@ptit.edu.vn",    Date(1975, 5, 10),
+		Enums.PerformerRoles.InstitutionalHead);
 
-	// GV sample
-	CreateLecturer("GV0010", "TS. Nguyễn Văn An",      CNTT1, "annv@ptit.edu.vn",     Date(1980, 3, 15));
-	CreateLecturer("GV0011", "ThS. Trần Thị Bình",     CNTT1, "binhtt@ptit.edu.vn",   Date(1985, 7, 20));
-	CreateLecturer("GV0012", "TS. Lê Hoàng Cường",     CNTT1, "cuonglh@ptit.edu.vn",  Date(1982, 11, 8));
-	CreateLecturer("GV0013", "PGS.TS. Phạm Minh Dũng", CNTT1, "dungpm@ptit.edu.vn",   Date(1978, 4, 25));
-	CreateLecturer("GV0020", "PGS.TS. Nguyễn Quốc Phong", VT1, "phongnq@ptit.edu.vn", Date(1976, 9, 12));
-	CreateLecturer("GV0021", "TS. Lê Thị Hương",       VT1,   "huonglt@ptit.edu.vn",  Date(1983, 6, 30));
+	// Trưởng BM — Role=Head
+	CreateLecturer("GV0013", "PGS.TS. Phạm Minh Dũng", TTNT,  "dungpm@ptit.edu.vn",   Date(1978, 4, 25),
+		Enums.PerformerRoles.Head);
+
+	// GV thường (Role rỗng)
+	CreateLecturer("GV0010", "TS. Nguyễn Văn An",      CNTT1, "annv@ptit.edu.vn",     Date(1980, 3, 15),
+		Enums.PerformerRoles.EmptyRef());
+	CreateLecturer("GV0011", "ThS. Trần Thị Bình",     CNTT1, "binhtt@ptit.edu.vn",   Date(1985, 7, 20),
+		Enums.PerformerRoles.EmptyRef());
+	CreateLecturer("GV0012", "TS. Lê Hoàng Cường",     CNTT1, "cuonglh@ptit.edu.vn",  Date(1982, 11, 8),
+		Enums.PerformerRoles.EmptyRef());
+	CreateLecturer("GV0020", "PGS.TS. Nguyễn Quốc Phong", VT1, "phongnq@ptit.edu.vn", Date(1976, 9, 12),
+		Enums.PerformerRoles.EmptyRef());
+	CreateLecturer("GV0021", "TS. Lê Thị Hương",       VT1,   "huonglt@ptit.edu.vn",  Date(1983, 6, 30),
+		Enums.PerformerRoles.EmptyRef());
 EndProcedure
 
-Function CreateLecturer(Code, FullName, Faculty, Email, BirthDate)
+Function CreateLecturer(Code, FullName, Faculty, Email, BirthDate, Role)
 	Existing = Catalogs.Lecturers.FindByCode(Code);
 	If Not Existing.IsEmpty() Then
 		Return Existing;
@@ -177,6 +189,7 @@ Function CreateLecturer(Code, FullName, Faculty, Email, BirthDate)
 	NewItem.DateOfBirth = BirthDate;
 	NewItem.JoinDate = Date(2015, 9, 1);
 	NewItem.Active = True;
+	NewItem.Role = Role;
 	NewItem.Write();
 	Return NewItem.Ref;
 EndFunction
@@ -547,27 +560,28 @@ Procedure FillBusinessProcessAndTasks() Export
 	// Tạo BusinessProcess instance
 	BP = CreateBusinessProcess(Date(2024, 1, 15));
 
-	// Tạo 4 Task instances tương ứng 4 bước
-	GV_Proposer = Catalogs.Lecturers.FindByCode("GV0010");      // GV Khoa CNTT1
-	GV_HeadDept = Catalogs.Lecturers.FindByCode("GV0013");      // PGS.TS Phạm Minh Dũng (Trưởng BM TTNT)
-	GV_PDT      = Catalogs.Lecturers.FindByCode("GV0002");      // PGĐ Phòng Đào tạo
-	GV_GD       = Catalogs.Lecturers.FindByCode("GV0001");      // Giám đốc
+	// Dynamic lookup performers theo Role thay vì hard-code mã GV
+	CNTT1     = Catalogs.Faculties.FindByCode("CNTT1");
+	Performer1 = WorkflowAddressing.FindAnyLecturerInFaculty(CNTT1);    // T1: GV trong Khoa đề xuất
+	Performer2 = WorkflowAddressing.FindHead(CNTT1);                    // T2: Trưởng BM/Khoa thuộc Khoa
+	Performer3 = WorkflowAddressing.FindInstitutionalHead();            // T3: Trưởng Phòng ĐT
+	Performer4 = WorkflowAddressing.FindDean();                         // T4: Giám đốc
 
 	CreateTask(BP, Date(2024, 1, 15),
 		"T1 - Soạn đề xuất CTĐT (Cử nhân CNTT K2024)",
-		GV_Proposer, True);
+		Performer1, True);
 
 	CreateTask(BP, Date(2024, 3, 10),
 		"T2 - Họp HĐKH Khoa CNTT1 phê duyệt sơ bộ",
-		GV_HeadDept, True);
+		Performer2, True);
 
 	CreateTask(BP, Date(2024, 5, 20),
 		"T3 - Trình HĐKHĐT Trường thẩm định",
-		GV_PDT, True);
+		Performer3, True);
 
 	CreateTask(BP, Date(2024, 6, 15),
 		"T4 - Trình Giám đốc ký QĐ ban hành",
-		GV_GD, True);
+		Performer4, True);
 EndProcedure
 
 Function CreateBusinessProcess(BPDate)
@@ -603,3 +617,4 @@ Procedure FillExtraProposals() Export
 EndProcedure
 
 #EndRegion
+

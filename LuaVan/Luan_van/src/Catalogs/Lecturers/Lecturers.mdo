@@ -234,4 +234,19 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="9e9a5b85-f554-4151-93a6-f1830980d718">
+    <name>Role</name>
+    <synonym>
+      <key>en</key>
+      <value>Vai trò quy trình phê duyệt</value>
+    </synonym>
+    <type>
+      <types>EnumRef.PerformerRoles</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
 </mdclass:Catalog>
