@@ -121,21 +121,6 @@
   <defaultPresentation>AsDescription</defaultPresentation>
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
-  <attributes uuid="276c8734-87d9-46ed-9284-ba4f56c89a17">
-    <name>AcademicTitle</name>
-    <synonym>
-      <key>en</key>
-      <value>Chức danh</value>
-    </synonym>
-    <type>
-      <types>EnumRef.AcademicTitles</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
   <attributes uuid="bb443279-a013-482e-b137-f61bda57f9ee">
     <name>DateOfBirth</name>
     <synonym>
@@ -147,21 +132,6 @@
       <dateQualifiers>
         <dateFractions>Date</dateFractions>
       </dateQualifiers>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="f93f7cb4-9ad5-4581-b912-f91c15014d59">
-    <name>Gender</name>
-    <synonym>
-      <key>en</key>
-      <value>Giới tính</value>
-    </synonym>
-    <type>
-      <types>EnumRef.Genders</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -264,65 +234,4 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <tabularSections uuid="caa779e2-9559-4688-8383-d42307b950f2">
-    <producedTypes>
-      <objectType typeId="f9ac369d-3040-4ad7-80b1-545b2c42b144" valueTypeId="f218c4f0-34ac-45ae-9ef9-4440c47cf9fe"/>
-      <rowType typeId="4390d859-d9cd-4bc6-94ba-8f9a322c6d96" valueTypeId="e3a71c70-60fe-4aad-8f1a-b67bc3f96ff7"/>
-    </producedTypes>
-    <name>SystemRoles</name>
-    <synonym>
-      <key>en</key>
-      <value>Các vai trò trong hệ thống QLĐT</value>
-    </synonym>
-    <attributes uuid="efb3f878-15c0-433b-9972-58a7457d376d">
-      <name>Role</name>
-      <synonym>
-        <key>en</key>
-        <value>Vai trò</value>
-      </synonym>
-      <type>
-        <types>EnumRef.UserRoles</types>
-      </type>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-    <attributes uuid="93e57379-c1f5-44f4-9c9d-b0a1c64f888b">
-      <name>AssignedDate</name>
-      <synonym>
-        <key>en</key>
-        <value>Ngày bắt đầu</value>
-      </synonym>
-      <type>
-        <types>Date</types>
-        <dateQualifiers>
-          <dateFractions>Date</dateFractions>
-        </dateQualifiers>
-      </type>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-    <attributes uuid="407392db-e261-480a-825d-d5daa8f67026">
-      <name>ExpiryDate</name>
-      <synonym>
-        <key>en</key>
-        <value>Ngày kết thúc</value>
-      </synonym>
-      <type>
-        <types>String</types>
-        <stringQualifiers>
-          <length>10</length>
-        </stringQualifiers>
-      </type>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-  </tabularSections>
 </mdclass:Catalog>

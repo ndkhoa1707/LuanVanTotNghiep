@@ -153,38 +153,6 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="55544980-42a4-4f12-bff0-5e491bd0960b">
-    <name>OwnerDepartment</name>
-    <synonym>
-      <key>en</key>
-      <value>Bộ môn chủ trì</value>
-    </synonym>
-    <type>
-      <types>CatalogRef.Departments</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="13e40c46-355d-4e1d-a920-5ce9b1a2eae0">
-    <name>DefaultCourseType</name>
-    <synonym>
-      <key>en</key>
-      <value>Loại HP mặc định</value>
-    </synonym>
-    <type>
-      <types>EnumRef.CourseTypes</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
   <attributes uuid="90af81bb-7caf-42ad-a9c0-27ad3273fd3b">
     <name>DefaultBlock</name>
     <synonym>
@@ -378,7 +346,10 @@
         <value>Loại ràng buộc</value>
       </synonym>
       <type>
-        <types>EnumRef.PrereqType</types>
+        <types>String</types>
+        <stringQualifiers>
+          <length>20</length>
+        </stringQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>

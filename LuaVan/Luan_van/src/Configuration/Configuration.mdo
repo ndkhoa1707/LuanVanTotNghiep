@@ -34,33 +34,13 @@
     </synonym>
     <languageCode>en</languageCode>
   </languages>
-  <constants>Constant.CurrentAcademicYear</constants>
-  <constants>Constant.MinimumTotalCredits</constants>
-  <constants>Constant.MaximumTotalCredits</constants>
-  <constants>Constant.MinGeneralEducationCredits</constants>
-  <constants>Constant.MinFoundationCredits</constants>
-  <constants>Constant.ApplicableCircular</constants>
-  <constants>Constant.SystemVersion</constants>
   <catalogs>Catalog.Faculties</catalogs>
-  <catalogs>Catalog.Departments</catalogs>
   <catalogs>Catalog.Lecturers</catalogs>
   <catalogs>Catalog.Majors</catalogs>
-  <catalogs>Catalog.ProgramModes</catalogs>
   <catalogs>Catalog.TrainingPrograms</catalogs>
-  <catalogs>Catalog.ProgramFrameworks</catalogs>
   <catalogs>Catalog.KnowledgeBlocks</catalogs>
   <catalogs>Catalog.Courses</catalogs>
-  <catalogs>Catalog.AssessmentMethods</catalogs>
   <catalogs>Catalog.AcademicYears</catalogs>
   <enums>Enum.ProgramStatuses</enums>
-  <enums>Enum.CourseTypes</enums>
-  <enums>Enum.KnowledgeBlockTypes</enums>
-  <enums>Enum.GradingSystems</enums>
   <enums>Enum.ApprovalLevel</enums>
-  <enums>Enum.Genders</enums>
-  <enums>Enum.UserRoles</enums>
-  <enums>Enum.AcademicTitles</enums>
-  <enums>Enum.DegreeLevels</enums>
-  <enums>Enum.PrereqType</enums>
-  <enums>Enum.AssessmentTypes</enums>
 </mdclass:Configuration>

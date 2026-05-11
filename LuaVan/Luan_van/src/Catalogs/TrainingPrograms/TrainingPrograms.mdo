@@ -121,22 +121,6 @@
   <defaultPresentation>AsDescription</defaultPresentation>
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
-  <attributes uuid="849761f5-c561-4f38-bb48-b9279c083128">
-    <name>ProgramMode</name>
-    <synonym>
-      <key>en</key>
-      <value>Hệ đào tạo</value>
-    </synonym>
-    <type>
-      <types>CatalogRef.ProgramModes</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
   <attributes uuid="97d35a53-31be-4fec-8112-3c003c60594d">
     <name>IssueYear</name>
     <synonym>
@@ -414,7 +398,10 @@
         <value>Loại HP</value>
       </synonym>
       <type>
-        <types>EnumRef.CourseTypes</types>
+        <types>String</types>
+        <stringQualifiers>
+          <length>30</length>
+        </stringQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
