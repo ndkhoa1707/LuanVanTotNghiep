@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<section name="Workbench">
-	<section name="com._1c.g5.v8.dt.dcs.ui.valueeditors.DataCompositionFilterDialog">
-		<item key="width" value="1162"/>
-		<item key="heigth" value="500"/>
-		<item key="top_x" value="414"/>
-		<item key="top_y" value="287"/>
-	</section>
-</section>
