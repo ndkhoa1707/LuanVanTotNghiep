@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ea9018d2-327f-401e-bc39-9be2b9553daf">
+  <producedTypes>
+    <managerType typeId="c10d2795-fb85-432b-910a-b1ab1f2d0077" valueTypeId="47fa2d7a-0201-4554-9316-02a9ad14dfff"/>
+    <valueManagerType typeId="ee532319-f3a0-44ea-bed9-bb87e1972f4c" valueTypeId="efccc24e-038d-465b-b4fe-05ee8a524c4c"/>
+    <valueKeyType typeId="bfce8f14-345e-4e1d-b566-4c40ab782eb1" valueTypeId="1afcde26-389c-4ce4-8aec-0fa50df54d53"/>
+  </producedTypes>
+  <name>UseDigitalSignatureFlag</name>
+  <synonym>
+    <key>en</key>
+    <value>Bật chữ ký số</value>
+  </synonym>
+  <type>
+    <types>Boolean</types>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

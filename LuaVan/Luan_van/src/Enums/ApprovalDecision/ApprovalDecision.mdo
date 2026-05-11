@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0eb94570-1ba7-4153-8723-d12af733126e">
+  <producedTypes>
+    <refType typeId="7e6eccc6-2cec-4df2-90bb-2d05ba76e1ed" valueTypeId="c3648b11-f36b-4a21-9de2-600847cc2751"/>
+    <listType typeId="434014fa-0aea-487f-ba04-3a185ddffd3e" valueTypeId="f71981f3-cbff-4696-92a6-314a02fc980b"/>
+    <managerType typeId="74107aaf-f3b4-4cc4-abb4-eded86210c74" valueTypeId="8f13545d-cf1f-43b0-bd7e-98e7b7bc2894"/>
+  </producedTypes>
+  <name>ApprovalDecision</name>
+  <synonym>
+    <key>en</key>
+    <value>Kết quả phê duyệt</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="196b14c4-8074-4bcc-a6a3-91aed5edf7d5">
+    <name>Approved</name>
+    <synonym>
+      <key>en</key>
+      <value>Phê duyệt</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="293505fe-b49c-4a6f-9d22-e43bcb77240e">
+    <name>RequiresRevision</name>
+    <synonym>
+      <key>en</key>
+      <value>Yêu cầu chỉnh sửa</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="fb1f3372-050f-422c-ae77-4222c1391983">
+    <name>Rejected</name>
+    <synonym>
+      <key>en</key>
+      <value>Từ chối</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

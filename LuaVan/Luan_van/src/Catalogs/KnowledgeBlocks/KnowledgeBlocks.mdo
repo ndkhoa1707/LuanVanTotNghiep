@@ -114,22 +114,6 @@
   <defaultPresentation>AsDescription</defaultPresentation>
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
-  <attributes uuid="30c36516-f3a3-48e9-a01f-1e61ec2fea5f">
-    <name>BlockType</name>
-    <synonym>
-      <key>en</key>
-      <value>Block type</value>
-    </synonym>
-    <type>
-      <types>EnumRef.KnowledgeBlockTypes</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
   <attributes uuid="30ac217c-5831-49e0-a9b3-8c35052da27e">
     <name>DefaultMinRatio</name>
     <synonym>
