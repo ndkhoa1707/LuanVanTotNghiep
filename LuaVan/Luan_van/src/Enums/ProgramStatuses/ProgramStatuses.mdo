@@ -16,28 +16,21 @@
     <name>Draft</name>
     <synonym>
       <key>en</key>
-      <value>Soạn thảo</value>
+      <value>Bản thảo</value>
     </synonym>
   </enumValues>
   <enumValues uuid="bd4b61a9-673a-44fc-b75c-c1ea7b8c5757">
-    <name>FacultyReview</name>
+    <name>UnderReview</name>
     <synonym>
       <key>en</key>
-      <value>Thẩm định cấp khoa</value>
-    </synonym>
-  </enumValues>
-  <enumValues uuid="22e7d279-3dfd-4bcc-aef9-ec6770877089">
-    <name>InstitutionalReview</name>
-    <synonym>
-      <key>en</key>
-      <value>Thẩm định cấp trường</value>
+      <value>Đang phê duyệt</value>
     </synonym>
   </enumValues>
   <enumValues uuid="2b61a8a1-74c6-422f-8887-2b2bbcacda01">
     <name>Approved</name>
     <synonym>
       <key>en</key>
-      <value>Đã duyệt</value>
+      <value>Đã phê duyệt</value>
     </synonym>
   </enumValues>
   <enumValues uuid="1d86dee8-15ed-44c3-9067-b26dd3720867">
@@ -47,11 +40,18 @@
       <value>Đã ban hành</value>
     </synonym>
   </enumValues>
-  <enumValues uuid="68cc2a1b-8af5-4f91-b687-6cf986f7b728">
-    <name>Expired</name>
+  <enumValues uuid="22e7d279-3dfd-4bcc-aef9-ec6770877089">
+    <name>Suspended</name>
     <synonym>
       <key>en</key>
-      <value>Hết hiệu lực</value>
+      <value>Tạm ngừng</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="68cc2a1b-8af5-4f91-b687-6cf986f7b728">
+    <name>Deactivated</name>
+    <synonym>
+      <key>en</key>
+      <value>Đã ngừng</value>
     </synonym>
   </enumValues>
 </mdclass:Enum>

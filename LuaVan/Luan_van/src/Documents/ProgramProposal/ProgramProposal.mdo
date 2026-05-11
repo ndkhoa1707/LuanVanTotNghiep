@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b615e860-4ef5-4f18-b74a-5f6e112c6bc4">
+  <producedTypes>
+    <objectType typeId="ea535cea-e8d2-4c17-acd8-be7cdc684ea3" valueTypeId="9b6fd8f8-8123-4c19-8949-5631b2487dcf"/>
+    <refType typeId="7f0808db-96ce-44b7-9956-741f1f2c9254" valueTypeId="80ca8e3b-347e-4832-b4c5-da5b1271b245"/>
+    <selectionType typeId="bd2d7f89-56ab-4318-8376-4e6245b7661e" valueTypeId="2a18b28f-fa9d-4691-8237-818f2a16f166"/>
+    <listType typeId="5c98db0b-e1b1-4a20-9144-408b066152b9" valueTypeId="f98ba3df-a26a-4f9c-8f85-d7930f311459"/>
+    <managerType typeId="c21a49cd-6278-4c21-8c2e-d4f420b8de75" valueTypeId="dcf7c3e2-949b-49bc-b629-120b2efed919"/>
+  </producedTypes>
+  <name>ProgramProposal</name>
+  <synonym>
+    <key>en</key>
+    <value>Đề xuất CTĐT</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ProgramProposal.StandardAttribute.Number</inputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <synonym>
+      <key>en</key>
+      <value>Số chứng từ (PP-{YYYY}-NNNNN)</value>
+    </synonym>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <synonym>
+      <key>en</key>
+      <value>Ngày tạo đề xuất</value>
+    </synonym>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>15</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <posting>Allow</posting>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <registerRecords>InformationRegister.ProgramValidity</registerRecords>
+  <registerRecords>InformationRegister.ApprovalLog</registerRecords>
+  <attributes uuid="062e8935-fb86-4ec5-9814-14b063ef002b">
+    <name>ProposingFaculty</name>
+    <synonym>
+      <key>en</key>
+      <value>Khoa đề xuất</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Faculties</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="33f97ecb-28da-42f2-9bbb-91964cffcad5">
+    <name>Proposer</name>
+    <synonym>
+      <key>en</key>
+      <value>Người đề xuất</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Lecturers</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="cffdf5fb-84f8-43b4-944c-20f675295787">
+    <name>TargetProgram</name>
+    <synonym>
+      <key>en</key>
+      <value>CTĐT (bản Draft đã tạo trước)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.TrainingPrograms</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="71a9d4b9-3a33-4d47-ad86-1fbdfd77212b">
+    <name>ProposalSummary</name>
+    <synonym>
+      <key>en</key>
+      <value>Tóm tắt nội dung và lý do đề xuất</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>2000</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="611074d3-3322-4d81-a883-af3843c51e1a">
+    <name>ExpectedIssueYear</name>
+    <synonym>
+      <key>en</key>
+      <value>Năm dự kiến ban hành</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.AcademicYears</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="eb673b67-8d56-46f4-8343-16ddf6908d88">
+    <name>JustificationFile</name>
+    <synonym>
+      <key>en</key>
+      <value>Đường dẫn file luận chứng (SSL.FileOperations)</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Document>

@@ -34,33 +34,37 @@
     </synonym>
     <languageCode>en</languageCode>
   </languages>
-  <constants>Constant.CurrentAcademicYear</constants>
-  <constants>Constant.MinimumTotalCredits</constants>
-  <constants>Constant.MaximumTotalCredits</constants>
-  <constants>Constant.MinGeneralEducationCredits</constants>
-  <constants>Constant.MinFoundationCredits</constants>
-  <constants>Constant.ApplicableCircular</constants>
-  <constants>Constant.SystemVersion</constants>
+  <subsystems>Subsystem.ProgramManagement</subsystems>
+  <subsystems>Subsystem.AcademicAffairs</subsystems>
+  <constants>Constant.AcademicInstitutionName</constants>
+  <constants>Constant.DefaultAcademicYear</constants>
+  <constants>Constant.UseDigitalSignatureFlag</constants>
   <catalogs>Catalog.Faculties</catalogs>
-  <catalogs>Catalog.Departments</catalogs>
   <catalogs>Catalog.Lecturers</catalogs>
   <catalogs>Catalog.Majors</catalogs>
-  <catalogs>Catalog.ProgramModes</catalogs>
   <catalogs>Catalog.TrainingPrograms</catalogs>
-  <catalogs>Catalog.ProgramFrameworks</catalogs>
   <catalogs>Catalog.KnowledgeBlocks</catalogs>
   <catalogs>Catalog.Courses</catalogs>
-  <catalogs>Catalog.AssessmentMethods</catalogs>
   <catalogs>Catalog.AcademicYears</catalogs>
+  <catalogs>Catalog.Decisions</catalogs>
+  <documents>Document.ProgramProposal</documents>
+  <documents>Document.ProgramApproval</documents>
+  <documents>Document.ProgramAmendment</documents>
+  <commonModules>CommonModule.InitialDataFill</commonModules>
   <enums>Enum.ProgramStatuses</enums>
-  <enums>Enum.CourseTypes</enums>
-  <enums>Enum.KnowledgeBlockTypes</enums>
-  <enums>Enum.GradingSystems</enums>
   <enums>Enum.ApprovalLevel</enums>
-  <enums>Enum.Genders</enums>
-  <enums>Enum.UserRoles</enums>
-  <enums>Enum.AcademicTitles</enums>
-  <enums>Enum.DegreeLevels</enums>
-  <enums>Enum.PrereqType</enums>
-  <enums>Enum.AssessmentTypes</enums>
+  <enums>Enum.AmendmentType</enums>
+  <enums>Enum.ApprovalDecision</enums>
+  <reports>Report.ProgramListReport</reports>
+  <reports>Report.ApprovalAuditReport</reports>
+  <dataProcessors>DataProcessor.ImportFromExcel</dataProcessors>
+  <informationRegisters>InformationRegister.ProgramValidity</informationRegisters>
+  <informationRegisters>InformationRegister.ApprovalLog</informationRegisters>
+  <businessProcesses>BusinessProcess.ProgramApprovalProcess</businessProcesses>
+  <tasks>Task.ProgramApprovalTasks</tasks>
+  <roles>Role.FacultyStaff</roles>
+  <roles>Role.HeadOfDepartment</roles>
+  <roles>Role.AcademicAffairsOffice</roles>
+  <roles>Role.SystemAdmin</roles>
+  <functionalOptions>FunctionalOption.UseDigitalSignature</functionalOptions>
 </mdclass:Configuration>

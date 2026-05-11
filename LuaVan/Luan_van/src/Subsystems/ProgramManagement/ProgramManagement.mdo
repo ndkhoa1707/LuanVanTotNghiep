@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ff63af5b-7c88-4748-898b-588728d603e1">
+  <name>ProgramManagement</name>
+  <synonym>
+    <key>en</key>
+    <value>Quản lý CTĐT &amp; HP</value>
+  </synonym>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Catalog.TrainingPrograms</content>
+  <content>Catalog.Courses</content>
+  <content>Catalog.KnowledgeBlocks</content>
+  <content>Catalog.Faculties</content>
+  <content>Catalog.Lecturers</content>
+  <content>Catalog.Majors</content>
+  <content>Catalog.AcademicYears</content>
+  <content>Document.ProgramProposal</content>
+  <content>DataProcessor.ImportFromExcel</content>
+</mdclass:Subsystem>

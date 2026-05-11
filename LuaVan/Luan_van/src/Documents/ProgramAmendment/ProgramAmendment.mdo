@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0704c9ab-99e4-44ff-bc47-529cb8fb108b">
+  <producedTypes>
+    <objectType typeId="e9baf8bd-583f-4c08-a88e-20de1a2a60d1" valueTypeId="f16dd655-cc3c-4d51-ad08-71bd97ae0bdd"/>
+    <refType typeId="bcc274b9-22f2-4715-9860-bff47accdb37" valueTypeId="3b6e3844-ad03-49b3-8cb8-3dec019705c3"/>
+    <selectionType typeId="c4570e1b-03a4-4634-997a-4c0b6ee13366" valueTypeId="15db8dd1-1320-4e1a-82e6-b21489f2b3ee"/>
+    <listType typeId="aac8fc50-e96b-429e-816f-6a08430a59ba" valueTypeId="a87a7b38-75e3-4037-9ec4-f9f91f8fe746"/>
+    <managerType typeId="c387e236-2b83-4b37-b63a-7b8f32526ce0" valueTypeId="b7e80e85-b86b-4c69-92d1-484c5c2879e9"/>
+  </producedTypes>
+  <name>ProgramAmendment</name>
+  <synonym>
+    <key>en</key>
+    <value>Sửa đổi/Ngừng/Rà soát CTĐT</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ProgramAmendment.StandardAttribute.Number</inputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <synonym>
+      <key>en</key>
+      <value>Số chứng từ (PAM-{YYYY}-NNNNN)</value>
+    </synonym>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <synonym>
+      <key>en</key>
+      <value>Ngày sửa đổi</value>
+    </synonym>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>15</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <posting>Allow</posting>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <registerRecords>InformationRegister.ProgramValidity</registerRecords>
+  <registerRecords>InformationRegister.ApprovalLog</registerRecords>
+  <attributes uuid="e16fc6d4-f692-43c7-ab9b-b5509d878413">
+    <name>TargetProgram</name>
+    <synonym>
+      <key>en</key>
+      <value>CTĐT bị tác động</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.TrainingPrograms</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="55deb3bf-5b4c-41f2-b9b4-ac3959a80828">
+    <name>AmendmentType</name>
+    <synonym>
+      <key>en</key>
+      <value>Loại sửa đổi (Minor/Major/Deact./AnnualReview)</value>
+    </synonym>
+    <type>
+      <types>EnumRef.AmendmentType</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4f5fc0fe-bb74-4b47-9300-7c8ba8a41235">
+    <name>AmendmentSummary</name>
+    <synonym>
+      <key>en</key>
+      <value>Mô tả thay đổi/lý do</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>2000</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="13540b7f-b1dc-4be5-b992-163e320c29ff">
+    <name>EffectiveDate</name>
+    <synonym>
+      <key>en</key>
+      <value>Ngày có hiệu lực</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="451805c2-5e0e-406c-9bdb-8aa40ccf1555">
+    <name>SupportingDecision</name>
+    <synonym>
+      <key>en</key>
+      <value>QĐ căn cứ (cho Major/Deactivation)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Decisions</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7f68eebd-2dea-4616-ac21-9904afbe7036">
+    <name>ReviewYear</name>
+    <synonym>
+      <key>en</key>
+      <value>Năm rà soát (cho AnnualReview)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.AcademicYears</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="34c47f1a-d1cd-458c-b077-d5990e363f35">
+    <name>ReviewSummary</name>
+    <synonym>
+      <key>en</key>
+      <value>Tóm tắt báo cáo rà soát (AnnualReview)</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>2000</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Document>
