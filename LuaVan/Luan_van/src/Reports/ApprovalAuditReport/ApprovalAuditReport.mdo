@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c051fa52-76fc-4579-9431-40e3d7115640">
+  <producedTypes>
+    <objectType typeId="6f252740-a0a3-44a5-a274-d3891f4072ad" valueTypeId="3a17aa1d-e77d-4227-bcbd-232c582847a8"/>
+    <managerType typeId="7170c4d0-fa22-4b12-a766-1550b4a22e0e" valueTypeId="3539346f-c12b-4cd9-be55-6389c416bdb9"/>
+  </producedTypes>
+  <name>ApprovalAuditReport</name>
+  <synonym>
+    <key>en</key>
+    <value>Báo cáo audit phê duyệt</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+</mdclass:Report>

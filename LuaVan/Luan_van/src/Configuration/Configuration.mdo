@@ -56,6 +56,9 @@
   <enums>Enum.ApprovalDecision</enums>
   <informationRegisters>InformationRegister.ApprovalLog</informationRegisters>
   <informationRegisters>InformationRegister.ProgramValidity</informationRegisters>
+  <reports>Report.ProgramListReport</reports>
+  <reports>Report.ApprovalAuditReport</reports>
+  <dataProcessors>DataProcessor.ImportFromExcel</dataProcessors>
   <roles>Role.FacultyStaff</roles>
   <roles>Role.HeadOfDepartment</roles>
   <roles>Role.AcademicAffairsOffice</roles>
