@@ -11,17 +11,18 @@
 #Region PublicAPI
 
 Procedure RunAll() Export
-	//FillConstants();
-	//FillAcademicYears();
-	//FillKnowledgeBlocks();
-	//FillFaculties();
-	//FillLecturers();
-	//FillMajors();
-	//FillCourses();
-	//FillDecisions();
+	FillConstants();
+	FillAcademicYears();
+	FillKnowledgeBlocks();
+	FillFaculties();
+	FillLecturers();
+	FillInfoBaseUsers();           // ← Tạo user đăng nhập + gán Roles
+	FillMajors();
+	FillCourses();
+	FillDecisions();
 	FillTrainingPrograms();
-	//FillDocuments();
-	//FillBusinessProcessAndTasks();
+	FillDocuments();
+	FillBusinessProcessAndTasks();
 EndProcedure
 
 #EndRegion
@@ -621,6 +622,79 @@ Procedure FillExtraProposals() Export
 	EndIf;
 	// Có thể bổ sung sau khi có CTĐT ATTT
 EndProcedure
+
+#EndRegion
+
+#Region InfoBaseUsers
+
+// Tạo users đăng nhập + gán Roles theo vị trí công việc
+// Login name = Lecturer code (để dễ map InfoBaseUser ↔ Lecturer)
+// Password mặc định = "1234" (test only, đổi sau khi deploy thực)
+//
+// Mapping Role workflow:
+//   T1 (Soạn đề xuất)        → FacultyStaff           → GV0010..0012, 0020, 0021
+//   T2 (HĐKH Khoa duyệt)     → HeadOfDepartment       → GV0013
+//   T3 (HĐKHĐT thẩm định)    → AcademicAffairsOffice  → GV0002 (PĐT)
+//   T4 (Ký QĐ ban hành)      → AcademicAffairsOffice  → GV0001 (GĐ)
+//                              + SystemAdmin
+Procedure FillInfoBaseUsers() Export
+	// Admin user (có toàn quyền)
+	CreateInfoBaseUser("admin", "Quản trị hệ thống", "1234",
+		StrSplit("SystemAdmin", ","));
+
+	// Giám đốc — có quyền AAO + SysAdmin (để ký QĐ + xem mọi thứ)
+	CreateInfoBaseUser("GV0001", "GS.TS. Từ Minh Phương", "1234",
+		StrSplit("AcademicAffairsOffice,SystemAdmin", ","));
+
+	// PGS PĐT — quyền AAO (T3 thẩm định)
+	CreateInfoBaseUser("GV0002", "PGS.TS. Đặng Hoài Bắc", "1234",
+		StrSplit("AcademicAffairsOffice", ","));
+
+	// Trưởng BM — quyền HeadOfDepartment + FacultyStaff (T2 duyệt cấp Khoa)
+	CreateInfoBaseUser("GV0013", "PGS.TS. Phạm Minh Dũng", "1234",
+		StrSplit("HeadOfDepartment,FacultyStaff", ","));
+
+	// GV thường — quyền FacultyStaff (T1 soạn đề xuất)
+	CreateInfoBaseUser("GV0010", "TS. Nguyễn Văn An", "1234",
+		StrSplit("FacultyStaff", ","));
+	CreateInfoBaseUser("GV0011", "ThS. Trần Thị Bình", "1234",
+		StrSplit("FacultyStaff", ","));
+	CreateInfoBaseUser("GV0012", "TS. Lê Hoàng Cường", "1234",
+		StrSplit("FacultyStaff", ","));
+	CreateInfoBaseUser("GV0020", "PGS.TS. Nguyễn Quốc Phong", "1234",
+		StrSplit("FacultyStaff", ","));
+	CreateInfoBaseUser("GV0021", "TS. Lê Thị Hương", "1234",
+		StrSplit("FacultyStaff", ","));
+EndProcedure
+
+// Helper: tạo 1 InfoBaseUser + gán Roles
+// Idempotent: nếu user đã tồn tại thì update Roles
+Function CreateInfoBaseUser(Login, FullName, Password, RoleNames)
+	IBUser = InfoBaseUsers.FindByName(Login);
+	IsNew = (IBUser = Undefined);
+	If IsNew Then
+		IBUser = InfoBaseUsers.CreateUser();
+	EndIf;
+
+	IBUser.Name = Login;
+	IBUser.FullName = FullName;
+	IBUser.StandardAuthentication = True;
+	IBUser.PasswordIsSet = True;
+	IBUser.Password = Password;
+	IBUser.ShowInList = True;
+
+	// Reset roles và assign lại
+	IBUser.Roles.Clear();
+	For Each RoleName In RoleNames Do
+		RoleMetadata = Metadata.Roles.Find(TrimAll(RoleName));
+		If RoleMetadata <> Undefined Then
+			IBUser.Roles.Add(RoleMetadata);
+		EndIf;
+	EndDo;
+
+	IBUser.Write();
+	Return IBUser;
+EndFunction
 
 #EndRegion
 
