@@ -74,7 +74,7 @@
 						<PortIndex>4</PortIndex>
 					</From>
 					<To>
-						<Item>Activity</Item>
+						<Item>PrepareProposal</Item>
 						<PortIndex>2</PortIndex>
 					</To>
 				</Connect>
@@ -162,7 +162,7 @@
 						<PortIndex>1</PortIndex>
 					</From>
 					<To>
-						<Item>Activity1</Item>
+						<Item>FacultyCouncilReview</Item>
 						<PortIndex>2</PortIndex>
 					</To>
 				</Connect>
@@ -249,7 +249,7 @@
 						<PortIndex>4</PortIndex>
 					</From>
 					<To>
-						<Item>Condition</Item>
+						<Item>IsApproved</Item>
 						<PortIndex>2</PortIndex>
 					</To>
 				</Connect>
@@ -336,7 +336,7 @@
 						<PortIndex>4</PortIndex>
 					</From>
 					<To>
-						<Item>Condition2</Item>
+						<Item>IsApprovedInst</Item>
 						<PortIndex>2</PortIndex>
 					</To>
 				</Connect>
@@ -506,7 +506,7 @@
 						<PortIndex>1</PortIndex>
 					</From>
 					<To>
-						<Item>Condition1</Item>
+						<Item>NeedsRevision</Item>
 						<PortIndex>2</PortIndex>
 					</To>
 				</Connect>
@@ -552,7 +552,7 @@
 						<PortIndex>3</PortIndex>
 					</From>
 					<To>
-						<Item>Activity2</Item>
+						<Item>InstitutionalReview</Item>
 						<PortIndex>2</PortIndex>
 					</To>
 				</Connect>
@@ -679,7 +679,7 @@
 						<PortIndex>3</PortIndex>
 					</From>
 					<To>
-						<Item>Activity</Item>
+						<Item>PrepareProposal</Item>
 						<PortIndex>4</PortIndex>
 					</To>
 				</Connect>
@@ -871,7 +871,7 @@
 						<PortIndex>3</PortIndex>
 					</From>
 					<To>
-						<Item>Activity3</Item>
+						<Item>IssueDecision</Item>
 						<PortIndex>1</PortIndex>
 					</To>
 				</Connect>
@@ -999,7 +999,7 @@
 						<PortIndex>3</PortIndex>
 					</From>
 					<To>
-						<Item>Activity</Item>
+						<Item>PrepareProposal</Item>
 						<PortIndex>3</PortIndex>
 					</To>
 				</Connect>
