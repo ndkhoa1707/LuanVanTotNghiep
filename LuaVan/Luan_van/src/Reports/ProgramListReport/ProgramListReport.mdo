@@ -10,4 +10,13 @@
     <value>Danh sách CTĐT</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ProgramListReport.Template.MainDataCompositionSchema</mainDataCompositionSchema>
+  <templates uuid="d8756283-d981-4f64-8d6f-52f0ed3bbef0">
+    <name>MainDataCompositionSchema</name>
+    <synonym>
+      <key>en</key>
+      <value>Main data composition schema</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
 </mdclass:Report>

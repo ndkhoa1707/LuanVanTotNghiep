@@ -11,18 +11,18 @@
 #Region PublicAPI
 
 Procedure RunAll() Export
-	FillConstants();
-	FillAcademicYears();
-	FillKnowledgeBlocks();
-	FillFaculties();
-	FillLecturers();
+	//FillConstants();
+	//FillAcademicYears();
+	//FillKnowledgeBlocks();
+	//FillFaculties();
+	//FillLecturers();
 	FillInfoBaseUsers();           // ← Tạo user đăng nhập + gán Roles
-	FillMajors();
-	FillCourses();
-	FillDecisions();
-	FillTrainingPrograms();
-	FillDocuments();
-	FillBusinessProcessAndTasks();
+	//FillMajors();
+	//FillCourses();
+	//FillDecisions();
+	//FillTrainingPrograms();
+	//FillDocuments();
+	//FillBusinessProcessAndTasks();
 EndProcedure
 
 #EndRegion
@@ -679,8 +679,6 @@ Function CreateInfoBaseUser(Login, FullName, Password, RoleNames)
 	IBUser.Name = Login;
 	IBUser.FullName = FullName;
 	IBUser.StandardAuthentication = True;
-	IBUser.PasswordIsSet = True;
-	IBUser.Password = Password;
 	IBUser.ShowInList = True;
 
 	// Reset roles và assign lại

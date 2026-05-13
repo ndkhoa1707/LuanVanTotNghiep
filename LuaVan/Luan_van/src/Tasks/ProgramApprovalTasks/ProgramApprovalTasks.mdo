@@ -22,6 +22,16 @@
   <numberLength>9</numberLength>
   <numberAllowedLength>Variable</numberAllowedLength>
   <descriptionLength>150</descriptionLength>
+  <defaultObjectForm>Task.ProgramApprovalTasks.Form.ItemForm</defaultObjectForm>
+  <forms uuid="687e7244-60c3-4e7e-98f6-b10281878a02">
+    <name>ItemForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Item form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
   <addressingAttributes uuid="95627cd0-b266-449f-9bd1-29f1b28be369">
     <name>Performer</name>
     <synonym>

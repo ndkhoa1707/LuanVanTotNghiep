@@ -10,4 +10,13 @@
     <value>Báo cáo audit phê duyệt</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ApprovalAuditReport.Template.MainDataCompositionSchema</mainDataCompositionSchema>
+  <templates uuid="08e1b57f-6675-486e-9c27-0e294028c032">
+    <name>MainDataCompositionSchema</name>
+    <synonym>
+      <key>en</key>
+      <value>Main data composition schema</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
 </mdclass:Report>

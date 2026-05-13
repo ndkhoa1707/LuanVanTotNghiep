@@ -1,21 +1,21 @@
-
-
-
 ////////////////////////////////////////////////////////////////////////////////
 // BusinessProcess.ProgramApprovalProcess - Object Module
-//
-// 4 BeforeCreateTasks handlers (T1-T4): set Performer dynamic theo Role
-// 4 Condition CheckCondition handlers: rẽ nhánh theo Decision của ProgramApproval
-//
-// CẦN: BP có attribute TargetProgram (CatalogRef.TrainingPrograms)
+//   • 4 BeforeCreateTasks handlers (T1-T4):
+//     - Set Performer động theo Role qua WorkflowAddressing
+//     - Lưu ý: trong trường hợp TasksBeingFormed.Count() = 0 ở thời điểm call,
+//       việc fill Performer/Description sẽ được Task.BeforeWrite handler đảm nhiệm
+//   • 4 Condition handlers: rẽ nhánh BP theo Decision của ProgramApproval mới nhất
 ////////////////////////////////////////////////////////////////////////////////
 
 #Region TaskCreationHandlers
 
 // T1 - Soạn đề xuất CTĐT
 Procedure PrepareProposalBeforeCreateTasks(RoutePoint, TasksBeingFormed, StandardProcessing)
-	Faculty = GetProposingFacultyOrDefault();
-	Performer = WorkflowAddressing.FindAnyLecturerInFaculty(Faculty);
+	Performer = WorkflowAddressing.GetProposerOfProgram(TargetProgram);
+	If Performer.IsEmpty() Then
+		Faculty = GetProposingFacultyOrDefault();
+		Performer = WorkflowAddressing.FindAnyLecturerInFaculty(Faculty);
+	EndIf;
 	For Each Task In TasksBeingFormed Do
 		Task.Performer = Performer;
 		Task.Description = "T1 - Soạn đề xuất CTĐT";
@@ -54,7 +54,7 @@ EndProcedure
 
 #Region ConditionHandlers
 
-// Sau T2 (Khoa) - Cond1: Approved?
+// Sau T2 (HĐKH Khoa): Approved?
 //   Yes → T3 (đi tiếp lên Trường)
 //   No  → Cond2 (check tiếp)
 Procedure IsApprovedConditionCheck(RoutePoint, Result)
@@ -62,7 +62,7 @@ Procedure IsApprovedConditionCheck(RoutePoint, Result)
 	Result = (LatestDecision = Enums.ApprovalDecision.Approved);
 EndProcedure
 
-// Sau Cond1 (No) - Cond2: RequiresRevision?
+// Sau Cond1 (No): RequiresRevision?
 //   Yes → T1 (quay lại sửa)
 //   No  → End (Rejected)
 Procedure NeedsRevisionConditionCheck(RoutePoint, Result)
@@ -70,7 +70,7 @@ Procedure NeedsRevisionConditionCheck(RoutePoint, Result)
 	Result = (LatestDecision = Enums.ApprovalDecision.RequiresRevision);
 EndProcedure
 
-// Sau T3 (Trường) - Cond3: Approved?
+// Sau T3 (HĐKHĐT Trường): Approved?
 //   Yes → T4 (ban hành)
 //   No  → Cond4
 Procedure IsApprovedInstConditionCheck(RoutePoint, Result)
@@ -78,7 +78,7 @@ Procedure IsApprovedInstConditionCheck(RoutePoint, Result)
 	Result = (LatestDecision = Enums.ApprovalDecision.Approved);
 EndProcedure
 
-// Sau Cond3 (No) - Cond4: RequiresRevision?
+// Sau Cond3 (No): RequiresRevision?
 //   Yes → T1 (quay lại sửa từ đầu)
 //   No  → End (Rejected)
 Procedure NeedsRevisionInstConditionCheck(RoutePoint, Result)
@@ -118,8 +118,7 @@ Function GetLatestDecision(Level)
 	Return Enums.ApprovalDecision.EmptyRef();
 EndFunction
 
-// Lookup Faculty đề xuất từ Document ProgramProposal mới nhất
-// Fallback CNTT1 nếu chưa có
+// Lookup Faculty đề xuất từ ProgramProposal mới nhất, fallback CNTT1 nếu chưa có
 Function GetProposingFacultyOrDefault()
 	If Not TargetProgram.IsEmpty() Then
 		Faculty = WorkflowAddressing.GetProposingFaculty(TargetProgram);

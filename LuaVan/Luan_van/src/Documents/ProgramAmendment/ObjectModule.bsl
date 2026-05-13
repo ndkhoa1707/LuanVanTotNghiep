@@ -8,15 +8,15 @@
 
 Procedure FillCheckProcessing(Cancel, CheckedAttributes)
 	If TargetProgram.IsEmpty() Then
-		ShowError("CTĐT bắt buộc.", "TargetProgram", Cancel);
+		ShowError("Vui lòng chọn CTĐT cần sửa đổi.", "TargetProgram", Cancel);
 	EndIf;
 	If (AmendmentType = Enums.AmendmentType.Deactivation
 		Or AmendmentType = Enums.AmendmentType.MajorAmendment)
 		And SupportingDecision.IsEmpty() Then
-		ShowError("Sửa đổi lớn / Ngừng hiệu lực phải có QĐ căn cứ.", "SupportingDecision", Cancel);
+		ShowError("Sửa đổi lớn hoặc Ngừng hiệu lực phải có Quyết định căn cứ.", "SupportingDecision", Cancel);
 	EndIf;
 	If AmendmentType = Enums.AmendmentType.AnnualReview And ReviewYear.IsEmpty() Then
-		ShowError("Rà soát hằng năm phải có ReviewYear.", "ReviewYear", Cancel);
+		ShowError("Vui lòng chọn năm học cần rà soát.", "ReviewYear", Cancel);
 	EndIf;
 EndProcedure
 
