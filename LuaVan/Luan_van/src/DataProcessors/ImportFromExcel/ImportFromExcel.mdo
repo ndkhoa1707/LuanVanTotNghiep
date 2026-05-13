@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6c9a1831-78b3-4a67-a0ff-c601b0e17e1e">
+  <producedTypes>
+    <objectType typeId="bdd65849-4ac3-437a-aa06-f405607b64d0" valueTypeId="96e8fac0-3803-45ae-88de-fb6d9f8cc513"/>
+    <managerType typeId="51017504-b278-40f3-86c1-ebbea5fe75f2" valueTypeId="8102be63-6695-465e-b5b7-85f1d489c1da"/>
+  </producedTypes>
+  <name>ImportFromExcel</name>
+  <synonym>
+    <key>en</key>
+    <value>Kết nhập từ Excel</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+</mdclass:DataProcessor>

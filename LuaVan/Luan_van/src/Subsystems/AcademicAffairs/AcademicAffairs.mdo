@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="61e1d9e2-3e7a-4a3f-84eb-2b57ae371a36">
+  <name>AcademicAffairs</name>
+  <synonym>
+    <key>en</key>
+    <value>Phòng Đào tạo &amp; Phê duyệt</value>
+  </synonym>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Catalog.Decisions</content>
+  <content>Document.ProgramApproval</content>
+  <content>Document.ProgramAmendment</content>
+  <content>InformationRegister.ProgramValidity</content>
+  <content>Report.ProgramListReport</content>
+  <content>Report.ApprovalAuditReport</content>
+  <content>DataProcessor.FillSampleData</content>
+  <content>BusinessProcess.ProgramApprovalProcess</content>
+  <content>Task.ProgramApprovalTasks</content>
+</mdclass:Subsystem>

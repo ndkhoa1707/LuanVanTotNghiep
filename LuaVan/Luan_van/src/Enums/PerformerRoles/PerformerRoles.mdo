@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0e54df70-682c-4586-a779-ebf120b9f962">
+  <producedTypes>
+    <refType typeId="ca1b7047-fdb8-4837-b878-1e04ea974893" valueTypeId="a487a2a7-72c8-4290-8e2a-1a53f3324f7f"/>
+    <listType typeId="df0eab19-d35a-4f19-b316-71b8e634131d" valueTypeId="eb97658e-aa9c-4cfe-ade1-ad54664bd11e"/>
+    <managerType typeId="335ee235-2e0d-4eb3-a4be-5901d0097940" valueTypeId="76e26845-5b44-477f-83e4-23331b448bb1"/>
+  </producedTypes>
+  <name>PerformerRoles</name>
+  <synonym>
+    <key>en</key>
+    <value>Vai trò trong quy trình</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="33b63bde-b35d-4ec7-a615-a80b52f60845">
+    <name>Head</name>
+    <synonym>
+      <key>en</key>
+      <value>Trưởng BM/Khoa</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="495c63cd-377c-4697-80dc-11f5a392297a">
+    <name>InstitutionalHead</name>
+    <synonym>
+      <key>en</key>
+      <value>Trưởng Phòng ĐT/HĐKHĐT</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="5e7ac19c-f037-4627-9f46-9ae912166e78">
+    <name>Dean</name>
+    <synonym>
+      <key>en</key>
+      <value>Giám đốc/BGH</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rights xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://v8.1c.ru/8.2/roles" xsi:type="Rights">
+	<setForNewObjects>true</setForNewObjects>
+	<setForAttributesByDefault>true</setForAttributesByDefault>
+	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
+
+	<!-- FacultyStaff (T1 - GV thường): chỉ thấy + làm những gì T1 cần -->
+
+	<!-- DENY: Document.ProgramApproval (KEY restriction) -->
+	<object>
+		<name>Document.ProgramApproval</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+	</object>
+
+	<!-- DENY: Catalog.Decisions (QĐ chính thức, chỉ PĐT quản lý) -->
+	<object>
+		<name>Catalog.Decisions</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+	</object>
+
+	<!-- DENY: Report.ApprovalAuditReport -->
+	<object>
+		<name>Report.ApprovalAuditReport</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+	</object>
+
+	<!-- DENY: DataProcessors -->
+	<object>
+		<name>DataProcessor.ImportFromExcel</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.FillSampleData</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+	</object>
+
+	<!-- BusinessProcess: GV0010 cần Read+Update để complete task → BP advance.
+	     Chỉ ẩn UI (View=false) để không thấy menu BP, không gây phiền user. -->
+	<object>
+		<name>BusinessProcess.ProgramApprovalProcess</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveStart</name>
+			<value>false</value>
+		</right>
+	</object>
+
+	<!-- Task: hide full list (View=false) nhưng giữ Read+Update để complete task qua My Tasks.
+	     My Tasks là built-in command filter theo current user, không bị View=false ảnh hưởng. -->
+	<object>
+		<name>Task.ProgramApprovalTasks</name>
+		<right>
+			<name>InteractiveActivate</name>
+			<value>false</value>
+		</right>
+	</object>
+
+	<!-- DENY: edit ProgramAmendment (chỉ View) -->
+	<object>
+		<name>Document.ProgramAmendment</name>
+		<right>
+			<name>Insert</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>false</value>
+		</right>
+	</object>
+
+	<!-- DENY: edit master data Catalogs (chỉ View) -->
+	<object>
+		<name>Catalog.TrainingPrograms</name>
+		<right>
+			<name>Insert</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Faculties</name>
+		<right>
+			<name>Insert</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Majors</name>
+		<right>
+			<name>Insert</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.AcademicYears</name>
+		<right>
+			<name>Insert</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Courses</name>
+		<right>
+			<name>Insert</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.KnowledgeBlocks</name>
+		<right>
+			<name>Insert</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Lecturers</name>
+		<right>
+			<name>Insert</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>false</value>
+		</right>
+	</object>
+
+	<!-- DENY: edit Constants (chỉ admin) -->
+	<object>
+		<name>Constant.AcademicInstitutionName</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.DefaultAcademicYear</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.UseDigitalSignatureFlag</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+	</object>
+
+	<!-- DENY: write IR (read-only) -->
+	<object>
+		<name>InformationRegister.ProgramValidity</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+	</object>
+</Rights>

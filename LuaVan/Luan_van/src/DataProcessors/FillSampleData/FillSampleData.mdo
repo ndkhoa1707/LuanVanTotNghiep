@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1af3805f-d7c8-4c7a-83d3-50b7f200610e">
+  <producedTypes>
+    <objectType typeId="4d6031ff-ff68-47fa-aa45-f2c1c5aac506" valueTypeId="d2598e0c-76c2-42c1-9577-a309019e063c"/>
+    <managerType typeId="59e621fa-ccc0-46ae-9679-981ceb20689c" valueTypeId="4b64f5ff-ec8b-4ba7-bd58-85359fc6978e"/>
+  </producedTypes>
+  <name>FillSampleData</name>
+  <synonym>
+    <key>en</key>
+    <value>Fill sample data</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.FillSampleData.Form.Form</defaultForm>
+  <forms uuid="167ab0ee-5b8d-4cff-9caa-08ff26563438">
+    <name>Form</name>
+    <synonym>
+      <key>en</key>
+      <value>Form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

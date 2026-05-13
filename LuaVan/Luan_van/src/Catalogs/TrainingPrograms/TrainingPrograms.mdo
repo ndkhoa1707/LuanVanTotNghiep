@@ -10,7 +10,7 @@
   <name>TrainingPrograms</name>
   <synonym>
     <key>en</key>
-    <value>Training programs</value>
+    <value>Chương trình đào tạo</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <inputByString>Catalog.TrainingPrograms.StandardAttribute.Description</inputByString>
@@ -367,10 +367,7 @@
         <value>Học phần</value>
       </synonym>
       <type>
-        <types>String</types>
-        <stringQualifiers>
-          <length>10</length>
-        </stringQualifiers>
+        <types>CatalogRef.Courses</types>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>

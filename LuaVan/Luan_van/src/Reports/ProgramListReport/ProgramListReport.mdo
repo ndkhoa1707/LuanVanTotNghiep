@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ef4545e4-b43c-416a-b899-517538dd5470">
+  <producedTypes>
+    <objectType typeId="82147b69-16f7-4340-8b6c-bbb71629bee7" valueTypeId="9e66d322-7167-4df2-9019-37ff1aafd9ec"/>
+    <managerType typeId="1010da21-2c39-443d-a238-ba45835bf97f" valueTypeId="cee8cfb1-459c-4cbe-a57f-587166d1083a"/>
+  </producedTypes>
+  <name>ProgramListReport</name>
+  <synonym>
+    <key>en</key>
+    <value>Danh sách CTĐT</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ProgramListReport.Template.MainDataCompositionSchema</mainDataCompositionSchema>
+  <templates uuid="d8756283-d981-4f64-8d6f-52f0ed3bbef0">
+    <name>MainDataCompositionSchema</name>
+    <synonym>
+      <key>en</key>
+      <value>Main data composition schema</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

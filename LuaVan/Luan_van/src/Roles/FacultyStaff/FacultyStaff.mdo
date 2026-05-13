@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f1497d29-574c-49d9-96db-238c6bbc3b44">
+  <name>FacultyStaff</name>
+  <synonym>
+    <key>en</key>
+    <value>Cán bộ khoa / Giảng viên</value>
+  </synonym>
+</mdclass:Role>

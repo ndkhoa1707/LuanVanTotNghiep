@@ -1,0 +1,8 @@
+////////////////////////////////////////////////////////////////////////////////
+// ProgramProposal - Manager Module
+// Tự động thêm prefix PP-{YYYY}- cho số chứng từ
+////////////////////////////////////////////////////////////////////////////////
+
+Procedure OnSetNewNumber(StandardProcessing, Prefix) Export
+	Prefix = "PP-" + Format(Year(CurrentDate()), "ND=4; NLZ=") + "-";
+EndProcedure

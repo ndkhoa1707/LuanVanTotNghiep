@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(extract-text \"D:/Thac-si/Luan an/Luận án/ThietKe_PhanHe_QLDT_v5_TinhGian.docx\")",
+      "Bash(python -c \"import docx; print\\('ok'\\)\")",
+      "Bash(python -c \"import docx2txt; print\\('ok'\\)\")",
+      "Bash(mkdir -p /tmp/docx_extract)",
+      "Read(//tmp/**)",
+      "Bash(unzip -o \"D:/Thac-si/Luan an/Luận án/ThietKe_PhanHe_QLDT_v5_TinhGian.docx\" -d v5)",
+      "Bash(unzip -o \"D:/Thac-si/Luan an/Luận án/ThietKe_PhanHe_QuanLyDaoTao_1C_v4_DonGian.docx\" -d v4_dongian)",
+      "Bash(unzip -o \"D:/Thac-si/Luan an/Luận án/PhanTich_ChiTiet_Metadata_v4.docx\" -d metadata_v4)",
+      "Bash(unzip -o \"D:/Thac-si/Luan an/Luận án/PhanTich_DoiTuong_ConLai_v4.docx\" -d doituong_conlai)",
+      "Bash(node -e ' *)",
+      "PowerShell(1..100 | ForEach-Object { [guid]::NewGuid\\(\\).ToString\\(\\) })",
+      "Bash(git add *)",
+      "PowerShell(Get-Command gh -ErrorAction SilentlyContinue)",
+      "Bash(git push *)",
+      "Bash(awk -F'<length>|</length>' '{print $1, $2}')",
+      "Bash(sort -k2 -n -r)",
+      "Bash(awk -F'<length>|</length>' '{print $2}')",
+      "Bash(git commit -m ' *)",
+      "Bash(xxd)",
+      "Bash(git reset *)",
+      "Bash(git fetch *)",
+      "Bash(git ls-tree *)",
+      "Bash(echo \"---exit code: $?---\")",
+      "Bash(git sparse-checkout *)",
+      "Bash(git config *)",
+      "Bash(git --git-dir=D:/1C/EDT/projects/.git ls-tree -r 196964a)",
+      "PowerShell([guid]::NewGuid\\(\\).ToString\\(\\))"
+    ]
+  }
+}

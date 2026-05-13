@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:FunctionalOption xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a0ca54fc-3ed7-48a9-b15e-cfed6471fd99">
+  <name>UseDigitalSignature</name>
+  <synonym>
+    <key>en</key>
+    <value>Sử dụng chữ ký số</value>
+  </synonym>
+  <location>Constant.UseDigitalSignatureFlag</location>
+  <privilegedGetMode>false</privilegedGetMode>
+</mdclass:FunctionalOption>

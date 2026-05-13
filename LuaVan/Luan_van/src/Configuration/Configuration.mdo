@@ -34,6 +34,15 @@
     </synonym>
     <languageCode>en</languageCode>
   </languages>
+  <subsystems>Subsystem.ProgramManagement</subsystems>
+  <subsystems>Subsystem.AcademicAffairs</subsystems>
+  <roles>Role.FacultyStaff</roles>
+  <roles>Role.HeadOfDepartment</roles>
+  <roles>Role.AcademicAffairsOffice</roles>
+  <roles>Role.SystemAdmin</roles>
+  <commonModules>CommonModule.InitialDataFill</commonModules>
+  <commonModules>CommonModule.WorkflowAddressing</commonModules>
+  <functionalOptions>FunctionalOption.UseDigitalSignature</functionalOptions>
   <constants>Constant.AcademicInstitutionName</constants>
   <constants>Constant.DefaultAcademicYear</constants>
   <constants>Constant.UseDigitalSignatureFlag</constants>
@@ -45,8 +54,19 @@
   <catalogs>Catalog.Courses</catalogs>
   <catalogs>Catalog.AcademicYears</catalogs>
   <catalogs>Catalog.Decisions</catalogs>
+  <documents>Document.ProgramProposal</documents>
+  <documents>Document.ProgramApproval</documents>
+  <documents>Document.ProgramAmendment</documents>
   <enums>Enum.ProgramStatuses</enums>
   <enums>Enum.ApprovalLevel</enums>
   <enums>Enum.AmendmentType</enums>
   <enums>Enum.ApprovalDecision</enums>
+  <enums>Enum.PerformerRoles</enums>
+  <reports>Report.ProgramListReport</reports>
+  <reports>Report.ApprovalAuditReport</reports>
+  <dataProcessors>DataProcessor.ImportFromExcel</dataProcessors>
+  <dataProcessors>DataProcessor.FillSampleData</dataProcessors>
+  <informationRegisters>InformationRegister.ProgramValidity</informationRegisters>
+  <businessProcesses>BusinessProcess.ProgramApprovalProcess</businessProcesses>
+  <tasks>Task.ProgramApprovalTasks</tasks>
 </mdclass:Configuration>
